@@ -10,8 +10,8 @@ Variant: Pre 0.4.0
 Variant: Current
 Limited to: 1
 {variant:1}(0-100)% increased Effect of Jewel Socket Passive Skills
-{variant:2}(0-150)% increased Effect of Jewel Socket Passive Skills
 {variant:1}containing Corrupted Magic Jewels
+{variant:2}(0-150)% increased Effect of Jewel Socket Passive Skills
 {variant:2}containing Corrupted Magic Jewels
 ]],[[
 Controlled Metamorphosis
@@ -49,8 +49,7 @@ Grand Spectrum
 Emerald
 Limited to: 3
 2% increased Spirit per socketed Grand Spectrum
-]],
-[[
+]],[[
 Grand Spectrum
 Sapphire
 Variant: Pre 0.4.0
@@ -58,6 +57,18 @@ Variant: Current
 Limited to: 3
 {variant:1}+4% to all Elemental Resistances per socketed Grand Spectrum
 {variant:2}+6% to all Elemental Resistances per socketed Grand Spectrum
+]],[[
+Voices
+Sapphire
+Variant: 2 Sinister Sockets
+Variant: 3 Sinister Sockets
+Variant: 4 Sinister Sockets
+League: Runes of Aldur
+Limited to: 1
+{variant:1}Allocates 2 Sinister Jewel sockets
+{variant:2}Allocates 3 Sinister Jewel sockets
+{variant:3}Allocates 4 Sinister Jewel sockets
+Corrupted
 ]],
 -- Jewel: Timeless
 [[

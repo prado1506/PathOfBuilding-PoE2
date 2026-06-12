@@ -519,7 +519,7 @@ end
 
 -- Estimate the offensive and defensive power of all unallocated nodes
 function CalcsTabClass:PowerBuilder()
-	--local timer_start = GetTime()
+	-- local timer_start = GetTime()
 	local useFullDPS = self.powerStat and self.powerStat.stat == "FullDPS"
 	local calcFunc, calcBase = self:GetMiscCalculator()
 	local cache = { }
@@ -540,11 +540,29 @@ function CalcsTabClass:PowerBuilder()
 	end
 	
 	local start = GetTime()
+	local nodeIndex = 0
+	local total = 0
+
 	for nodeId, node in pairs(self.build.spec.nodes) do
 		wipeTable(node.power)
 		if node.modKey ~= "" and not self.mainEnv.grantedPassives[nodeId] then
-			distanceMap[node.pathDist or 1000] = distanceMap[node.pathDist or 1000] or { }
-			distanceMap[node.pathDist or 1000][nodeId] = node
+			local hiddenByLockedAscendancyNode = false
+			if node.unlockConstraint then
+				for _, unlockNodeId in ipairs(node.unlockConstraint.nodes) do
+					local unlockNode = self.build.spec.nodes[unlockNodeId]
+					if unlockNode and unlockNode.ascendancyName and not unlockNode.alloc then
+						hiddenByLockedAscendancyNode = true
+						break
+					end
+				end
+			end
+			if not hiddenByLockedAscendancyNode then
+				distanceMap[node.pathDist or 1000] = distanceMap[node.pathDist or 1000] or { }
+				distanceMap[node.pathDist or 1000][nodeId] = node
+				if not (self.nodePowerMaxDepth and self.nodePowerMaxDepth < node.pathDist) then
+					total = total + 1
+				end
+			end
 		end
 	end
 	for distance, nodes in pairs(distanceMap) do
@@ -552,6 +570,13 @@ function CalcsTabClass:PowerBuilder()
 	end
 	distanceMap = nil
 	table.sort(distanceList, function(a, b) return a[1] < b[1] end)
+	-- Count eligible cluster nodes
+	for _, node in pairs(self.build.spec.tree.clusterNodeMap) do
+		if not node.alloc and node.modKey ~= "" and not self.mainEnv.grantedPassives[node.id] then
+			total = total + 1
+		end
+	end
+
 	for _, data in ipairs(distanceList) do
 		local distance, nodes = data[1], data[2]
 		if self.nodePowerMaxDepth and self.nodePowerMaxDepth < distance then
@@ -605,7 +630,11 @@ function CalcsTabClass:PowerBuilder()
 					end
 				end
 			end
+			nodeIndex = nodeIndex + 1
 			if coroutine.running() and GetTime() - start > 100 then
+				if self.build.powerBuilderProgressCallback then
+					self.build.powerBuilderProgressCallback(m_floor(nodeIndex/total*100))
+				end
 				coroutine.yield()
 				start = GetTime()
 			end
@@ -627,15 +656,19 @@ function CalcsTabClass:PowerBuilder()
 			if self.powerStat and self.powerStat.stat and not self.powerStat.ignoreForNodes then
 				node.power.singleStat = self:CalculatePowerStat(self.powerStat, output, calcBase)
 			end
-		end
-		if coroutine.running() and GetTime() - start > 100 then
-			coroutine.yield()
-			start = GetTime()
+			nodeIndex = nodeIndex + 1
+			if coroutine.running() and GetTime() - start > 100 then
+				if self.build.powerBuilderProgressCallback then
+					self.build.powerBuilderProgressCallback(m_floor(nodeIndex/total*100))
+				end
+				coroutine.yield()
+				start = GetTime()
+			end
 		end
 	end
 	self.powerMax = newPowerMax
 	self.powerBuilderInitialized = true
-	--ConPrintf("Power Build time: %d ms", GetTime() - timer_start)
+	-- ConPrintf("Power Build time: %d ms", GetTime() - timer_start)
 end
 
 function CalcsTabClass:CalculatePowerStat(selection, original, modified)
