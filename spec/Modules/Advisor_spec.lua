@@ -1,4 +1,4 @@
--- cspell:ignore maxhit deadend ntype
+-- cspell:ignore maxhit deadend ntype minionsplash
 describe("Advisor", function()
 	local Advisor
 

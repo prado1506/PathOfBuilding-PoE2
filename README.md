@@ -1,3 +1,4 @@
+<!-- cspell:ignore pathofbuildingcommunity pathofbuilding OPENCODE -->
 # Path of Building 2 Community
 ## Welcome to Path of Building 2, an offline build planner for Path of Exile 2!
 
