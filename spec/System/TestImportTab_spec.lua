@@ -3,6 +3,80 @@ describe("ImportTab", function()
 		newBuild()
 	end)
 
+	it("parses [Ward|Runic Ward] property from GGG API data and sets armourData.Ward (import path)", function()
+		local importTab = build.importTab
+		-- Simulate a GGG API item with localized Ward property name
+		local mockItemData = {
+			typeLine = "Runeforged Serpentscale Coat",
+			name = "Empyrean Shelter",
+			frameType = 2,
+			inventoryId = "BodyArmour",
+			id = "body1",
+			ilvl = 36,
+			mirrored = false,
+			corrupted = false,
+			properties = {
+				{ name = "[Ward|Runic Ward]", values = {{"104", 0}}, type = 104 },
+			},
+		}
+		-- Returns (item, slotName)
+		local item = importTab:ImportItem(mockItemData, "Body Armour")
+		assert.is_not_nil(item, "ImportItem returned nil — ensure 'Serpentscale Coat' exists in data.itemBases")
+		assert.is_not_nil(item and item.armourData, "armourData is nil — Ward property was not parsed")
+		assert.are.equals(104, item and item.armourData and item.armourData.Ward)
+	end)
+
+	it("parses [Ward|Runic Ward] property with a Ward rune mod without double-counting", function()
+		local importTab = build.importTab
+		-- GGG API item data that includes rune mods adding Ward
+		local mockItemData = {
+			typeLine = "Runeforged Itinerant Jacket",
+			name = "Loath Coat",
+			frameType = 2,
+			inventoryId = "BodyArmour",
+			id = "body2",
+			ilvl = 67,
+			mirrored = false,
+			corrupted = false,
+			properties = {
+				{ name = "[Ward|Runic Ward]", values = {{"104", 0}}, type = 104 },
+				{ name = "[Evasion|Evasion Rating]", values = {{"157", 0}}, type = 4 },
+				{ name = "[EnergyShield|Energy Shield]", values = {{"61", 0}}, type = 6 },
+			},
+			runeMods = {
+				"{rune}{enchant}112% increased Ward\n+65 to maximum Ward",
+			},
+		}
+		local item = importTab:ImportItem(mockItemData, "Body Armour")
+		assert.is_not_nil(item, "ImportItem returned nil — ensure 'Itinerant Jacket' exists in data.itemBases")
+		assert.is_not_nil(item and item.armourData, "armourData is nil — Ward property was not parsed")
+		-- Property line value is authoritative for Ward; rune INC/flat mods must not be re-applied
+		assert.are.equals(104, item and item.armourData and item.armourData.Ward)
+		-- Rune mods should be parsed into runeModLines
+		assert.are.equals(2, item and #item.runeModLines)
+	end)
+
+	it("ImportItem does not crash for Mace Strike with empty weapon slots", function()
+		local importTab = build.importTab
+		-- Simulate a character skill with typeLine "Mace Strike" but no weapon equipped
+		-- activeItemSet slots exist but have selItemId == 0 (nothing equipped)
+		local mockItemData = {
+			typeLine = "Mace Strike",
+			name = "",
+			frameType = 4,
+			inventoryId = "Flask",
+			x = 3,
+			id = "flask1",
+			ilvl = 1,
+			mirrored = false,
+			corrupted = false,
+		}
+		-- Should not crash even when Weapon 1/2 slots are empty (selItemId == 0)
+		assert.has_no.errors(function()
+			importTab:ImportItem(mockItemData, "Flask 3")
+		end)
+	end)
+
 	it("builds character lists for private Ruthless league names without a Ruthless tree", function()
 		local importTab = build.importTab
 		importTab.lastCharList = {

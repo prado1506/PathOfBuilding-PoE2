@@ -1059,6 +1059,8 @@ data.uniques['race'] = LoadModule("Data/Uniques/Special/race")
 LoadModule("Data/Uniques/Special/Generated")
 LoadModule("Data/Uniques/Special/New")
 
+data.modEquivalencies = LoadModule("Data/ModEquivalencies")
+
 data.questRewards = LoadModule("Data/QuestRewards")
 
 data.flavourText = LoadModule("Data/FlavourText")

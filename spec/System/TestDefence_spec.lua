@@ -607,4 +607,29 @@ describe("TestDefence", function()
 		assertClose(block.EffectiveBlockChance, 10)
 		assert.is_true(block.TotalEHP > base.TotalEHP)
 	end)
+
+	it("PhysicalGuardAbsorbRate increases MaximumHitTaken when sharedGuardAbsorbRate is zero (precedence regression)", function()
+		-- CalcDefence.lua had `output["sharedGuardAbsorbRate"] or 0 + output[…] or 0`
+		-- In Lua, 0 is truthy, so `0 or X = 0` — the per-damage-type guard rate was silently ignored
+		-- whenever sharedGuardAbsorbRate was 0 (no shared guard skill active).
+		-- This test verifies the fix: (sharedRate or 0) + (typeRate or 0).
+
+		-- Baseline: known life pool, no guard
+		build.configTab.input.customMods = "+1000 to maximum Life\n"
+		build.configTab:BuildModList()
+		runCallback("OnFrame")
+		local baseMaxHit = build.calcsTab.calcsOutput.PhysicalMaximumHitTaken
+
+		-- With 100% physical guard absorb rate and 300 absorb limit:
+		-- sharedGuardAbsorbRate = 0 (no shared guard), PhysicalGuardAbsorbRate = 100
+		-- rate >= 100 path: TotalHitPool += GuardAbsorbLimit (300) → MaximumHitTaken increases by 300
+		-- Old bug: 0 (truthy) short-circuited to GuardAbsorbRate=0 → guard ignored → no increase
+		build.configTab.input.customMods = "+1000 to maximum Life\n"
+		build.configTab:BuildModList()
+		build.configTab.modList:NewMod("PhysicalGuardAbsorbRate", "BASE", 100, "Custom")
+		build.configTab.modList:NewMod("PhysicalGuardAbsorbLimit", "BASE", 300, "Custom")
+		runCallback("OnFrame")
+
+		assert.are.equals(baseMaxHit + 300, build.calcsTab.calcsOutput.PhysicalMaximumHitTaken)
+	end)
 end)

@@ -2,9 +2,9 @@ name: Spell Checker
 
 on:
   push:
-    branches: [ dev ]
+    branches: [dev]
   pull_request:
-    branches: [ dev ]
+    branches: [dev]
   workflow_dispatch:
     inputs:
       ref:
@@ -12,30 +12,56 @@ on:
         default: dev
         required: false
 
+concurrency:
+  group: spellcheck-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   spellcheck:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     env:
-      CONFIG_URL:  https://raw.githubusercontent.com/Nightblade/pob-dict/main
+      CONFIG_URL: https://raw.githubusercontent.com/Nightblade/pob-dict/main
     steps:
       - name: Checkout
         uses: actions/checkout@v6
         with:
-          ref: ${{ inputs.ref }}
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.ref || '' }}
+
+      - name: Get current date for cache key
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
+      - name: Cache pob-dict files
+        id: dict-cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            cspell.json
+            pob-dict.txt
+            poe-dict.txt
+            ignore-dict.txt
+            extra-en-dict.txt
+            contribs-dict.txt
+          # Cache key rotates daily so the dict stays reasonably fresh
+          # without fetching on every run.
+          key: pob-dict-${{ runner.os }}-${{ steps.date.outputs.date }}
 
       - name: Fetch config file and dictionaries
-        run:
-          curl --silent --show-error --parallel --remote-name-all
-            ${{ env.CONFIG_URL }}/cspell.json
-            ${{ env.CONFIG_URL }}/pob-dict.txt
-            ${{ env.CONFIG_URL }}/poe-dict.txt
-            ${{ env.CONFIG_URL }}/ignore-dict.txt
-            ${{ env.CONFIG_URL }}/extra-en-dict.txt
-            ${{ env.CONFIG_URL }}/contribs-dict.txt
+        if: steps.dict-cache.outputs.cache-hit != 'true'
+        run: |
+          curl --silent --show-error --fail --retry 3 --retry-delay 5 --parallel \
+            --remote-name-all \
+            "${{ env.CONFIG_URL }}/cspell.json" \
+            "${{ env.CONFIG_URL }}/pob-dict.txt" \
+            "${{ env.CONFIG_URL }}/poe-dict.txt" \
+            "${{ env.CONFIG_URL }}/ignore-dict.txt" \
+            "${{ env.CONFIG_URL }}/extra-en-dict.txt" \
+            "${{ env.CONFIG_URL }}/contribs-dict.txt"
 
       - name: Run cspell
         uses: streetsidesoftware/cspell-action@v8
         with:
-          files: '**' # needed as workaround for non-incremental runs (overrides in config still work ok)
+          files: '**'
           config: "cspell.json"
           incremental_files_only: ${{ github.event_name != 'workflow_dispatch' }}

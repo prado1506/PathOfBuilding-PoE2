@@ -1,0 +1,1309 @@
+# total=7041 supported=5584 partial=496 unsupported=961
+unsupported	#% Chance to gain a Charge when you kill an enemy
+unsupported	#% Chance to gain a Charge when you kill an enemy Creates Ignited Ground for # seconds when used, Igniting enemies as though dealing Fire damage equal to #% of your maximum Life
+unsupported	#% Chance to gain a Charge when you kill an enemy Energy Shield Recharge starts on use
+unsupported	#% chance to gain Archon of Undeath when you use a Command skill
+unsupported	#% chance to gain Volatility on Kill
+unsupported	#% chance to gain Volatility when you are Stunned
+unsupported	#% chance to gain a Frenzy Charge on Hit
+unsupported	#% chance to gain a Power Charge on Critical Hit
+unsupported	#% chance to gain a Power Charge on Hit
+unsupported	#% chance to gain a Power Charge on Hit Lose all Power Charges on reaching maximum Power Charges
+unsupported	(##) Life gained when you Block
+unsupported	(##)% additional Physical Damage Reduction
+unsupported	(##)% chance to Avoid Elemental Ailments
+unsupported	(##)% chance to Avoid Elemental Ailments (##)% chance to Avoid being Stunned
+unsupported	(##)% chance to Avoid being Stunned
+unsupported	(##)% chance to Blind Enemies on Hit
+unsupported	(##)% chance to Freeze
+unsupported	(##)% chance to Shock
+unsupported	(##)% increased Area Damage
+unsupported	(##)% increased Area of Effect
+unsupported	(##)% increased Armour
+unsupported	(##)% increased Armour (##)% additional Physical Damage Reduction
+unsupported	(##)% increased Armour, Evasion and Energy Shield from Equipped Shield
+unsupported	(##)% increased Attack Damage
+unsupported	(##)% increased Attack Speed
+unsupported	(##)% increased Cast Speed
+unsupported	(##)% increased Chaos Damage
+unsupported	(##)% increased Chaos Damage #% chance to inflict Withered for # seconds on Hit
+unsupported	(##)% increased Cold Damage
+unsupported	(##)% increased Cold Damage #% of Physical Damage Converted to Cold Damage
+unsupported	(##)% increased Cold Damage Damage Penetrates (##)% Cold Resistance
+unsupported	(##)% increased Critical Damage Bonus
+unsupported	(##)% increased Critical Hit Chance
+unsupported	(##)% increased Critical Hit Chance for Spells
+unsupported	(##)% increased Curse Magnitudes
+unsupported	(##)% increased Curse Magnitudes Curse Skills have #% increased Skill Effect Duration
+unsupported	(##)% increased Damage over Time
+unsupported	(##)% increased Damage over Time (##)% increased Skill Effect Duration
+unsupported	(##)% increased Energy Shield Recharge Rate
+unsupported	(##)% increased Evasion Rating
+unsupported	(##)% increased Evasion Rating (##)% chance to Blind Enemies on Hit
+unsupported	(##)% increased Fire Damage
+unsupported	(##)% increased Fire Damage #% of Physical Damage Converted to Fire Damage
+unsupported	(##)% increased Fire Damage Damage Penetrates (##)% Fire Resistance
+unsupported	(##)% increased Lightning Damage
+unsupported	(##)% increased Lightning Damage #% of Physical Damage Converted to Lightning Damage
+unsupported	(##)% increased Lightning Damage Damage Penetrates (##)% Lightning Resistance
+unsupported	(##)% increased Magnitudes of Non-Curse Auras from your Skills
+unsupported	(##)% increased Mana Regeneration Rate
+unsupported	(##)% increased Movement Speed
+unsupported	(##)% increased Physical Damage
+unsupported	(##)% increased Projectile Damage
+unsupported	(##)% increased Projectile Speed
+unsupported	(##)% increased Skill Effect Duration
+unsupported	(##)% increased Spell Damage
+unsupported	(##)% increased Spell Damage (##)% increased Critical Hit Chance for Spells
+unsupported	(##)% increased maximum Energy Shield
+unsupported	(##)% increased maximum Energy Shield (##)% increased Energy Shield Recharge Rate
+unsupported	(##)% increased maximum Life
+unsupported	(##)% increased maximum Life Regenerate (##)% of maximum Life per second
+unsupported	(##)% increased maximum Mana
+unsupported	(##)% increased maximum Mana (##)% increased Mana Regeneration Rate
+unsupported	+(##)% to Chaos Resistance
+unsupported	+(##)% to Cold Resistance
+unsupported	+(##)% to Fire Resistance
+unsupported	+(##)% to Lightning Resistance
+unsupported	+(##)% to all Elemental Resistances
+unsupported	Abyssal Wasting also applies % to Cold Resistance
+unsupported	Abyssal Wasting also applies % to Cold Resistance #% increased Magnitude of Chill you inflict
+unsupported	Abyssal Wasting also applies % to Fire Resistance
+unsupported	Abyssal Wasting also applies % to Fire Resistance #% of Armour also applies to Elemental Damage
+unsupported	Abyssal Wasting also applies % to Lightning Resistance
+unsupported	Abyssal Wasting also applies % to Lightning Resistance Projectiles have #% chance for an additional Projectile when Forking
+unsupported	Abyssal Wasting you inflict has Infinite Duration
+unsupported	Abyssal Wasting you inflict has Infinite Duration Abyssal Wasting also applies % to Fire Resistance
+unsupported	Adapt to the highest Elemental Damage Type of each Hit you take
+unsupported	Adapt to the highest Elemental Damage Type of each Hit you take #% less Damage taken of each Elemental Damage Type per matching Adaptation
+unsupported	Adaptations have a duration of # seconds
+unsupported	Aggravate Bleeding on Enemies when they Enter your Presence
+unsupported	Aggravate Bleeding on Enemies when they Enter your Presence #% increased Thorns damage
+unsupported	Aggravate Bleeding on targets you Critically Hit with Attacks
+unsupported	Aggravating any Bleeding with this Weapon also Aggravates all Ignites on the target
+unsupported	Aggravating any Bleeding with this Weapon also Aggravates all Ignites on the target #% chance to Aggravate Bleeding on Hit
+unsupported	All Damage from you and Allies in your Presence
+unsupported	All Damage taken from Hits Contributes to Magnitude of Chill inflicted on you
+unsupported	All Damage taken from Hits Contributes to Magnitude of Chill inflicted on you The Effect of Chill on you is reversed
+unsupported	All Damage taken from Hits while Bleeding Contributes to Magnitude of Chill on you
+unsupported	All Damage taken from Hits while Bleeding Contributes to Magnitude of Chill on you All Damage from Hits against Bleeding targets Contributes to Chill Magnitude
+unsupported	All Damage taken from Hits while Bleeding Contributes to Magnitude of Chill on you Enemies have an Accuracy Penalty against you based on Distance
+unsupported	All Damage taken from Hits while Poisoned Contributes to Magnitude of Chill on you
+unsupported	All Damage taken from Hits while Poisoned Contributes to Magnitude of Chill on you All Damage from Hits against Poisoned targets Contributes to Chill Magnitude
+unsupported	All Damage taken from Hits while Poisoned Contributes to Magnitude of Chill on you Inflict Abyssal Wasting on Hit
+unsupported	Allies in your Presence gain added Attack Damage equal
+unsupported	Allies in your Presence have Block Chance equal to yours
+unsupported	Alternating every # seconds:
+unsupported	Alternating every # seconds: Take #% less Damage from Hits
+unsupported	Apply Debilitate to Enemies # Metres in front of you while your Shield is raised
+unsupported	Archon Buffs also grant #% increased Critical Damage Bonus
+unsupported	Archon Buffs also grant #% increased Critical Damage Bonus Archon Buffs also grant #% increased Critical Hit Chance
+unsupported	Archon Buffs also grant #% increased Critical Hit Chance
+unsupported	Archon Buffs also grant #% increased Movement Speed
+unsupported	Archon Buffs also grant #% to all Elemental Resistances
+unsupported	Archon Buffs also grant #% to all Elemental Resistances Archon Buffs also grant #% increased Movement Speed
+unsupported	Archon Buffs have no recovery period after you lose one
+unsupported	Archon recovery period expires #% faster
+unsupported	Archon recovery period expires #% faster #% increased effect of Archon Buffs on you
+unsupported	Archon recovery period expires #% slower
+unsupported	Archon recovery period expires #% slower Archon Buffs also grant #% increased Critical Damage Bonus
+unsupported	Archon recovery period expires #% slower Archon Buffs also grant #% increased Critical Damage Bonus Archon Buffs also grant #% increased Critical Hit Chance
+unsupported	Armour does not apply to Physical Damage
+unsupported	Armour does not apply to Physical Damage #% to all maximum Elemental Resistances
+unsupported	Arrows Return if they have Pierced a target which had Fully Broken Armour
+unsupported	Arrows gain Critical Hit Chance as they travel farther, up to
+unsupported	Attack Hits Aggravate any Bleeding on targets which is older than # seconds
+unsupported	Attack Hits inflict Spectral Fire for # seconds
+unsupported	Attack Projectiles Return if they Pierced at least # times
+unsupported	Attack Projectiles Return if they Pierced at least # times Projectiles deal #% increased Damage with Hits for each time they have Pierced
+unsupported	Attacks consume an Endurance Charge to Critically Hit
+unsupported	Attacks consume an Endurance Charge to Critically Hit Take # Chaos damage per second per Endurance Charge
+unsupported	Attacks gain increased Accuracy Rating equal to their Critical Hit Chance
+unsupported	Attacks using your Weapons have Added Physical Damage equal
+unsupported	Attribute Passive Skills can instead grant #% increased Armour, Evasion and Energy Shield
+unsupported	Attribute Passive Skills can instead grant #% increased Armour, Evasion and Energy Shield Attribute Passive Skills can instead grant #% increased Cost Efficiency
+unsupported	Attribute Passive Skills can instead grant #% increased Cost Efficiency
+unsupported	Attribute Passive Skills can instead grant #% increased Damage
+unsupported	Attribute Passive Skills can instead grant #% increased Damage Attribute Passive Skills can instead grant #% increased Armour, Evasion and Energy Shield
+unsupported	Attribute Passive Skills can instead grant #% increased Damage Attribute Passive Skills can instead grant #% increased Armour, Evasion and Energy Shield Attribute Passive Skills can instead grant #% increased Cost Efficiency
+unsupported	Banner Buffs linger on you for # seconds after you leave the Area
+unsupported	Banners always have maximum Valour
+unsupported	Banners gain # Glory per second
+unsupported	Banners gain # Glory per second There is no Limit on the number of Banners you can place
+unsupported	Bear Spirit gains Embrace of the Wild
+unsupported	Bear Spirit gains Embrace of the Wild Vivid Stags leap towards enemies
+unsupported	Bear Spirit gains Embrace of the Wild Vivid Stags leap towards enemies Central Projectile of Owl Feather-Empowered Skills leaves a trail of Soaring Ground
+unsupported	Become Ignited when you deal a Critical Hit, taking #% of your maximum Life and Energy Shield as Fire Damage per second
+unsupported	Become Ignited when you deal a Critical Hit, taking #% of your maximum Life and Energy Shield as Fire Damage per second #% more Critical Damage Bonus
+unsupported	Blind Chilled enemies on Hit
+unsupported	Blind Enemies # metres in front of you every # seconds while your Shield is raised
+unsupported	Blind Enemies # metres in front of you every # seconds while your Shield is raised Raise Shield inflicts Parried for # seconds on Hit
+unsupported	Blind Enemies when they Stun you
+unsupported	Blind Targets when you Poison them
+unsupported	Blind does not affect your Light Radius
+unsupported	Blind does not affect your Light Radius #% more Melee Critical Hit Chance while Blinded
+unsupported	Blocking Damage Poisons the Enemy as though dealing # Base Chaos Damage
+unsupported	Blocking Damage Poisons the Enemy as though dealing # Base Chaos Damage Blocking Damage Poisons the Enemy as though dealing # Base Chaos Damage
+unsupported	Break #% of Armour on Pinning an Enemy
+unsupported	Break enemy Concentration on Hit equal to #% of Damage Dealt
+unsupported	Break enemy Concentration on Hit equal to #% of Damage Dealt Enemies regain #% of Concentration every second if they haven't lost Concentration in the past # seconds
+unsupported	Breaks Armour equal to #% of damage from Hits with this weapon
+unsupported	Breaks Armour equal to #% of damage from Hits with this weapon Fully Armour Broken enemies you kill with Hits Shatter
+unsupported	Burning Enemies you kill have a #% chance to Explode, dealing a
+unsupported	Can Attack as though using a Quarterstaff while both of your hand slots are empty
+unsupported	Can Attack as though using a Quarterstaff while both of your hand slots are empty Unarmed Attacks that would use an Equipped Quarterstaff's damage have:
+unsupported	Can Attack as though using a Quarterstaff while both of your hand slots are empty Unarmed Attacks that would use an Equipped Quarterstaff's damage have: Base Unarmed Physical damage replaced with damage based on their Skill Level
+unsupported	Can Attack as though using a Quarterstaff while both of your hand slots are empty Unarmed Attacks that would use an Equipped Quarterstaff's damage have: Base Unarmed Physical damage replaced with damage based on their Skill Level #% more Attack Speed per # Item Evasion on Equipped Armour Items
+unsupported	Can have up to one Unique Tamed Beast summoned
+unsupported	Can have up to one Unique Tamed Beast summoned Unique Tamed Beasts have #% increased movement speed
+unsupported	Can have up to one Unique Tamed Beast summoned Unique Tamed Beasts have #% increased movement speed Unique Tamed Beasts are Possessed by random Azmeri Spirits, changing every # seconds
+unsupported	Can instead consume #% of maximum Mana to trigger Charms with insufficient charges
+unsupported	Can only use a Normal Body Armour
+unsupported	Can only use a Normal Body Armour # to Armour for each Connected Notable Passive Skill Allocated
+unsupported	Can tattoo Runes onto your body, gaining
+unsupported	Can tattoo Runes onto your body, gaining additional Rune-only sockets:
+unsupported	Can tattoo Runes onto your body, gaining additional Rune-only sockets: # Helmet socket
+unsupported	Can tattoo Runes onto your body, gaining additional Rune-only sockets: # Helmet socket # Body Armour sockets
+unsupported	Can tattoo Runes onto your body, gaining additional Rune-only sockets: # Helmet socket # Body Armour sockets # Gloves socket
+unsupported	Can tattoo Runes onto your body, gaining additional Rune-only sockets: # Helmet socket # Body Armour sockets # Gloves socket # Boots socket
+unsupported	Can't use Helmets
+unsupported	Can't use Helmets Your Critical Hit Chance is Lucky
+unsupported	Can't use Helmets Your Critical Hit Chance is Lucky Your Damage with Critical Hits is Lucky
+unsupported	Can't use Helmets Your Critical Hit Chance is Lucky Your Damage with Critical Hits is Lucky Enemies' Damage with Critical Hits against you is Lucky
+unsupported	Cannot collide with targets
+unsupported	Cannot use Life Flasks
+unsupported	Cannot use Life Flasks Non-Unique Life Flasks apply their Effects constantly
+unsupported	Cascadable Spells have #% chance to Echo
+unsupported	Cascadable Spells have #% chance to Echo Repeatable Spells have #% chance to Repeat
+unsupported	Central Projectile of Owl Feather-Empowered Skills leaves a trail of Soaring Ground
+unsupported	Chain an additional time
+unsupported	Chain an additional time Chain from Terrain an additional time
+unsupported	Chain an additional time Chain from Terrain an additional time Cannot collide with targets
+unsupported	Chain from Terrain an additional time
+unsupported	Chain from Terrain an additional time Cannot collide with targets
+unsupported	Charms applied to you have #% increased Effect per # Tribute
+unsupported	Charms applied to you have #% increased Effect per empty Charm slot
+unsupported	Cold Resistance is unaffected by Area Penalties
+unsupported	Companions in your Presence have Onslaught while you are Shapeshifted
+unsupported	Consume all Rage when Shapeshifting to Human form to recover #% of maximum life per Rage Consumed
+unsupported	Consuming Glory grants you #% increased Attack damage per Glory consumed for # seconds, up to #%
+unsupported	Convert #% of Fire Damage with Mace Skills to Cold Damage
+unsupported	Convert #% of maximum Energy Shield to maximum Divinity
+unsupported	Convert #% of maximum Energy Shield to maximum Divinity #% increased maximum Divinity
+unsupported	Convert #% of maximum Life to twice as much Armour per #% Chaos Resistance above #%
+unsupported	Convert #% of maximum Life to twice as much Armour per #% Chaos Resistance above #% Defend with #% of Armour while you have Energy Shield
+unsupported	Convert All Armour to Evasion Rating
+unsupported	Copy a random Modifier from each enemy in your Presence when
+unsupported	Copy a random Modifier from each enemy in your Presence when you Shapeshift to an Animal form
+unsupported	Create Cold Infusion Remnants instead of Lightning
+unsupported	Create Cold Infusion Remnants instead of Lightning Create Fire Infusion Remnants instead of Cold
+unsupported	Create Fire Infusion Remnants instead of Cold
+unsupported	Create Lightning Infusion Remnants instead of Fire
+unsupported	Create Lightning Infusion Remnants instead of Fire Create Cold Infusion Remnants instead of Lightning
+unsupported	Create Lightning Infusion Remnants instead of Fire Create Cold Infusion Remnants instead of Lightning Create Fire Infusion Remnants instead of Cold
+unsupported	Create a Fragment of Divinity in your Presence every # seconds
+unsupported	Creates Ignited Ground for # seconds when used, Igniting enemies as though dealing Fire damage equal to #% of your maximum Life
+unsupported	Critical Hits cannot Extract Impale
+unsupported	Critical Hits inflict Impale
+unsupported	Critical Hits inflict Impale Critical Hits cannot Extract Impale
+unsupported	Critical Hits with Spells apply # Stack of Critical Weakness
+unsupported	Critical Hits with Spells apply # Stacks of Critical Weakness
+unsupported	Critical Hits with Spells apply # Stacks of Critical Weakness Critical Hits with Spells apply # Stack of Critical Weakness
+unsupported	Culling Strike against Beasts while your Companion is in your Presence
+unsupported	Curses you inflict are reflected back to you
+unsupported	Curses you inflict have infinite Duration
+unsupported	Curses you inflict have infinite Duration You can apply an additional Curse
+unsupported	Curses you inflict spread to enemies within # metres when Cursed enemy dies
+unsupported	Curses you inflict spread to enemies within # metres when Cursed enemy dies Gain # Dark Whisper every second there is a Cursed Enemy in your Presence
+unsupported	Damage Blocked is Recouped as Mana
+unsupported	Damage Penetrates (##)% Cold Resistance
+unsupported	Damage Penetrates (##)% Fire Resistance
+unsupported	Damage Penetrates (##)% Lightning Resistance
+unsupported	Damage of Enemies Hitting you is Unlucky
+unsupported	Damage of Enemies Hitting you is Unlucky while you are on Low Life
+unsupported	Damage of Enemies Hitting you is Unlucky while you are on Low Life #% chance to Avoid Death from Hits
+unsupported	Damage over Time bypasses your Energy Shield
+unsupported	Damage over Time bypasses your Energy Shield While not on Full Life, Sacrifice #% of maximum Mana per Second to Recover that much Life
+unsupported	Damage over Time cannot bypass your Energy Shield
+unsupported	Damage taken is Reserved from Darkness before being taken from Life or Energy Shield
+unsupported	Damage taken is Reserved from Darkness before being taken from Life or Energy Shield Darkness Reservation lasts for # seconds
+unsupported	Damage taken is Reserved from Darkness before being taken from Life or Energy Shield Darkness Reservation lasts for # seconds # to Maximum Darkness per Level
+unsupported	Damaging Ailments Cannot Be inflicted on you while you already have one
+unsupported	Damaging Ailments Cannot Be inflicted on you while you already have one #% increased Magnitude of Damaging Ailments you inflict
+unsupported	Damaging Spells consume a Power Charge if able to trigger Abyssal Apparition
+unsupported	Darkness Reservation lasts for # seconds
+unsupported	Darkness Reservation lasts for # seconds # to Maximum Darkness per Level
+unsupported	Deal up to #% more Damage to Enemies based on their missing Concentration
+unsupported	Deal your Thorns Damage to Enemies you Stun with Melee Attacks
+unsupported	Deals #% of current Mana as Chaos Damage to you when Effect ends
+unsupported	Debuffs inflicted by Hazards have #% increased Slow Magnitude
+unsupported	Debuffs inflicted by Hazards have #% increased Slow Magnitude #% increased Hazard Immobilisation buildup
+unsupported	Debuffs you inflict have #% increased Slow Magnitude
+unsupported	Debuffs you inflict have #% increased Slow Magnitude #% increased Exposure Effect
+unsupported	Debuffs you inflict have #% increased Slow Magnitude #% increased Hinder Duration
+unsupported	Debuffs you inflict have #% increased Slow Magnitude #% increased Physical Damage
+unsupported	Debuffs you inflict have #% increased Slow Magnitude #% increased Spirit
+unsupported	Debuffs you inflict have #% increased Slow Magnitude Cannot Immobilise enemies
+unsupported	Debuffs you inflict have #% increased Slow Magnitude Debuffs on you expire #% faster
+unsupported	Decimating Strike
+unsupported	Defend with #% of Armour against Critical Hits
+unsupported	Defend with #% of Armour against Critical Hits # to Strength
+unsupported	Defend with #% of Armour against Hits from Enemies that are further than #m away
+unsupported	Defend with #% of Armour against Projectile Attacks
+unsupported	Defend with #% of Armour while you have Energy Shield
+unsupported	Defend with #% of Armour while you have Energy Shield Damage over Time cannot bypass your Energy Shield
+unsupported	Deflected Hits cannot inflict Bleeding on you
+unsupported	Deflected Hits cannot inflict Maim on you
+unsupported	Deflected Hits cannot inflict Maim on you Deflected Hits cannot inflict Bleeding on you
+unsupported	Divine Flight
+unsupported	Dodge Roll avoids all Hits
+unsupported	Dodge Roll avoids all Hits Gain Overencumbrance for # seconds when you Dodge Roll
+unsupported	Dodge Roll passes through Enemies
+unsupported	Dodging can expend up to # Owl Feathers, granting Primal Bounty #% more
+unsupported	Dodging can expend up to # Owl Feathers, granting Primal Bounty #% more Empowerment effect per additional Feather expended
+unsupported	Dodging can expend up to # Owl Feathers, granting Primal Bounty #% more Empowerment effect per additional Feather expended Gain Owl Feathers #% faster
+unsupported	Drop Ignited Ground while moving, which lasts # seconds and Ignites as though dealing Fire Damage equal to #% of your maximum Life
+unsupported	Drop Shocked Ground while moving, lasting # seconds
+unsupported	Each Arrow fired is a Crescendo, Splinter, Reversing, Diamond, Covetous, or Blunt Arrow
+unsupported	Echoed Spells have #% increased Area of Effect
+unsupported	Effect is not removed when Unreserved Life is Filled
+unsupported	Effect is not removed when Unreserved Life is Filled #% of Damage taken during effect Recouped as Life
+unsupported	Effect is not removed when Unreserved Life is Filled Cannot be Used manually
+unsupported	Elemental Archon does not expire while on High Infernal Flame
+unsupported	Elemental Archon does not expire while on High Infernal Flame Lose Elemental Archon on reaching maximum Infernal Flame
+unsupported	Empowered Attacks Gain #% of Damage as Extra Cold Damage
+unsupported	Empowered Attacks Gain #% of Physical Damage as Extra Fire damage
+unsupported	Empowered Attacks deal #% increased damage per # Tribute
+unsupported	Empowered Attacks deal #% increased damage per # Tribute #% increased Warcry Speed per # Tribute
+unsupported	Empowered Attacks have #% increased Stun Buildup
+unsupported	Empowered Attacks have #% increased Stun Buildup #% increased Stun Threshold during Empowered Attacks
+unsupported	Empowerment effect per additional Feather expended
+unsupported	Empowerment effect per additional Feather expended Gain Owl Feathers #% faster
+unsupported	Enemies Chilled by your Hits can be Shattered as though Frozen
+unsupported	Enemies Chilled by your Hits can be Shattered as though Frozen #% chance to deal your Thorns Damage to Enemies you Hit with Melee Attacks
+unsupported	Enemies Hitting you have #% chance to gain an Endurance, 
+unsupported	Enemies Hitting you have #% chance to gain an Endurance,  Frenzy or Power Charge
+unsupported	Enemies Ignited by you permanently take #% increased Fire Damage for each second they have ever been Ignited by you, up to a maximum of #%
+unsupported	Enemies are Culled on Block
+unsupported	Enemies are Intimidated for # seconds when you Immobilise them
+unsupported	Enemies are Maimed for # seconds after becoming Unpinned
+unsupported	Enemies have Maximum Concentration equal to #% of their Maximum Life
+unsupported	Enemies have Maximum Concentration equal to #% of their Maximum Life Break enemy Concentration on Hit equal to #% of Damage Dealt
+unsupported	Enemies have Maximum Concentration equal to #% of their Maximum Life Break enemy Concentration on Hit equal to #% of Damage Dealt Enemies regain #% of Concentration every second if they haven't lost Concentration in the past # seconds
+unsupported	Enemies in Jagged Ground you create take #% increased Damage
+unsupported	Enemies in your Presence are Ignited as though dealt # Base Fire Damage
+unsupported	Enemies in your Presence are Ignited as though dealt # Base Fire Damage Enemies in your Presence are Ignited as though dealt # Base Fire Damage
+unsupported	Enemies in your Presence have additional Power equal to their Gruelling Madness
+unsupported	Enemies in your Presence killed by anyone count as being killed by you instead
+unsupported	Enemies near Enemies you Mark are Blinded
+unsupported	Enemies near Enemies you Mark are Blinded Enemies you Mark cannot deal Critical Hits
+unsupported	Enemies regain #% of Concentration every second if they haven't lost Concentration in the past # seconds
+unsupported	Enemies standing on Chilled Ground take #% increased Fire Damage
+unsupported	Enemies standing on Chilled Ground take #% increased Fire Damage Enemies standing on Ignited Ground take #% increased Cold Damage
+unsupported	Enemies standing on Ignited Ground take #% increased Cold Damage
+unsupported	Enemies take #% increased Damage for each Elemental Ailment type among
+unsupported	Enemies you Fully Armour Break are Maimed
+unsupported	Enemies you Fully Armour Break cannot Regenerate Life
+unsupported	Enemies you Fully Armour Break cannot Regenerate Life Enemies you Fully Armour Break are Maimed
+unsupported	Enemies you Heavy Stun while Shapeshifted are Intimidated for # seconds
+unsupported	Enemies you inflict Bleeding on cannot Regenerate Life
+unsupported	Enemies' Damage with Critical Hits against you is Lucky
+unsupported	Energy Shield Recharge is not interrupted by Damage if Recharge began Recently
+unsupported	Energy Shield Recharge starts on use
+unsupported	Energy Shield Recharge starts when you use a Mana Flask
+unsupported	Energy Shield starts at zero
+unsupported	Energy Shield starts at zero Cannot Recharge or Regenerate Energy Shield
+unsupported	Energy Shield starts at zero Cannot Recharge or Regenerate Energy Shield Lose #% of Energy Shield per second
+unsupported	Energy Shield starts at zero Cannot Recharge or Regenerate Energy Shield Lose #% of Energy Shield per second Life Leech effects are not removed when Unreserved Life is Filled
+unsupported	Energy Shield starts at zero Cannot Recharge or Regenerate Energy Shield Lose #% of Energy Shield per second Life Leech effects are not removed when Unreserved Life is Filled Life Leech effects Recover Energy Shield instead while on Full Life
+unsupported	Equipment has no Attribute Requirements
+unsupported	Equipment has no Attribute Requirements Skill Gems have no Attribute Requirements
+unsupported	Every # seconds during Effect, deal #% of Mana spent in those seconds as Chaos Damage to Enemies within # metres
+unsupported	Every # seconds during Effect, deal #% of Mana spent in those seconds as Chaos Damage to Enemies within # metres Every # seconds during Effect, deal #% of Mana spent in those seconds as Chaos Damage to Enemies within # metres
+unsupported	Every # seconds during Effect, deal #% of Mana spent in those seconds as Chaos Damage to Enemies within # metres Recover all Mana when Used
+unsupported	Every # seconds, Consume a nearby Corpse to Recover #% of maximum Life
+unsupported	Every # seconds, Recover # Life for every # Life Recovery per second from Regeneration
+unsupported	Every # seconds, gain a random non-damaging Shrine buff for # seconds
+unsupported	Every Third Slam skill that doesn't create Fissures which you use yourself causes # additional Aftershocks ahead and to each side of the initial area
+unsupported	Every five Rage also grants you #% increased Minion Attack Speed
+unsupported	Every five Rage also grants you #% increased Minion Attack Speed Every Rage also grants you #% increased Minion Damage
+unsupported	Every second Slam Skill you use while Shapeshifted is Ancestrally Boosted
+unsupported	Every second Slam Skill you use while Shapeshifted is Ancestrally Boosted Every second Strike Skill you use while Shapeshifted is Ancestrally Boosted
+unsupported	Every second Strike Skill you use while Shapeshifted is Ancestrally Boosted
+unsupported	Excess Life Recovery added as Guard for # seconds
+unsupported	Excess Life Recovery added as Guard for # seconds Excess Life Recovery added as Guard for # seconds
+unsupported	Excess Life Recovery from Leech is applied to Energy Shield
+unsupported	Expend all Vivid Wisps to trigger Vivid Stampede when you Attack
+unsupported	Expend all Vivid Wisps to trigger Vivid Stampede when you Attack Grants Skill: Vivid Stampede
+unsupported	Expend an Owl Feather when you Dodge to trigger Primal Bounty
+unsupported	Expend an Owl Feather when you Dodge to trigger Primal Bounty Grants Skill: Primal Bounty
+unsupported	Final Echo of Cascadable Spells also Cascades to either side of the targeted Area along a random axis
+unsupported	Fire Resistance is unaffected by Area Penalties
+unsupported	Fissure Skills have # to Limit
+unsupported	Flasks do not recover Life
+unsupported	Flasks do not recover Life Gain # Life Flask Charge per #% Life spent
+unsupported	Flasks do not recover Life Gain # Life Flask Charge per #% Life spent On Hitting an Enemy while a Life Flask is at full Charges, #% of its Charges are consumed
+unsupported	Flasks do not recover Life Gain # Life Flask Charge per #% Life spent On Hitting an Enemy while a Life Flask is at full Charges, #% of its Charges are consumed Gain #% of damage as Physical damage for # seconds per Charge consumed this way
+unsupported	Flasks do not recover Life On-Kill Effects happen twice
+unsupported	Fork an additional time
+unsupported	Fork an additional time Chain an additional time
+unsupported	Fork an additional time Chain an additional time Chain from Terrain an additional time
+unsupported	Fork an additional time Chain an additional time Chain from Terrain an additional time Cannot collide with targets
+unsupported	Frenzy or Power Charge
+unsupported	Fully Armour Broken enemies you kill with Hits Shatter
+unsupported	Fully Broken Armour you inflict also increases Cold and Lightning Damage Taken from Hits
+unsupported	Gain Combo from all Attack Hits
+unsupported	Gain Deflection Rating equal to #% of Evasion Rating per # Tribute
+unsupported	Gain Deflection Rating equal to #% of Evasion Rating per # Tribute #% increased Evasion Rating per # Tribute
+unsupported	Gain Elemental Archon after spending #% of your Maximum Mana
+unsupported	Gain Elemental Archon when you cast a Spell while on High Infernal Flame
+unsupported	Gain Elemental Archon when you cast a Spell while on High Infernal Flame Elemental Archon does not expire while on High Infernal Flame
+unsupported	Gain Elemental Archon when you cast a Spell while on High Infernal Flame Elemental Archon does not expire while on High Infernal Flame Lose Elemental Archon on reaching maximum Infernal Flame
+unsupported	Gain Elemental Archon when your Energy Shield Recharge begins
+unsupported	Gain Endurance Charges instead of Power Charges
+unsupported	Gain Finality for # seconds per Combo expended when using Skills
+unsupported	Gain Finality for # seconds per Combo expended when using Skills Gain # Guard for # seconds per Combo expended when using Skills
+unsupported	Gain Frenzy Charges instead of Endurance Charges
+unsupported	Gain Frenzy Charges instead of Endurance Charges Gain Endurance Charges instead of Power Charges
+unsupported	Gain Guard equal to #% of missing Energy Shield for # seconds when you Dodge Roll
+unsupported	Gain Guard equal to #% of missing Energy Shield for # seconds when you Dodge Roll Maximum amount of Guard is based on maximum Energy Shield instead
+unsupported	Gain Infernal Flame instead of spending Mana for Skill costs
+unsupported	Gain Infernal Flame instead of spending Mana for Skill costs Take maximum Life and Energy Shield as Fire Damage when Infernal Flame reaches maximum
+unsupported	Gain Infernal Flame instead of spending Mana for Skill costs Take maximum Life and Energy Shield as Fire Damage when Infernal Flame reaches maximum Lose all Infernal Flame on reaching maximum Infernal Flame
+unsupported	Gain Infernal Flame instead of spending Mana for Skill costs Take maximum Life and Energy Shield as Fire Damage when Infernal Flame reaches maximum Lose all Infernal Flame on reaching maximum Infernal Flame #% of Infernal Flame lost per second if none was gained in the past # seconds
+unsupported	Gain Overencumbrance for # seconds when you Dodge Roll
+unsupported	Gain Overencumbrance for # seconds when you Dodge Roll Your speed is Unaffected by Slows while Sprinting
+unsupported	Gain Owl Feathers #% faster
+unsupported	Gain Power Charges instead of Frenzy Charges
+unsupported	Gain Power Charges instead of Frenzy Charges Gain Frenzy Charges instead of Endurance Charges
+unsupported	Gain Power Charges instead of Frenzy Charges Gain Frenzy Charges instead of Endurance Charges Gain Endurance Charges instead of Power Charges
+unsupported	Gain a Power Charge when you consume an Elemental Infusion
+unsupported	Gain a Primal Owl Feather every # seconds, up to a maximum of #
+unsupported	Gain a Primal Owl Feather every # seconds, up to a maximum of # Expend an Owl Feather when you Dodge to trigger Primal Bounty
+unsupported	Gain a Primal Owl Feather every # seconds, up to a maximum of # Expend an Owl Feather when you Dodge to trigger Primal Bounty Grants Skill: Primal Bounty
+unsupported	Gain a Vivid Wisp for every # metres you move, up to a maximum of #
+unsupported	Gain a Vivid Wisp for every # metres you move, up to a maximum of # Expend all Vivid Wisps to trigger Vivid Stampede when you Attack
+unsupported	Gain a Vivid Wisp for every # metres you move, up to a maximum of # Expend all Vivid Wisps to trigger Vivid Stampede when you Attack Grants Skill: Vivid Stampede
+unsupported	Gain a Vivid Wisp when Vivid Stampede ends
+unsupported	Gain a Vivid Wisp when Vivid Stampede ends Stags deal #% more damage per leap
+unsupported	Gain a Vivid Wisp when Vivid Stampede ends Stags deal #% more damage per leap Stags have #% more Shock Magnitude per leap
+unsupported	Gain a random Charge on reaching Maximum Rage, no more than once every # seconds
+unsupported	Gain a random Charge on reaching Maximum Rage, no more than once every # seconds Lose all Rage on reaching Maximum Rage
+unsupported	Gain a stack of Jade every second
+unsupported	Gain a stack of Jade every second Grants Skill: Encase in Jade
+unsupported	Gain an Endurance Charge when you Heavy Stun a Rare or Unique Enemy
+unsupported	Gain an additional Charge when you gain a Charge
+unsupported	Gain no inherent bonus from Dexterity
+unsupported	Gain no inherent bonus from Dexterity #% increased Armour per # Dexterity
+unsupported	Gem Quality grants Socketed Skills an additional effect
+unsupported	Gloves you equip have their Base Type transformed to Fists of Stone while equipped, and
+unsupported	Gloves you equip have their Base Type transformed to Fists of Stone while equipped, and their Explicit Modifiers are transformed into more powerful related Modifiers
+unsupported	Gloves you equip have their Base Type transformed to Fists of Stone while equipped, and their Explicit Modifiers are transformed into more powerful related Modifiers Ignore Attribute Requirements to equip Gloves
+unsupported	Grant Elemental Archon to your Minions for # seconds when they Revive
+unsupported	Grants Onslaught during effect
+unsupported	Grants Sands of Time
+unsupported	Grants Skill: Kelari's Deception
+unsupported	Grants Skill: Kelari's Judgment
+unsupported	Grants Skill: Level # His Dark Horizon
+unsupported	Grants Skill: Level # His Dark Horizon Grants Skill: Level # His Foul Emergence
+unsupported	Grants Skill: Level # His Grave Command
+unsupported	Grants Skill: Level # His Grave Command Grants Skill: Level # His Scattering Calamity
+unsupported	Grants Skill: Navira's Fracturing
+unsupported	Grants Skill: Navira's Oasis
+unsupported	Grants Skill: Navira's Well
+unsupported	Grants Skill: Ruzhan's Fury
+unsupported	Grants Skill: Ruzhan's Reckoning
+unsupported	Grants Skill: Ruzhan's Trap
+unsupported	Grants Thaumaturgical Dynamism
+unsupported	Grants a Frenzy Charge on use
+unsupported	Grants a Power Charge on use
+unsupported	Grants effect of Dreaming Gloom Shrine
+unsupported	Grants effect of Guided Freezing Shrine
+unsupported	Grants effect of Guided Meteoric Shrine
+unsupported	Grants effect of Guided Tempest Shrine
+unsupported	Grants up to your maximum Rage on use
+unsupported	Green: #% less Movement Speed Penalty from using Skills while Moving
+unsupported	Hit damage is taken from Mana before Life if your current Mana is higher than your current Life
+unsupported	Hit damage is taken from Mana before Life if your current Mana is higher than your current Life #% less maximum Life
+unsupported	Hit damage is taken from Mana before Life if your current Mana is higher than your current Life #% less maximum Life #% less maximum Mana
+unsupported	Hits Break # Armour
+unsupported	Hits Break # Armour Inflicts Elemental Exposure when this Weapon Fully Breaks Armour
+unsupported	Hits with this Weapon inflict # Gruelling Madness
+unsupported	Hits with this Weapon inflict # Gruelling Madness Enemies in your Presence have additional Power equal to their Gruelling Madness
+unsupported	Ice Crystals have #% reduced maximum Life per #% Cold Resistance you have
+unsupported	If you would gain a Charge, Allies in your Presence gain that Charge instead
+unsupported	Ignites you cause are reflected back to you
+unsupported	Ignites you cause are reflected back to you #% reduced Magnitude of Ignite on you
+unsupported	Ignites you inflict spread to other Enemies that stay within # metres for # second
+unsupported	Ignites you inflict spread to other Enemies that stay within # metres for # second You gain Onslaught for # seconds on Kill
+unsupported	Increases Movement Speed by #%, plus #% per # Evasion Rating, up to a maximum of #%
+unsupported	Increases Movement Speed by #%, plus #% per # Evasion Rating, up to a maximum of #% Other Modifiers to Movement Speed except for Sprinting do not apply
+unsupported	Increases and Reductions to Mana Regeneration Rate also
+unsupported	Infinite Parry Range
+unsupported	Infinite Parry Range #% increased Parried Debuff Duration
+unsupported	Inflict Abyssal Wasting on Hit
+unsupported	Inflict Abyssal Wasting on Hit #% increased Magnitude of Abyssal Wasting you inflict
+unsupported	Inflict Abyssal Wasting on Hit Projectiles have #% chance to Chain an additional time from terrain
+unsupported	Inflict Cold Exposure on Igniting an Enemy
+unsupported	Inflict Cold Exposure on Igniting an Enemy Inflict Fire Exposure on Shocking an Enemy
+unsupported	Inflict Corrupted Blood for # seconds on Block, dealing #% of
+unsupported	Inflict Elemental Exposure to Enemies # metres in front of you
+unsupported	Inflict Elemental Exposure to Enemies # metres in front of you for # seconds, every # seconds while raised
+unsupported	Inflict Fire Exposure on Shocking an Enemy
+unsupported	Inflict Fire Exposure on Shocking an Enemy Inflict Lightning Exposure on Critical Hit
+unsupported	Inflict Lightning Exposure on Critical Hit
+unsupported	Inflicts Elemental Exposure when this Weapon Fully Breaks Armour
+unsupported	Inflicts Runefather's Challenge on enemies # metres in front of you when raised, no more than once every # seconds
+unsupported	Inflicts Runefather's Challenge on enemies # metres in front of you when raised, no more than once every # seconds Gain # Runefather's Boast per Power of targets affected by Runefather's Challenge you kill
+unsupported	Inflicts a random Curse on you when your Totems die, ignoring Curse limit
+unsupported	Invocation Skills cannot gain Energy while Triggering Spells
+unsupported	Invocation Skills cannot gain Energy while Triggering Spells Invoked Spells consume #% less Energy
+unsupported	Invocation Skills instead Trigger Spells every # seconds
+unsupported	Invocation Skills instead Trigger Spells every # seconds Invocation Skills cannot gain Energy while Triggering Spells
+unsupported	Invocation Skills instead Trigger Spells every # seconds Invocation Skills cannot gain Energy while Triggering Spells Invoked Spells consume #% less Energy
+unsupported	Invocation Spells have #% increased Critical Damage Bonus
+unsupported	Invoked Spells consume #% less Energy
+unsupported	Knocks Back Enemies on Hit
+unsupported	Knocks Back Enemies on Hit Cannot use Projectile Attacks
+unsupported	Leech Life #% less quickly
+unsupported	Leech Life #% less quickly Cannot Recover Life other than from Leech
+unsupported	Leech Life #% less quickly Cannot Recover Life other than from Leech Life Leech effects are not removed when Unreserved Life is Filled
+unsupported	Leeches #% of maximum Life when you Cast a Spell
+unsupported	Leeching Life from your Hits causes Allies in your Presence to also Leech the same amount of Life
+unsupported	Leeching Life from your Hits causes your Companion to also Leech the same amount of Life
+unsupported	Life Flask Effects do not Queue
+unsupported	Life Flasks also recover Mana
+unsupported	Life Flasks also recover Mana Mana Flasks also recover Life
+unsupported	Life Flasks applied to you grant Guard for # seconds equal to #% of the Life Recovery per Second they apply
+unsupported	Life Leech can Overflow Maximum Life
+unsupported	Life Leech can Overflow Maximum Life #% reduced Duration of Bleeding on You
+unsupported	Life Recharges
+unsupported	Life Recovery from Flasks can Overflow Maximum Life
+unsupported	Life Recovery from Flasks is instant
+unsupported	Life Recovery from your Flasks also applies to your Companions
+unsupported	Life Recovery other than Flasks cannot Recover Life to above Low Life
+unsupported	Life and Mana Flasks can be equipped in either slot
+unsupported	Lightning Damage of Enemies Hitting you is Unlucky
+unsupported	Lightning Damage of Enemies Hitting you is Unlucky Attacks have added Physical damage equal to #% of maximum Life
+unsupported	Lightning Damage of Enemies Hitting you is Unlucky during effect
+unsupported	Lightning Resistance is unaffected by Area Penalties
+unsupported	Lightning Skills Chain # times
+unsupported	Lightning Skills Chain # times #% increased Magnitude of Shock you inflict
+unsupported	Lightning Skills Chain # times Gain #% of Damage as Extra Chaos Damage
+unsupported	Lose Elemental Archon on reaching maximum Infernal Flame
+unsupported	Lose a Mountain's Teaching when you are Hit, or when you use or Sustain an Attack that benefits from Mountain's Teachings
+unsupported	Lose all Fragile Regrowth when Hit
+unsupported	Lose all Fragile Regrowth when Hit Gain # Fragile Regrowth each second
+unsupported	Lose all Infernal Flame on reaching maximum Infernal Flame
+unsupported	Lose all Infernal Flame on reaching maximum Infernal Flame #% of Infernal Flame lost per second if none was gained in the past # seconds
+unsupported	Lose all Power Charges on reaching maximum Power Charges
+unsupported	Lose all Power Charges on reaching maximum Power Charges Shocks you when you reach maximum Power Charges
+unsupported	Lose all Rage on reaching Maximum Rage
+unsupported	Lose all Runic Bindings when you Shapeshift to gain that much Unbound Potential
+unsupported	Lose all Tailwind when Hit
+unsupported	Maim on Critical Hit
+unsupported	Mana Flasks also recover Life
+unsupported	Mana Recovery from Flasks can Overflow maximum Mana during Effect
+unsupported	Mana Recovery from Regeneration Overflows maximum Mana
+unsupported	Mana Recovery from Regeneration Overflows maximum Mana #% less Mana Regeneration Rate
+unsupported	Mana Recovery other than Regeneration cannot Recover Mana
+unsupported	Maximum # Fragile Regrowth
+unsupported	Maximum # Fragile Regrowth #% of maximum Life Regenerated per second per Fragile Regrowth
+unsupported	Maximum Energy Shield cannot be Converted
+unsupported	Maximum Energy Shield cannot be Converted Regenerate # Life per second for every # Intelligence
+unsupported	Maximum Mana is replaced by twice as much Maximum Infernal Flame
+unsupported	Maximum Mana is replaced by twice as much Maximum Infernal Flame Gain Infernal Flame instead of spending Mana for Skill costs
+unsupported	Maximum Mana is replaced by twice as much Maximum Infernal Flame Gain Infernal Flame instead of spending Mana for Skill costs Take maximum Life and Energy Shield as Fire Damage when Infernal Flame reaches maximum
+unsupported	Maximum Mana is replaced by twice as much Maximum Infernal Flame Gain Infernal Flame instead of spending Mana for Skill costs Take maximum Life and Energy Shield as Fire Damage when Infernal Flame reaches maximum Lose all Infernal Flame on reaching maximum Infernal Flame
+unsupported	Maximum Mana is replaced by twice as much Maximum Infernal Flame Gain Infernal Flame instead of spending Mana for Skill costs Take maximum Life and Energy Shield as Fire Damage when Infernal Flame reaches maximum Lose all Infernal Flame on reaching maximum Infernal Flame #% of Infernal Flame lost per second if none was gained in the past # seconds
+unsupported	Maximum amount of Guard is based on maximum Energy Shield instead
+unsupported	Maximum amount of Guard is based on maximum Energy Shield instead Divine Flight
+unsupported	Meta Skills gain #% increased Energy
+unsupported	Meta Skills gain #% increased Energy #% increased Cast Speed per # Spirit
+unsupported	Meta Skills gain #% increased Energy #% increased Critical Hit Chance
+unsupported	Meta Skills gain #% increased Energy if you've dealt a Critical Hit Recently
+unsupported	Meta Skills gain #% more Energy
+unsupported	Meta Skills gain #% more Energy Meta Skills have #% increased Reservation Efficiency
+unsupported	Minions Break Armour equal to #% of Physical damage dealt
+unsupported	Minions Revive #% faster if all your Minions are Companions
+unsupported	Minions Revive #% slower
+unsupported	Minions Revive #% slower All Damage from Hits against Poisoned targets Contributes to Chill Magnitude
+unsupported	Minions cannot Die while affected by a Life Flask
+unsupported	Minions cannot Die while affected by a Life Flask #% increased Flask Charges gained
+unsupported	Minions deal (##)% increased Damage
+unsupported	Minions have (##)% increased maximum Life
+unsupported	Minions have (##)% increased maximum Life Minions deal (##)% increased Damage
+unsupported	Modifiers gained this way are lost after # seconds or when you next Shapeshift
+unsupported	Moving while Bleeding doesn't cause you to take extra damage
+unsupported	Nearby Allies and Enemies Share Charges with you
+unsupported	Nearby Allies and Enemies Share Charges with you Enemies Hitting you have #% chance to gain an Endurance, 
+unsupported	Nearby Allies and Enemies Share Charges with you Enemies Hitting you have #% chance to gain an Endurance,  Frenzy or Power Charge
+unsupported	No Charge requirement for placing Totems
+unsupported	No Charge requirement for placing Totems Totems reserve # Spirit each
+unsupported	No Inherent loss of Rage
+unsupported	No Inherent loss of Rage Regenerate #% of your maximum Rage per second
+unsupported	No Inherent loss of Rage Regenerate #% of your maximum Rage per second Increases and Reductions to Mana Regeneration Rate also apply to Rage Regeneration Rate
+unsupported	No Inherent loss of Rage Regenerate #% of your maximum Rage per second Increases and Reductions to Mana Regeneration Rate also apply to Rage Regeneration Rate Skills have # to Rage cost
+unsupported	No Inherent loss of Rage during effect
+unsupported	No Inherent loss of Rage during effect #% increased Duration
+unsupported	Non-Unique Life Flasks apply their Effects constantly
+unsupported	Non-Unique Life Flasks apply their Effects constantly Recovery from Life Flasks cannot be Instant
+unsupported	Non-Unique Time-Lost Jewels have #% increased radius
+unsupported	Off-hand Hits inflict Runefather's Challenge
+unsupported	Off-hand Hits inflict Runefather's Challenge Inflicts Runefather's Challenge on enemies # metres in front of you when raised, no more than once every # seconds
+unsupported	Offerings cannot be damaged if they have been created Recently
+unsupported	Offerings have #% increased Maximum Life
+unsupported	Offerings have #% increased Maximum Life Recover #% of maximum Life when you create an Offering
+unsupported	Offerings have #% reduced Maximum Life
+unsupported	On Hitting an Enemy while a Life Flask is at full Charges, #% of its Charges are consumed
+unsupported	On Hitting an Enemy while a Life Flask is at full Charges, #% of its Charges are consumed Gain #% of damage as Physical damage for # seconds per Charge consumed this way
+unsupported	On Hitting an enemy, gains maximum added Lightning damage equal to
+unsupported	On Hitting an enemy, gains maximum added Lightning damage equal to the enemy's Power for # seconds, up to a total of #
+unsupported	On-Kill Effects happen twice
+unsupported	Orb Skills have # to Limit
+unsupported	Other Modifiers to Movement Speed except for Sprinting do not apply
+unsupported	Other Modifiers to Movement Speed except for Sprinting do not apply Increases Movement Speed by #%, plus #% per # Evasion Rating, up to a maximum of #%
+unsupported	Overgrown Plant Skills Break #% increased Armour
+unsupported	Parried enemies take more Spell Damage instead of more Attack Damage
+unsupported	Parried enemies take more Spell Damage instead of more Attack Damage #% increased Parried Debuff Duration
+unsupported	Parrying applies # Stacks of Critical Weakness
+unsupported	Parrying applies # Stacks of Critical Weakness #% increased Parry Damage
+unsupported	Physical Damage of Enemies Hitting you is Unlucky
+unsupported	Physical Damage of Enemies Hitting you is Unlucky Convert All Armour to Evasion Rating
+unsupported	Physical damage from Hits Contributes to Chill Magnitude and Freeze Buildup
+unsupported	Physical damage from Hits Contributes to Chill Magnitude and Freeze Buildup Enemies in your Presence are Blinded
+unsupported	Pin Enemies which are Primed for Pinning
+unsupported	Pin Enemies which are Primed for Pinning Require # fewer enemies to be Surrounded
+unsupported	Pinned enemies cannot perform actions
+unsupported	Plants have a #% chance to immediately Overgrow
+unsupported	Possessed by Spirit Of The Bear for # seconds on use
+unsupported	Possessed by Spirit Of The Bear for # seconds on use Possessed by Spirit Of The Boar for # seconds on use
+unsupported	Possessed by Spirit Of The Boar for # seconds on use
+unsupported	Possessed by Spirit Of The Boar for # seconds on use Possessed by Spirit Of The Cat for # seconds on use
+unsupported	Possessed by Spirit Of The Cat for # seconds on use
+unsupported	Possessed by Spirit Of The Cat for # seconds on use Possessed by Spirit Of The Owl for # seconds on use
+unsupported	Possessed by Spirit Of The Owl for # seconds on use
+unsupported	Possessed by Spirit Of The Owl for # seconds on use Possessed by Spirit Of The Ox for # seconds on use
+unsupported	Possessed by Spirit Of The Ox for # seconds on use
+unsupported	Possessed by Spirit Of The Ox for # seconds on use Possessed by Spirit Of The Primate for # seconds on use
+unsupported	Possessed by Spirit Of The Primate for # seconds on use
+unsupported	Possessed by Spirit Of The Primate for # seconds on use Possessed by Spirit Of The Serpent for # seconds on use
+unsupported	Possessed by Spirit Of The Serpent for # seconds on use
+unsupported	Possessed by Spirit Of The Serpent for # seconds on use Possessed by Spirit Of The Stag for # seconds on use
+unsupported	Possessed by Spirit Of The Stag for # seconds on use
+unsupported	Possessed by Spirit Of The Stag for # seconds on use Possessed by Spirit Of The Wolf for # seconds on use
+unsupported	Possessed by Spirit Of The Wolf for # seconds on use
+unsupported	Prevent #% of Damage from Deflected Critical Hits
+unsupported	Projectile Attacks have a #% chance to fire two additional Projectiles while moving
+unsupported	Projectiles Pierce all Ignited enemies
+unsupported	Projectiles do one of the following at random:
+unsupported	Projectiles do one of the following at random: Fork an additional time
+unsupported	Projectiles do one of the following at random: Fork an additional time Chain an additional time
+unsupported	Projectiles do one of the following at random: Fork an additional time Chain an additional time Chain from Terrain an additional time
+unsupported	Projectiles do one of the following at random: Fork an additional time Chain an additional time Chain from Terrain an additional time Cannot collide with targets
+unsupported	Projectiles from Spells Chain # times
+unsupported	Projectiles from Spells Chain # times Projectiles from Spells cannot Pierce
+unsupported	Projectiles from Spells Fork
+unsupported	Projectiles from Spells Fork Projectiles from Spells Chain # times
+unsupported	Raise Shield inflicts Parried for # seconds on Hit
+unsupported	Recoup #% of damage taken by your Totems as Life
+unsupported	Recoup #% of damage taken by your Totems as Life Each Totem applies #% increased Damage taken to Enemies in their Presence
+unsupported	Recover #% of Maximum Life when you collect a Remnant
+unsupported	Recover #% of Maximum Mana when you collect a Remnant
+unsupported	Recover #% of Missing Life before being Hit by an Enemy
+unsupported	Recover #% of Missing Life before being Hit by an Enemy Recover #% of Missing Life before being Hit by an Enemy
+unsupported	Recover #% of maximum Life and Mana when you use a Warcry
+unsupported	Recover #% of maximum Life and Mana when you use a Warcry #% increased Warcry Speed
+unsupported	Recover #% of maximum Life and Mana when you use a Warcry #% increased Warcry Speed #% increased Warcry Cooldown Recovery Rate
+unsupported	Recover #% of maximum Life for each Endurance Charge consumed
+unsupported	Recover #% of maximum Life for each Endurance Charge consumed # to Maximum Endurance Charges
+unsupported	Recover #% of maximum Life on Kill per # Tribute
+unsupported	Recover #% of maximum Life on Killing a Poisoned Enemy
+unsupported	Recover #% of maximum Life on Killing a Poisoned Enemy #% increased Skill Effect Duration
+unsupported	Recover #% of maximum Life per Glory consumed
+unsupported	Recover #% of maximum Life when one of your Minions is Revived
+unsupported	Recover #% of maximum Life when you Heavy Stun a Rare or Unique Enemy
+unsupported	Recover #% of maximum Life when you create an Offering
+unsupported	Recover #% of maximum Life when you use a Mana Flask
+unsupported	Recover #% of maximum Life when you use a Mana Flask Mana Flasks gain # charges per Second
+unsupported	Recover #% of maximum Mana on Kill per # Tribute
+unsupported	Recover #% of maximum Mana when a Charm is used
+unsupported	Recover #% of maximum Mana when a Charm is used #% increased Culling Strike Threshold
+unsupported	Recover #% of maximum Mana when you consume a Power Charge
+unsupported	Recover #% of your maximum Life when an Enemy dies in your Presence
+unsupported	Recover #% of your maximum Life when an Enemy dies in your Presence Gain Deflection Rating equal to #% of Evasion Rating
+unsupported	Recover #% of your maximum Life when an Enemy dies in your Presence Recover #% of your maximum Life when an Enemy dies in your Presence
+unsupported	Recover #% of your maximum Life when an Enemy dies in your Presence Recover #% of your maximum Mana when an Enemy dies in your Presence
+unsupported	Recover #% of your maximum Mana when an Enemy dies in your Presence
+unsupported	Recover #% of your maximum Mana when an Enemy dies in your Presence #% faster start of Energy Shield Recharge
+unsupported	Recover #% of your maximum Mana when an Enemy dies in your Presence #% increased Spirit Reservation Efficiency
+unsupported	Recover #% of your maximum Mana when an Enemy dies in your Presence Recover #% of your maximum Mana when an Enemy dies in your Presence
+unsupported	Recover Life equal to #% of Mana Flask's Recovery Amount when used
+unsupported	Recover Life equal to #% of Mana Flask's Recovery Amount when used Recover Mana equal to #% of Life Flask's Recovery Amount when used
+unsupported	Recover Mana equal to #% of Life Flask's Recovery Amount when used
+unsupported	Recover all Mana when Used
+unsupported	Recover all Mana when Used Deals #% of current Mana as Chaos Damage to you when Effect ends
+unsupported	Recovery from Life Flasks cannot be Instant
+unsupported	Recovery from Life Flasks cannot be Instant Recovery from your Life Flasks cannot be applied to anything other than you
+unsupported	Recovery from your Life Flasks cannot be applied to anything other than you
+unsupported	Recovery from your Life Flasks cannot be applied to anything other than you #% less Life Flask Recovery
+unsupported	Regenerate #% of maximum Life over # second when Stunned
+unsupported	Regenerate #% of maximum Life over # second when Stunned # to Stun Threshold per Dexterity
+unsupported	Regenerate (##)% of maximum Life per second
+unsupported	Remnants can be collected from #% further away
+unsupported	Remnants can be collected from #% further away All Flames of Chayula that you manifest are Blue
+unsupported	Remnants can be collected from #% further away All Flames of Chayula that you manifest are Purple
+unsupported	Remnants can be collected from #% further away All Flames of Chayula that you manifest are Red
+unsupported	Remnants can be collected from #% further away Remnants you create reappear once, # seconds after being collected
+unsupported	Remnants you create affect Allies in your Presence as well as you when collected
+unsupported	Remnants you create affect Allies in your Presence as well as you when collected #% increased Reservation Efficiency of Remnant Skills
+unsupported	Remnants you create have #% increased effect per # Tribute
+unsupported	Remnants you create reappear once, # seconds after being collected
+unsupported	Remove Ignite when you Warcry
+unsupported	Remove a Curse after Channelling for # seconds
+unsupported	Remove a Curse when you use a Mana Flask
+unsupported	Remove all Explosive Rhythm on reaching # to gain Explosive Fervour for # Seconds
+unsupported	Repeatable Attacks with this Bow Repeat # time if no enemies are in your Presence
+unsupported	Repeatable Attacks with this Bow Repeat # time if no enemies are in your Presence Repeatable Attacks with this Bow Repeat # times if no enemies are in your Presence
+unsupported	Repeatable Attacks with this Bow Repeat # times if no enemies are in your Presence
+unsupported	Repeatable Spells have #% chance to Repeat
+unsupported	Reveal Weaknesses against Rare and Unique enemies
+unsupported	Reveal Weaknesses against Rare and Unique enemies #% more damage against enemies with an Open Weakness
+unsupported	Rolls only the minimum or maximum Damage value for each Damage Type
+unsupported	Sacrificing Energy Shield does not interrupt Recharge
+unsupported	Sacrificing Energy Shield does not interrupt Recharge Sacrifice #% of maximum Energy Shield when you Cast a Spell
+unsupported	Sacrificing Energy Shield does not interrupt Recharge Sacrifice #% of maximum Energy Shield when you Cast a Spell Spells for which this Sacrifice was fully made deal #% more Damage
+unsupported	Sealed Skills have #% increased Seal gain frequency
+unsupported	Share Charges with Allies in your Presence
+unsupported	Shocking Hits have a #% chance to also Shock enemies in a # metre radius
+unsupported	Shocks you when you reach maximum Power Charges
+unsupported	Sinister Jewel Socket
+unsupported	Skills Cost Divinity instead of Mana or Life
+unsupported	Skills can build and retain Combo regardless of Weapon Set
+unsupported	Skills can build and retain Combo regardless of Weapon Set Gain Combo from all Attack Hits
+unsupported	Skills from Corrupted Gems have #% increased Cost Efficiency during any Flask Effect
+unsupported	Skills from Corrupted Gems have #% increased Cost Efficiency during any Flask Effect Corrupted Blood cannot be inflicted on you
+unsupported	Skills from Corrupted Gems have #% of Mana Costs Converted to Life Costs
+unsupported	Skills lose Combo #% slower
+unsupported	Skills which Empower an Attack have #% chance to not count that Attack
+unsupported	Skills which Empower an Attack have #% chance to not count that Attack # to # added Physical Thorns damage per Runic Plate
+unsupported	Skills which create Fissures have a #% chance to create an additional Fissure
+unsupported	Skills which require Glory generate # Glory every # seconds
+unsupported	Skills which require Glory generate # Glory every # seconds Enemies in your Presence have Exposure
+unsupported	Slam Skills you use yourself cause an additional Aftershock
+unsupported	Slam Skills you use yourself have #% increased Aftershock Area of Effect
+unsupported	Spear Skills inflict a Bloodstone Lance on Hit, up to a maximum of # on each target
+unsupported	Spells fire Projectiles in a circle
+unsupported	Stags deal #% more damage per leap
+unsupported	Stags deal #% more damage per leap Stags have #% more Shock Magnitude per leap
+unsupported	Stags have #% more Shock Magnitude per leap
+unsupported	Storm and Plant Spells:
+unsupported	Storm and Plant Spells: deal #% more damage
+unsupported	Strike Skills you use yourself with Maces have #% chance to deal Splash Damage
+unsupported	Strikes deal Splash Damage
+unsupported	Strikes deal Splash Damage #% increased Physical Damage
+unsupported	Strikes deal Splash Damage Knocks Back Enemies on Hit
+unsupported	Successfully Parrying a Melee Hit grants #% increased Damage to your next Ranged Attack
+unsupported	Successfully Parrying a Melee Hit grants #% increased Damage to your next Ranged Attack Successfully Parrying a Projectile Hit grants #% increased Damage to your next Melee Attack
+unsupported	Successfully Parrying a Projectile Hit grants #% increased Damage to your next Melee Attack
+unsupported	Take maximum Life and Energy Shield as Fire Damage when Infernal Flame reaches maximum
+unsupported	Take maximum Life and Energy Shield as Fire Damage when Infernal Flame reaches maximum Lose all Infernal Flame on reaching maximum Infernal Flame
+unsupported	Take maximum Life and Energy Shield as Fire Damage when Infernal Flame reaches maximum Lose all Infernal Flame on reaching maximum Infernal Flame #% of Infernal Flame lost per second if none was gained in the past # seconds
+unsupported	Take no Damage from Volatility
+unsupported	Tame Beast can capture Unique Beasts
+unsupported	Tame Beast can capture Unique Beasts Can have up to one Unique Tamed Beast summoned
+unsupported	Tame Beast can capture Unique Beasts Can have up to one Unique Tamed Beast summoned Unique Tamed Beasts have #% increased movement speed
+unsupported	Tame Beast can capture Unique Beasts Can have up to one Unique Tamed Beast summoned Unique Tamed Beasts have #% increased movement speed Unique Tamed Beasts are Possessed by random Azmeri Spirits, changing every # seconds
+unsupported	The Bodach haunts your Presence
+unsupported	The next Attack you use within # seconds after Heavy Stunning a Rare or Unique Enemy is Ancestrally Boosted
+unsupported	The next Attack you use within # seconds after Heavy Stunning a Rare or Unique Enemy is Ancestrally Boosted Ancestrally Boosted Attacks deal #% increased Damage
+unsupported	The next Fire Spell you cast yourself after using a Warcry is Ancestrally Boosted
+unsupported	There is no Limit on the number of Banners you can place
+unsupported	This Flask cannot be Used but applies its Effect constantly
+unsupported	This Flask cannot be Used but applies its Effect constantly #% reduced Amount Recovered
+unsupported	This item gains bonuses from Socketed Items as though it was Boots
+unsupported	This item gains bonuses from Socketed Items as though it was Boots This item gains bonuses from Socketed Items as though it was Gloves
+unsupported	This item gains bonuses from Socketed Items as though it was Gloves
+unsupported	This item gains bonuses from Socketed Items as though it was Gloves This item gains bonuses from Socketed Items as though it was a Helmet
+unsupported	This item gains bonuses from Socketed Items as though it was a Body Armour
+unsupported	This item gains bonuses from Socketed Items as though it was a Body Armour Has # Augment Sockets
+unsupported	This item gains bonuses from Socketed Items as though it was a Body Armour This item gains bonuses from Socketed Items as though it was Boots
+unsupported	This item gains bonuses from Socketed Items as though it was a Helmet
+unsupported	This item gains bonuses from Socketed Items as though it was a Helmet This item gains bonuses from Socketed Items as though it was a Shield
+unsupported	This item gains bonuses from Socketed Items as though it was a Shield
+unsupported	This item gains bonuses from Socketed Soul Cores as though it was also Boots
+unsupported	This item gains bonuses from Socketed Soul Cores as though it was also Boots This item gains bonuses from Socketed Soul Cores as though it was also Gloves
+unsupported	This item gains bonuses from Socketed Soul Cores as though it was also Gloves
+unsupported	This item gains bonuses from Socketed Soul Cores as though it was also Gloves This item gains bonuses from Socketed Soul Cores as though it was also a Helmet
+unsupported	This item gains bonuses from Socketed Soul Cores as though it was also a Helmet
+unsupported	This item gains bonuses from Socketed Soul Cores as though it was also a Helmet This item gains bonuses from Socketed Soul Cores as though it was also a Shield
+unsupported	This item gains bonuses from Socketed Soul Cores as though it was also a Shield
+unsupported	This item gains bonuses from Socketed Soul Cores as though it was also a Shield Has no Attribute Requirements
+unsupported	Thorns can Retaliate against all Hits
+unsupported	Totems Regenerate #% of maximum Life per second
+unsupported	Totems die # seconds after their Life is reduced to #
+unsupported	Totems only use Skills when you fire an Attack Projectile
+unsupported	Trigger Decompose every # metres travelled
+unsupported	Trigger Elemental Expression on Melee Critical Hit
+unsupported	Trigger Elemental Expression on Melee Critical Hit Grants Skill: Elemental Expression
+unsupported	Trigger Elemental Storm on Critical Hit with Spells
+unsupported	Trigger Elemental Storm on Critical Hit with Spells Grants Skill: Elemental Storm
+unsupported	Trigger Ember Fusillade Skill on casting a Spell
+unsupported	Trigger Lightning Bolt Skill on Critical Hit
+unsupported	Trigger Spark Skill on killing a Shocked Enemy
+unsupported	Trigger skills refund half of Energy spent
+unsupported	Unaffected by Chill during Dodge Roll
+unsupported	Unaffected by Elemental Weakness
+unsupported	Unique Tamed Beasts are Possessed by random Azmeri Spirits, changing every # seconds
+unsupported	Unique Tamed Beasts have #% increased movement speed
+unsupported	Unique Tamed Beasts have #% increased movement speed Unique Tamed Beasts are Possessed by random Azmeri Spirits, changing every # seconds
+unsupported	Used when you are affected by a Slow
+unsupported	Used when you are affected by a Slow Grants Onslaught during effect
+unsupported	Used when you become Frozen
+unsupported	Used when you become Frozen #% Chance to gain a Charge when you kill an enemy
+unsupported	Used when you become Ignited
+unsupported	Used when you become Ignited #% Chance to gain a Charge when you kill an enemy
+unsupported	Used when you become Poisoned
+unsupported	Used when you become Poisoned Recover Life equal to #% of Mana Flask's Recovery Amount when used
+unsupported	Used when you become Shocked
+unsupported	Used when you become Shocked #% increased Duration
+unsupported	Used when you become Stunned
+unsupported	Used when you become Stunned Defend with #% of Armour during effect
+unsupported	Used when you kill a Rare or Unique enemy
+unsupported	Used when you kill a Rare or Unique enemy Possessed by Spirit Of The Bear for # seconds on use
+unsupported	Used when you release a skill with Perfect Timing
+unsupported	Used when you release a skill with Perfect Timing Skills have #% longer Perfect Timing window during effect
+unsupported	Used when you start Bleeding
+unsupported	Used when you start Bleeding Gains # Charges per Second
+unsupported	Used when you take Chaos damage from a Hit
+unsupported	Used when you take Chaos damage from a Hit #% increased Duration
+unsupported	Used when you take Cold damage from a Hit
+unsupported	Used when you take Cold damage from a Hit #% reduced Charges per use
+unsupported	Used when you take Fire damage from a Hit
+unsupported	Used when you take Fire damage from a Hit #% increased Charges
+unsupported	Used when you take Lightning damage from a Hit
+unsupported	Used when you take Lightning damage from a Hit #% increased Charges gained
+unsupported	Using a Mana Flask grants Guard equal to #% of Flask's recovery amount for # seconds
+unsupported	Using a Mana Flask grants Guard equal to #% of Flask's recovery amount for # seconds # Physical Damage taken on Minion Death
+unsupported	Using a Mana Flask grants Guard equal to #% of Flask's recovery amount for # seconds Using a Mana Flask grants Guard equal to #% of Flask's recovery amount for # seconds
+unsupported	Vivid Stags leap towards enemies
+unsupported	Vivid Stags leap towards enemies Central Projectile of Owl Feather-Empowered Skills leaves a trail of Soaring Ground
+unsupported	Volatile Power also grants #% increased Critical Hit chance per Volatility exploded
+unsupported	Warcries inflict # Critical Weakness on Enemies
+unsupported	When a Banner expires, recover #% of the Glory required for that Banner
+unsupported	When a Party Member in your Presence Casts a Spell, you
+unsupported	When a Party Member in your Presence Casts a Spell, you Sacrifice #% of Mana and they Leech that Mana
+unsupported	When collecting an Elemental Infusion, gain another different Elemental Infusion
+unsupported	When you Consume a Charge Trigger Chaotic Surge to gain # Chaos Surges
+unsupported	When you Consume a Charge Trigger Chaotic Surge to gain # Chaos Surges Life Leech recovers based on your Chaos damage instead of Physical damage
+unsupported	When you Consume a Charge, Trigger Elemental Surge to gain # Cold Surges
+unsupported	When you Consume a Charge, Trigger Elemental Surge to gain # Cold Surges Gain # fewer Lightning Surge from Triggering Elemental Surge
+unsupported	When you Consume a Charge, Trigger Elemental Surge to gain # Fire Surges
+unsupported	When you Consume a Charge, Trigger Elemental Surge to gain # Fire Surges When you Consume a Charge, Trigger Elemental Surge to gain # Cold Surges
+unsupported	When you Consume a Charge, Trigger Elemental Surge to gain # Fire Surges When you Consume a Charge, Trigger Elemental Surge to gain # Cold Surges Gain # fewer Lightning Surge from Triggering Elemental Surge
+unsupported	When you Consume a Charge, Trigger Elemental Surge to gain # Lightning Surges
+unsupported	When you Consume a Charge, Trigger Elemental Surge to gain # Lightning Surges Grants Skill: Elemental Surge
+unsupported	When you Shapeshift to Human form, gain #% increased Spell Damage per second you were Shapeshifted, up to a maximum of #%, for # seconds
+unsupported	When you gain Combo, gain an additional Combo
+unsupported	When you gain Combo, gain an additional Combo # seconds to current Energy Shield Recharge delay per Combo expended when using Skills
+unsupported	When you kill a Rare monster, you gain its Modifiers for # seconds
+unsupported	When you reload, triggers Gemini Surge to alternately
+unsupported	When you reload, triggers Gemini Surge to alternately gain # Cold Surges or # Fire Surges
+unsupported	Wind Skills which can be boosted by Elemental Ground Surfaces can be boosted by multiple Elemental Ground Surfaces
+unsupported	Wind Skills which can be boosted by Elemental Ground Surfaces can be boosted by multiple Elemental Ground Surfaces #% reduced Duration of Curses on you
+unsupported	Wind Skills which can be boosted by Elemental Ground Surfaces can be boosted by multiple Elemental Ground Surfaces Wind Skills which can be boosted by Elemental Ground Surfaces count
+unsupported	Wind Skills which can be boosted by Elemental Ground Surfaces count
+unsupported	Wind Skills which can be boosted by Elemental Ground Surfaces count Ignite you inflict deals Chaos Damage instead of Fire Damage
+unsupported	Wind Skills which can be boosted by Elemental Ground Surfaces count Wind Skills which can be boosted by Elemental Ground Surfaces count
+unsupported	Wind Skills which can be boosted by Elemental Ground Surfaces count as being boosted by Chilled Ground
+unsupported	Wind Skills which can be boosted by Elemental Ground Surfaces count as being boosted by Ignited Ground
+unsupported	Wind Skills which can be boosted by Elemental Ground Surfaces count as being boosted by Ignited, Shocked, and Chilled Ground
+unsupported	Wind Skills which can be boosted by Elemental Ground Surfaces count as being boosted by Shocked Ground
+unsupported	Withered also causes enemies to deal #% reduced Damage
+unsupported	Withered does not expire on Enemies Ignited by you
+unsupported	Withered does not expire on Enemies Ignited by you #% chance to Intimidate Enemies for # seconds on Hit
+unsupported	Withered you inflict also increases Fire Damage taken
+unsupported	Withered you inflict also increases Fire Damage taken Withered does not expire on Enemies Ignited by you
+unsupported	Withered you inflict has infinite Duration
+unsupported	You can have any number of Companions of different types
+unsupported	You can have two Companions of different types
+unsupported	You can have two Companions of different types #% more Reservation Efficiency of Companion Skills
+unsupported	You can have two Companions of different types #% more Reservation Efficiency of Companion Skills #% less Reservation Efficiency of non-Companion Skills
+unsupported	You can only Socket # Emerald Jewel in this item
+unsupported	You can only Socket # Emerald Jewel in this item #% to Cold and Lightning Resistances per Equipped Item with a Fire Resistance Modifier
+unsupported	You can only Socket # Ruby Jewel in this item
+unsupported	You can only Socket # Ruby Jewel in this item You can only Socket # Sapphire Jewel in this item
+unsupported	You can only Socket # Sapphire Jewel in this item
+unsupported	You can only Socket # Sapphire Jewel in this item Projectiles from Spells Fork
+unsupported	You cannot Recover Energy Shield from Regeneration
+unsupported	You cannot Recover Energy Shield from Regeneration You cannot Recover Energy Shield to above Armour
+unsupported	You cannot Recover Energy Shield to above Armour
+unsupported	You cannot be Chilled for # seconds after being Chilled
+unsupported	You cannot be Chilled for # seconds after being Chilled You cannot be Frozen for # seconds after being Frozen
+unsupported	You cannot be Electrocuted
+unsupported	You cannot be Electrocuted #% reduced effect of Shock on you
+unsupported	You cannot be Frozen for # seconds after being Frozen
+unsupported	You cannot be Frozen for # seconds after being Frozen You cannot be Ignited for # seconds after being Ignited
+unsupported	You cannot be Ignited for # seconds after being Ignited
+unsupported	You cannot be Ignited for # seconds after being Ignited You cannot be Shocked for # seconds after being Shocked
+unsupported	You cannot be Light Stunned if you've been Stunned Recently
+unsupported	You cannot be Shocked for # seconds after being Shocked
+unsupported	You cannot be Shocked for # seconds after being Shocked Curses you inflict are reflected back to you
+unsupported	You deal #% more Damage per # total Power of your Undead Minions
+unsupported	You deal #% more Damage per # total Power of your Undead Minions Undead Minions have #% less maximum Life
+unsupported	You have a Smoke Cloud around you while stationary
+unsupported	You take Fire Damage instead of Physical Damage from Bleeding
+unsupported	You take Fire Damage instead of Physical Damage from Bleeding Bleeding you inflict deals Fire Damage instead of Physical Damage
+unsupported	You take Fire Damage instead of Physical Damage from Bleeding Fire Damage also Contributes to Bleeding Magnitude
+unsupported	Your Critical Hit Chance cannot be Rerolled
+unsupported	Your Heavy Stun buildup empties #% faster
+unsupported	Your Heavy Stun buildup empties #% faster if you've successfully Parried Recently
+unsupported	Your Heavy Stun buildup empties #% faster per # Tribute
+unsupported	Your Heavy Stun buildup empties #% faster per # Tribute #% increased Armour, Evasion and Energy Shield from Equipped Shield per # Tribute
+unsupported	Your Hits are Crushing Blows
+unsupported	Your Life Flask also applies to your Minions
+unsupported	Your Life Flask also applies to your Minions Minions cannot Die while affected by a Life Flask
+unsupported	Your Offerings can target Enemies in Culling range
+unsupported	Your Offerings can target Enemies in Culling range Your Offerings affect you instead of your Minions
+unsupported	Your Offerings can target Enemies in Culling range Your Offerings affect you instead of your Minions Offerings created by Culling Enemies have #% increased Effect per Power of Culled Enemy
+unsupported	Your maximum Energy Shield is equal to #% of your Strength
+unsupported	Your maximum Energy Shield is equal to #% of your Strength Maximum Energy Shield cannot be Converted
+unsupported	Your other Modifiers to Rarity of Items found do not apply
+unsupported	Your other Modifiers to Rarity of Items found do not apply #% to Cold Resistance
+unsupported	Your speed is Unaffected by Slows while Sprinting
+unsupported	Your speed is Unaffected by Slows while Sprinting #% less Movement and Skill Speed per Dodge Roll in the past # seconds
+unsupported	additional Elemental Infusion of the same type
+unsupported	additional Rune-only sockets:
+unsupported	additional Rune-only sockets: # Helmet socket
+unsupported	additional Rune-only sockets: # Helmet socket # Body Armour sockets
+unsupported	additional Rune-only sockets: # Helmet socket # Body Armour sockets # Gloves socket
+unsupported	additional Rune-only sockets: # Helmet socket # Body Armour sockets # Gloves socket # Boots socket
+unsupported	as being boosted by Chilled Ground
+unsupported	as being boosted by Ignited Ground
+unsupported	as being boosted by Ignited, Shocked, and Chilled Ground
+unsupported	as being boosted by Shocked Ground
+unsupported	being Shapeshifted for at least # seconds
+unsupported	for # seconds, every # seconds while raised
+unsupported	the enemy's Power for # seconds, up to a total of #
+unsupported	until you take no Damage to Life for # seconds
+unsupported	until you take no Damage to Life for # seconds Life that would be lost by taking Damage is instead Reserved
+unsupported	you Shapeshift to an Animal form
+unsupported	you Shapeshift to an Animal form Modifiers gained this way are lost after # seconds or when you next Shapeshift
+unsupported	your maximum number of Power Charges
+unsupported	your maximum number of Power Charges # to Maximum Power Charges
+partial	# Body Armour sockets	Body  sockets
+partial	# Body Armour sockets # Gloves socket	Body  sockets # Gloves socket
+partial	# Body Armour sockets # Gloves socket # Boots socket	Body  sockets # Gloves socket # Boots socket
+partial	# Boots socket	Boots socket
+partial	# Gloves socket	Gloves socket
+partial	# Gloves socket # Boots socket	Gloves socket # Boots socket
+partial	# Helmet socket	Helmet socket
+partial	# Helmet socket # Body Armour sockets	Helmet socket # Body  sockets
+partial	# Helmet socket # Body Armour sockets # Gloves socket	Helmet socket # Body  sockets # Gloves socket
+partial	# Helmet socket # Body Armour sockets # Gloves socket # Boots socket	Helmet socket # Body  sockets # Gloves socket # Boots socket
+partial	# maximum Rage if you've used a Skill that Requires Glory in the past # seconds	if you've used a Skill that Requires Glory in the past # seconds
+partial	# maximum stacks of Puppet Master	maximum stacks of Puppet Master
+partial	# metre to Dodge Roll distance	metre to Dodge Roll distance
+partial	# metre to Dodge Roll distance #% increased Evasion Rating if you've Dodge Rolled Recently	metre to Dodge Roll distance #% increased
+partial	# metre to Dodge Roll distance if you've Dodge Rolled Recently	metre to Dodge Roll distance
+partial	# metre to Dodge Roll distance if you've Dodge Rolled Recently Repeatable Attacks with this Bow Repeat # time if no enemies are in your Presence	metre to Dodge Roll distance  Repeatable Attacks with this Bow Repeat # time if no enemies are in your Presence
+partial	# metres to Dodge Roll distance if you haven't Dodge Rolled Recently	metres to Dodge Roll distance if you haven't Dodge Rolled Recently
+partial	# metres to Dodge Roll distance if you haven't Dodge Rolled Recently # metre to Dodge Roll distance if you've Dodge Rolled Recently	metres to Dodge Roll distance if you haven't Dodge Rolled Recently # metre to Dodge Roll distance
+partial	# metres to Dodge Roll distance while Surrounded	metres to Dodge Roll distance
+partial	# metres to Dodge Roll distance while Surrounded #% increased Movement Speed while Surrounded	metres to Dodge Roll distance  #% increased
+partial	# seconds after being Damaged by an Enemy Hit, take Damage equal to #% of that Hit's Damage	seconds after being d by an Enemy Hit, take Damage equal to #% of that Hit's Damage
+partial	# seconds to current Energy Shield Recharge delay per Combo expended when using Skills	seconds to current  Recharge delay per Combo expended when using Skills
+partial	# to # added Physical Thorns damage per Runic Plate	to # added Physical  per Runic Plate
+partial	# to Deflection Rating per # missing Energy Shield	per # missing Energy Shield
+partial	# to Deflection Rating per # missing Energy Shield #% increased Evasion and Energy Shield	per # missing Energy Shield #% increased Evasion and Energy Shield
+partial	# to Maximum Power Charges	to
+partial	# to maximum Cold Infusions	maximum Cold Infusions
+partial	# to maximum Fire Infusions	maximum Fire Infusions
+partial	# to maximum Lightning Infusions	maximum Lightning Infusions
+partial	# to maximum number of Elemental Infusions	maximum number of Elemental Infusions
+partial	# to maximum number of placed Banners	maximum number of placed Banners
+partial	#% Chance to build an additional Combo on Hit	to build an additional Combo
+partial	#% Chance to revive a random Permanent Minion whenever you use a Command Skill	to revive a random Permanent  whenever you use a Command Skill
+partial	#% Chance to revive a random Permanent Minion whenever you use a Command Skill #% Surpassing Chance to gain a Puppet Master stack whenever you use a Command Skill	to revive a random Permanent  whenever you use a Command Skill #% Surpassing Chance to gain a Puppet Master stack whenever you use a Command Skill
+partial	#% Surpassing Chance to gain a Puppet Master stack whenever you use a Command Skill	% Surpassing Chance to gain a Puppet Master stack whenever you use a Command Skill
+partial	#% Surpassing chance per enemy Power to gain Mountain's Teachings on Immobilising an enemy, up to a maximum of #	% Surpassing chance per enemy Power to gain Mountain's Teachings on Immobilising an enemy, up to a maximum of #
+partial	#% Surpassing chance per enemy Power to gain Mountain's Teachings on Immobilising an enemy, up to a maximum of # Lose a Mountain's Teaching when you are Hit, or when you use or Sustain an Attack that benefits from Mountain's Teachings	% Surpassing chance per enemy Power to gain Mountain's Teachings on Immobilising an enemy, up to a maximum of # Lose a Mountain's Teaching when you are Hit, or when you use or Sustain an Attack that benefits from Mountain's Teachings
+partial	#% chance for Attacks to Maim on Hit against Poisoned Enemies	to Maim on Hit
+partial	#% chance for Attacks to Maim on Hit against Poisoned Enemies #% increased Magnitude of Poison you inflict	to Maim on Hit  #% increased
+partial	#% chance for Bleeding to be Aggravated when Inflicted against Enemies on Jagged Ground	to be Aggravated when Inflicted against Enemies on Jagged Ground
+partial	#% chance for Bleeding to be Aggravated when Inflicted against Enemies on Jagged Ground #% increased Jagged Ground Duration	to be Aggravated when Inflicted against Enemies on Jagged Ground #% increased Jagged Ground
+partial	#% chance for Charms you use to not consume Charges	for Charms you use to not consume
+partial	#% chance for Charms you use to not consume Charges Recover #% of maximum Mana when a Charm is used	for Charms you use to not consume  Recover #% of maximum Mana when a Charm is used
+partial	#% chance for Damage of Enemies Hitting you to be Unlucky	for  of Enemies Hitting you to be Unlucky
+partial	#% chance for Damage of Enemies Hitting you to be Unlucky #% chance for Damage with Hits to be Lucky	for  of Enemies Hitting you to be Unlucky #% chance for Damage  to be Lucky
+partial	#% chance for Enemies you Kill to Explode, dealing #%	for Enemies you Kill to Explode, dealing #%
+partial	#% chance for Energy Shield Recharge to start when you Kill an Enemy	for  Recharge to start
+partial	#% chance for Mace Slam Skills you use yourself to cause an additional Aftershock	for Mace Slam Skills you use yourself to cause an additional Aftershock
+partial	#% chance for Mace Slam Skills you use yourself to cause an additional Aftershock Strike Skills you use yourself with Maces have #% chance to deal Splash Damage	for Mace Slam Skills you use yourself to cause an additional Aftershock Strike Skills you use yourself  have #% chance to deal Splash
+partial	#% chance for Projectiles to Pierce Enemies within #m distance of you	for  to Pierce Enemies within #m distance of you
+partial	#% chance for Remnants you create to grant their effects twice	for Remnants you create to grant their s twice
+partial	#% chance for Shapeshift Slam Skills you use yourself to cause an additional Aftershock	for Shapeshift Slam Skills you use yourself to cause an additional Aftershock
+partial	#% chance for Slam Skills to cause an additional Aftershock	for Slam Skills to cause an additional Aftershock
+partial	#% chance for Slam Skills you use yourself to cause an additional Aftershock	for Slam Skills you use yourself to cause an additional Aftershock
+partial	#% chance for Spell Damage with Critical Hits to be Lucky	for    to be Lucky
+partial	#% chance for Spell Damage with Critical Hits to be Lucky #% chance for Spell Damage with Critical Hits to be Lucky	for    to be Lucky #% chance for Spell Damage  to be Lucky
+partial	#% chance for Spell Damage with Critical Hits to be Lucky #% to Fire and Lightning Resistances per Equipped Item with a Cold Resistance Modifier	for    to be Lucky #% to Fire and Lightning Resistances per Equipped Item with a Cold Resistance Modifier
+partial	#% chance for Trigger skills to refund half of Energy Spent	for Trigger skills to refund half of Energy Spent
+partial	#% chance for Trigger skills to refund half of Energy Spent #% increased chance to inflict Ailments	for Trigger skills to refund half of Energy Spent #% increased
+partial	#% chance on Consuming a Shock on an Enemy to reapply it	on Consuming a Shock on an Enemy to reapply it
+partial	#% chance that if you would gain Endurance Charges, you instead gain up to maximum Endurance Charges	that if you would gain Endurance , you instead gain up to maximum Endurance Charges
+partial	#% chance that if you would gain Endurance Charges, you instead gain up to maximum Endurance Charges # to Maximum Endurance Charges	that if you would gain Endurance , you instead gain up to maximum Endurance Charges # to Maximum Endurance Charges
+partial	#% chance that if you would gain Frenzy Charges, you instead gain up to your maximum number of Frenzy Charges	that if you would gain Frenzy , you instead gain up to your maximum number of Frenzy Charges
+partial	#% chance that if you would gain Frenzy Charges, you instead gain up to your maximum number of Frenzy Charges # to Maximum Frenzy Charges	that if you would gain Frenzy , you instead gain up to your maximum number of Frenzy Charges # to Maximum Frenzy Charges
+partial	#% chance that if you would gain Power Charges, you instead gain up to	that if you would gain Power , you instead gain up to
+partial	#% chance that if you would gain Power Charges, you instead gain up to your maximum number of Power Charges	that if you would gain Power , you instead gain up to your maximum number of Power Charges
+partial	#% chance that if you would gain Power Charges, you instead gain up to your maximum number of Power Charges # to Maximum Power Charges	that if you would gain Power , you instead gain up to your maximum number of Power Charges # to Maximum Power Charges
+partial	#% chance that if you would gain Rage on Hit, you instead gain up to your maximum Rage	that if you would gain Rage , you instead gain up to your
+partial	#% chance that when Volatility on you explodes, you regain an equivalent amount of Volatility	that when Volatility on you explodes, you regain an equivalent amount of Volatility
+partial	#% chance to Aggravate Bleeding on Hit	to Aggravate Bleeding
+partial	#% chance to Aggravate Bleeding on targets you Critically Hit with Attacks	to Aggravate Bleeding on targets you Critically Hit
+partial	#% chance to Aggravate Bleeding on targets you Hit with Attacks	to Aggravate Bleeding on targets you Hit
+partial	#% chance to Aggravate Bleeding on targets you Hit with Attacks #% increased Attack Speed while a Rare or Unique Enemy is in your Presence	to Aggravate Bleeding on targets you Hit  #% increased
+partial	#% chance to Aggravate Bleeding on targets you Hit with Empowered Attacks	to Aggravate Bleeding on targets you Hit with Empowered Attacks
+partial	#% chance to Aggravate Bleeding on targets you Hit with Empowered Attacks Empowered Attacks deal #% increased Damage	to Aggravate Bleeding on targets you Hit with Empowered Attacks Empowered Attacks deal #% increased
+partial	#% chance to Avoid Death from Hits	to Avoid Death from Hits
+partial	#% chance to Daze Enemies whose Hits you Block with a raised Shield	Enemies whose Hits you Block with a raised Shield
+partial	#% chance to Hinder Enemies on Hit with Spells	to Hinder Enemies
+partial	#% chance to Intimidate Enemies for # seconds on Hit	to Intimidate Enemies
+partial	#% chance to Intimidate Enemies for # seconds on Hit #% chance to Intimidate Enemies for # seconds on Hit	to Intimidate Enemies   #% chance to Intimidate Enemies  on Hit
+partial	#% chance to Intimidate Enemies for # seconds on Hit #% of Armour also applies to Chaos Damage	to Intimidate Enemies   #% of  also applies to Chaos Damage
+partial	#% chance to Knock Back Bleeding Enemies with Hits	to Knock Back Bleeding Enemies
+partial	#% chance to Knock Enemies Back with Hits at Close Range	to Knock Enemies Back
+partial	#% chance to Maim on Hit	to Maim
+partial	#% chance to Maim on Hit Adds # to # Physical Damage	to Maim  Adds # to #
+partial	#% chance to be Poisoned	to be Poisoned
+partial	#% chance to be Poisoned #% chance to Poison on Hit with Spell Damage	to be Poisoned #% chance
+partial	#% chance to be inflicted with Bleeding when Hit	to be inflicted  when Hit
+partial	#% chance to create an additional Remnant	to create an additional Remnant
+partial	#% chance to create an additional Remnant Remnants can be collected from #% further away	to create an additional Remnant Remnants can be collected from #% further away
+partial	#% chance to deal your Thorns Damage to Enemies you Hit with Melee Attacks	to deal your  to Enemies you Hit
+partial	#% chance to deal your Thorns Damage to Enemies you Hit with Melee Attacks #% chance for Spell Damage with Critical Hits to be Lucky	to deal your  to Enemies you Hit  #% chance for Spell Damage  to be Lucky
+partial	#% chance to deal your Thorns Damage to Enemies you Hit with Melee Attacks #% chance to deal your Thorns Damage to Enemies you Hit with Melee Attacks	to deal your  to Enemies you Hit  #% chance to deal your Thorns Damage to Enemies you Hit with Melee Attacks
+partial	#% chance to gain Onslaught on Killing Blow with Axes	ing Blow
+partial	#% chance to load a bolt into all Crossbow skills on Kill	to load a bolt into all  skills
+partial	#% chance to load a bolt into all Crossbow skills on Kill Sacrifice # Life to not consume the last bolt when firing	to load a bolt into all  skills #  to not consume the last bolt when firing
+partial	#% chance to not destroy Corpses when Consuming Corpses	to not destroy Corpses when Consuming Corpses
+partial	#% chance when a Charm is used to use another Charm without consuming Charges	when a Charm is used to use another Charm without consuming
+partial	#% chance when a Charm is used to use another Charm without consuming Charges Charms applied to you have #% increased Effect	when a Charm is used to use another Charm without consuming  Charms applied to you have #% increased Effect
+partial	#% chance when collecting an Elemental Infusion to gain an	when collecting an Elemental Infusion to gain an
+partial	#% chance when collecting an Elemental Infusion to gain an additional Elemental Infusion of the same type	when collecting an Elemental Infusion to gain an additional Elemental Infusion of the same type
+partial	#% chance when you gain a Charge to gain an additional Charge per # Tribute	when you gain a Charge to gain an additional Charge
+partial	#% chance when you gain a Frenzy Charge to gain an additional Frenzy Charge	when you gain a Frenzy Charge to gain an additional Frenzy Charge
+partial	#% chance when you gain a Frenzy Charge to gain an additional Frenzy Charge # to Maximum Frenzy Charges	when you gain a Frenzy Charge to gain an additional Frenzy Charge # to
+partial	#% chance when you gain a Power Charge to gain an additional Power Charge	when you gain a Power Charge to gain an additional Power Charge
+partial	#% chance when you gain a Power Charge to gain an additional Power Charge # to Maximum Power Charges	when you gain a Power Charge to gain an additional Power Charge # to
+partial	#% chance when you gain an Endurance Charge to gain an additional Endurance Charge	when you gain an Endurance Charge to gain an additional Endurance Charge
+partial	#% chance when you gain an Endurance Charge to gain an additional Endurance Charge # to Maximum Endurance Charges	when you gain an Endurance Charge to gain an additional Endurance Charge # to
+partial	#% faster Dodge Roll	Dodge Roll
+partial	#% faster Dodge Roll Gain Guard equal to #% of missing Energy Shield for # seconds when you Dodge Roll	Dodge Roll Gain Guard equal to #% of missing   when you Dodge Roll
+partial	#% faster start of Energy Shield Recharge while affected by an Archon Buff	while affected by an Archon Buff
+partial	#% faster start of inherent Rage loss	start of inherent Rage loss
+partial	#% increased Accuracy Rating against Enemies affected by Abyssal Wasting	against Enemies affected by Abyssal Wasting
+partial	#% increased Accuracy Rating against Enemies affected by Abyssal Wasting #% of Mana Leeched from targets affected by Abyssal Wasting is Instant	against Enemies affected by Abyssal Wasting #% of Mana Leeched from targets affected by Abyssal Wasting is Instant
+partial	#% increased Archon Buff duration	Archon Buff
+partial	#% increased Archon Buff duration #% faster start of Energy Shield Recharge while affected by an Archon Buff	Archon Buff  #% faster start of Energy Shield Recharge while affected by an Archon Buff
+partial	#% increased Archon Buff duration #% increased effect of Archon Buffs on you	Archon Buff  #% increased effect of Archon Buffs on you
+partial	#% increased Area of Effect for Attacks per Enemy you've Ignited in the last # seconds, up to #%	per Enemy you've Ignited in the last # seconds, up to #%
+partial	#% increased Armour Break Duration	Break Duration
+partial	#% increased Armour Break Duration #% increased Attack Area Damage	Break Duration #% increased Attack  Damage
+partial	#% increased Attack Damage for each different Non-Instant Spell you've used in the past # seconds	for each different Non-Instant  you've used in the past # seconds
+partial	#% increased Blind duration	Blind
+partial	#% increased Blind duration #% increased Damage with Hits against Blinded Enemies	Blind  #% increased Damage
+partial	#% increased Cast Speed for each different Spell you've Cast in the last eight seconds	for each different  you've Cast in the last eight seconds
+partial	#% increased Cast Speed if you've used a Mana Flask Recently	if you've used a Mana Flask Recently
+partial	#% increased Cast Speed if you've used a Mana Flask Recently Mana Flasks gain # charges per Second	if you've used a Mana Flask Recently Mana Flasks gain # charges per Second
+partial	#% increased Cast Speed per Spell Echoed Recently, up to #%	per  Echoed Recently, up to #%
+partial	#% increased Chance to Block if you've Blocked with a raised Shield Recently	if you've Blocked with a raised Shield Recently
+partial	#% increased Chance to Block if you've Blocked with a raised Shield Recently #% increased Armour, Evasion and Energy Shield from Equipped Shield	if you've Blocked with a raised Shield Recently #% increased Armour, Evasion and Energy Shield
+partial	#% increased Chance to be afflicted by Ailments when Hit	Chance to be afflicted by Ailments when Hit
+partial	#% increased Chance to be afflicted by Ailments when Hit #% increased Movement Speed while affected by an Ailment	Chance to be afflicted by Ailments when Hit #% increased
+partial	#% increased Chaos Damage over Time per Volatility	per Volatility
+partial	#% increased Cooldown Recovery Rate for Grenade Skills	forSkills
+partial	#% increased Cooldown Recovery Rate for Grenade Skills #% reduced Grenade Damage	forSkills #% reduced  Damage
+partial	#% increased Corrupted Charms effect duration	Corrupted Charms  duration
+partial	#% increased Corrupted Charms effect duration #% of Charges consumed by used Charms are granted to your Life Flasks	Corrupted Charms  duration #% of Charges consumed by used Charms are granted to your Life Flasks
+partial	#% increased Critical Hit Chance against Enemies that are affected	against Enemies that are affected
+partial	#% increased Critical Hit Chance against Humanoids	against Humanoids
+partial	#% increased Critical Hit Chance against Humanoids #% increased Immobilisation buildup against Constructs	against Humanoids #% increased Immobilisation buildup against Constructs
+partial	#% increased Damage against Demons	against Demons
+partial	#% increased Damage against Demons #% increased Duration of Ailments on Beasts	against Demons #% increased Duration of Ailments on Beasts
+partial	#% increased Damage against Demons #% increased Duration of Ailments on Beasts #% increased Critical Hit Chance against Humanoids	against Demons #% increased Duration of Ailments on Beasts #% increased Critical Hit Chance against Humanoids
+partial	#% increased Damage against Demons #% increased Duration of Ailments on Beasts #% increased Critical Hit Chance against Humanoids #% increased Immobilisation buildup against Constructs	against Demons #% increased Duration of Ailments on Beasts #% increased Critical Hit Chance against Humanoids #% increased Immobilisation buildup against Constructs
+partial	#% increased Damage for each different Warcry you've used Recently	for each different  you've used Recently
+partial	#% increased Damage with Hits against targets in your Presence	against targets in your Presence
+partial	#% increased Daze Duration	Daze
+partial	#% increased Desecrated Modifier magnitudes	Desecrated Modifier
+partial	#% increased Desecrated Modifier magnitudes #% increased Chaos Damage	Desecrated Modifier  #% increased Chaos Damage
+partial	#% increased Duration of Ailments on Beasts	on Beasts
+partial	#% increased Duration of Ailments on Beasts #% increased Critical Hit Chance against Humanoids	on Beasts #% increased Critical Hit Chance against Humanoids
+partial	#% increased Duration of Ailments on Beasts #% increased Critical Hit Chance against Humanoids #% increased Immobilisation buildup against Constructs	on Beasts #% increased Critical Hit Chance against Humanoids #% increased Immobilisation buildup against Constructs
+partial	#% increased Duration of each Puppet Master stack	of each Puppet Master stack
+partial	#% increased Effect of Arcane Surge on you per ten percent missing Mana	per ten percent missing Mana
+partial	#% increased Effect of Jewel Socket Passive Skills	of Jewel Socket Passive Skills
+partial	#% increased Effect of Puppet Master	of Puppet Master
+partial	#% increased Effect of bonuses gained from Socketed Jewel	of bonuses gained from Socketed Jewel
+partial	#% increased Effect of bonuses gained from Socketed Jewel #% more Mana Cost of Skills if you have no Energy Shield	of bonuses gained from Socketed Jewel #% more Mana Cost of Skills
+partial	#% increased Elemental Ailment Application if you have Shapeshifted to an Animal form Recently	Elemental Ailment Application
+partial	#% increased Elemental Infusion duration	Elemental Infusion
+partial	#% increased Elemental Infusion duration Remnants can be collected from #% further away	Elemental Infusion  Remnants can be collected from #% further away
+partial	#% increased Evasion Rating while Parrying	while Parrying
+partial	#% increased Experience gain	Experience gain
+partial	#% increased Fire Damage per Endurance Charge consumed Recently	consumed Recently
+partial	#% increased Freeze Buildup with Empowered Attacks	with Empowered Attacks
+partial	#% increased Glory generation	Glory generation
+partial	#% increased Glory generation for Banner Skills	Glory generation for Banner Skills
+partial	#% increased Hinder Duration	Hinder
+partial	#% increased Immobilisation buildup against Constructs	against Constructs
+partial	#% increased Jagged Ground Duration	Jagged Ground
+partial	#% increased Life Recovery rate per #% missing Unreserved Life	per #% missing Unreserved Life
+partial	#% increased Magnitude of Abyssal Wasting you inflict	Magnitude of Abyssal Wasting you inflict
+partial	#% increased Magnitude of Abyssal Wasting you inflict Abyssal Wasting you inflict has Infinite Duration	Magnitude of Abyssal Wasting you inflict Abyssal Wasting you inflict has Infinite
+partial	#% increased Magnitude of Daze	Magnitude of Daze
+partial	#% increased Magnitude of Unholy Might buffs you grant	Magnitude of  buffs you grant
+partial	#% increased Magnitude of Unholy Might buffs you grant You have Unholy Might	Magnitude of  buffs you grant You have Unholy Might
+partial	#% increased Magnitudes of Non-Curse Auras from your Skills	of Non-Curse Auras from your Skills
+partial	#% increased Mana Cost Efficiency of Command Skills	of Command Skills
+partial	#% increased Mana Cost Efficiency of Command Skills # maximum stacks of Puppet Master	of Command Skills # maximum stacks of Puppet Master
+partial	#% increased Minion Damage while you have at least two different active Offerings	while you have at least two different active Offerings
+partial	#% increased Parry Hit Area of Effect	Hit
+partial	#% increased Pin duration	Pin
+partial	#% increased Pin duration Pinned Enemies cannot deal Critical Hits	Pin  Pinned Enemies cannot deal Critical Hits
+partial	#% increased Projectile Damage with Spears while there are no Enemies within #m	while there are no Enemies within #m
+partial	#% increased Quantity of Gold Dropped by Slain Enemies	Quantity of Gold Dropped by Slain Enemies
+partial	#% increased Quantity of Gold Dropped by Slain Enemies #% reduced Quantity of Gold Dropped by Slain Enemies	Quantity of Gold Dropped by Slain Enemies #% reduced Quantity of Gold Dropped by Slain Enemies
+partial	#% increased Rarity of Items Dropped by Enemies killed with a Critical Hit	by Enemies killed with a Critical Hit
+partial	#% increased Rarity of Items Dropped by Enemies killed with a Critical Hit You have Consecrated Ground around you while stationary	by Enemies killed with a Critical Hit You have Consecrated Ground around you
+partial	#% increased Reservation Efficiency of Remnant Skills	of Remnant Skills
+partial	#% increased Skill Effect Duration per Enemy you've Frozen in the last # seconds, up to #%	per Enemy you've Frozen in the last # seconds, up to #%
+partial	#% increased Spell Damage for each different Non-Instant Attack you've used in the past # seconds	for each different Non-Instant Attack you've used in the past # seconds
+partial	#% increased Spirit Reservation Efficiency	increased
+partial	#% increased Spirit Reservation Efficiency #% increased Reservation Efficiency of Minion Skills	increased  #% increased Reservation Efficiency
+partial	#% increased Stun Threshold during Empowered Attacks	during Empowered Attacks
+partial	#% increased Stun Threshold while Parrying	while Parrying
+partial	#% increased Totem Placement range	Placement range
+partial	#% increased Volatility Explosion delay	Volatility Explosion delay
+partial	#% increased chance to inflict Ailments against Enemies affected by Abyssal Wasting	against Enemies affected by Abyssal Wasting
+partial	#% increased chance to inflict Ailments against Enemies affected by Abyssal Wasting #% of Life Leeched from targets affected by Abyssal Wasting is Instant	against Enemies affected by Abyssal Wasting #% of Life Leeched from targets affected by Abyssal Wasting is Instant
+partial	#% increased damage against Undead Enemies	against Undead Enemies
+partial	#% increased effect of Archon Buffs on you	of Archon Buffs on you
+partial	#% increased effect of Socketed Augment Items	of Socketed Augment Items
+partial	#% increased effect of Socketed Augment Items This item gains bonuses from Socketed Items as though it was a Body Armour	of Socketed Augment Items This item gains bonuses from Socketed Items as though it was a Body Armour
+partial	#% increased maximum Divinity	maximum Divinity
+partial	#% increased maximum Divinity #% reduced maximum Divinity per Corrupted Item Equipped	maximum Divinity #% reduced maximum Divinity per Corrupted Item Equipped
+partial	#% increased speed of Recoup Effects	speed of Recoup s
+partial	#% increased speed of Recoup Effects Recover #% of maximum Life on Killing a Poisoned Enemy	speed of Recoup s Recover #% of maximum Life ing a Poisoned Enemy
+partial	#% less Damage taken of each Elemental Damage Type per matching Adaptation	of each Elemental Damage Type per matching Adaptation
+partial	#% less Knockback Distance for Blocked Hits	for Blocked Hits
+partial	#% less Life Flask Recovery	Flask Recovery
+partial	#% less Movement and Skill Speed per Dodge Roll in the past # seconds	Movement and  per Dodge Roll in the past # seconds
+partial	#% more Damage against Enemies affected by Blood Boils	against Enemies affected by Blood Boils
+partial	#% more Damage against Enemies affected by Blood Boils Grants Skill: Blood Boil	against Enemies affected by Blood Boils Grants Skill:
+partial	#% more Skill Speed while Off Hand is empty and you have	and you have
+partial	#% of Chaos damage you prevent when Hit Recouped as Life and Mana during effect	you prevent when Hit Recouped as Life and Mana
+partial	#% of Charges consumed by used Charms are granted to your Life Flasks	consumed by used Charms are granted to your Life Flasks
+partial	#% of Charges consumed by used Charms are granted to your Life Flasks #% of Charges consumed by used Life Flasks are granted to your Charms	consumed by used Charms are granted to your Life Flasks #% of Charges consumed by used Life Flasks are granted to your Charms
+partial	#% of Charges consumed by used Life Flasks are granted to your Charms	consumed by used Life Flasks are granted to your Charms
+partial	#% of Charges consumed by used Life Flasks are granted to your Charms # Charm Slot	consumed by used Life Flasks are granted to your Charms # Charm Slot
+partial	#% of Damage from Deflected Hits is taken from Damageable Companion's Life before you	from Deflected Hits is taken from Damageable Companion's Life before you
+partial	#% of Damage from Hits is taken from your Damageable Companion's Life before you	from Hits is taken from your Damageable Companion's Life before you
+partial	#% of Damage from Hits is taken from your Damageable Companion's Life before you #% increased Armour, Evasion and Energy Shield while your Companion is in your Presence	from Hits is taken from your Damageable Companion's Life before you #% increased Armour, Evasion and Energy Shield
+partial	#% of Damage taken during effect Recouped as Life	Recouped as Life
+partial	#% of Damage taken during effect Recouped as Life Gain # Rage when Hit by an Enemy during effect	Recouped as Life Gain # Rage when Hit by an Enemy
+partial	#% of Damage taken from Deflected Hits Recouped as Life	from Deflected Hits Recouped as Life
+partial	#% of Damage taken from Deflected Hits Recouped as Life #% faster start of Energy Shield Recharge when not on Full Life	from Deflected Hits Recouped as Life #% faster start of Energy Shield Recharge
+partial	#% of Damage taken from Hits bypasses Energy Shield if Energy Shield is below half	bypasses Energy Shield if Energy Shield is below half
+partial	#% of Damage taken from Hits bypasses Energy Shield if Energy Shield is below half Gain # Runic Binding on Hit with Spells, no more than once every # seconds	bypasses Energy Shield if Energy Shield is below half Gain # Runic Binding , no more than once every # seconds
+partial	#% of Infernal Flame lost per second if none was gained in the past # seconds	if none was gained in the past # seconds
+partial	#% of Life Leeched from targets affected by Abyssal Wasting is Instant	Leeched from targets affected by Abyssal Wasting is Instant
+partial	#% of Life Leeched from targets affected by Abyssal Wasting is Instant Abyssal Wasting also applies % to Lightning Resistance	Leeched from targets affected by Abyssal Wasting is Instant Abyssal Wasting also applies % to Lightning Resistance
+partial	#% of Mana Leeched from targets affected by Abyssal Wasting is Instant	Leeched from targets affected by Abyssal Wasting is Instant
+partial	#% of Mana Leeched from targets affected by Abyssal Wasting is Instant Abyssal Wasting also applies % to Cold Resistance	Leeched from targets affected by Abyssal Wasting is Instant Abyssal Wasting also applies % to Cold Resistance
+partial	#% of Maximum Mana is Converted to twice that much Armour	is Converted to twice that much Armour
+partial	#% of Melee Physical Damage taken reflected to Attacker	taken reflected to Attacker
+partial	#% of Melee Physical Damage taken reflected to Attacker Regenerate #% of maximum Life per second while Surrounded	taken reflected to Attacker Regenerate #% of maximum Life per second
+partial	#% of Physical Damage prevented Recouped as Energy Shield per enemy Power	prevented Recouped as Energy Shield per enemy Power
+partial	#% of Physical Damage prevented Recouped as Energy Shield per enemy Power Energy Shield does not Recharge	prevented Recouped as Energy Shield per enemy Power Energy Shield does not Recharge
+partial	#% of Physical Damage prevented Recouped as Energy Shield per enemy Power Energy Shield does not Recharge You cannot Recover Energy Shield from Regeneration	prevented Recouped as Energy Shield per enemy Power Energy Shield does not Recharge You cannot Recover Energy Shield from Regeneration
+partial	#% of Physical Damage prevented Recouped as Energy Shield per enemy Power Energy Shield does not Recharge You cannot Recover Energy Shield from Regeneration You cannot Recover Energy Shield to above Armour	prevented Recouped as Energy Shield per enemy Power Energy Shield does not Recharge You cannot Recover Energy Shield from Regeneration You cannot Recover Energy Shield to above Armour
+partial	#% of Physical Damage prevented Recouped as Life	prevented Recouped as Life
+partial	#% of Physical Damage prevented Recouped as Life #% increased speed of Recoup Effects	prevented Recouped as Life #% increased speed of Recoup Effects
+partial	#% of Physical damage dealt by your Hits causes Blood Loss	dealt by your Hits causes Blood Loss
+partial	#% of Physical damage dealt by your Hits causes Blood Loss Vaal Pact	dealt by your Hits causes Blood Loss  Pact
+partial	#% of your Base Life Regeneration is granted to Allies in your Presence	your Base  is granted to
+partial	#% of your Base Life Regeneration is granted to Allies in your Presence # to Dexterity	your Base  is granted to # to Dexterity
+partial	#% of your Base Life Regeneration is granted to Allies in your Presence # to Intelligence	your Base  is granted to # to Intelligence
+partial	#% of your Base Life Regeneration is granted to Allies in your Presence # to Strength	your Base  is granted to # to Strength
+partial	#% of your Base Life Regeneration is granted to Allies in your Presence # to all Attributes	your Base  is granted to # to all Attributes
+partial	#% of your current Energy Shield is added to your Armour for	your current  is added to your Armour for
+partial	#% reduced Armour Break taken	Break taken
+partial	#% reduced Armour Break taken #% reduced Slowing Potency of Debuffs on You	Break taken #% reduced Slowing Potency of Debuffs on You
+partial	#% reduced Armour Break taken Defend with #% of Armour while not on Low Energy Shield	Break taken Defend with #% of Armour while not on Low Energy Shield
+partial	#% reduced Critical Spell Damage Bonus per Critical Hit you've dealt with Spells Recently	per Critical Hit you've dealt  Recently
+partial	#% reduced Critical Spell Damage Bonus per Critical Hit you've dealt with Spells Recently #% to Chaos Resistance	per Critical Hit you've dealt  Recently #% to Chaos Resistance
+partial	#% reduced Duration of Curses on you	of Curses on you
+partial	#% reduced Duration of Curses on you #% reduced Duration of Curses on you	of Curses on you #% reduced Duration of Curses on you
+partial	#% reduced Duration of Curses on you Curses you inflict spread to enemies within # metres when Cursed enemy dies	of Curses on you Curses you inflict spread to enemies within # metres when Cursed enemy dies
+partial	#% reduced Effect of Non-Damaging Ailments on you	on you
+partial	#% reduced Movement Speed Penalty from using Cold Skills while moving	Penalty from using Cold Skills
+partial	#% reduced Movement Speed Penalty from using Fire Skills while moving	Penalty from using Fire Skills
+partial	#% reduced Movement Speed Penalty while Actively Blocking	Penalty ly Blocking
+partial	#% reduced Projectile Range	Range
+partial	#% reduced Projectile Range Adds # to # Fire Damage	Range Adds # to # Fire Damage
+partial	#% reduced Quantity of Gold Dropped by Slain Enemies	Quantity of Gold Dropped by Slain Enemies
+partial	#% reduced Quantity of Gold Dropped by Slain Enemies Enemies Chilled by your Hits can be Shattered as though Frozen	Quantity of Gold Dropped by Slain Enemies Enemies Chilled by your Hits can be Shattered as though Frozen
+partial	#% reduced Reservation Efficiency of Skills which create Undead Minions	which create Undead s
+partial	#% reduced Reservation Efficiency of Skills which create Undead Minions #% increased Reservation Efficiency of Skills which create Undead Minions	which create Undead s #% increased Reservation Efficiency of Skills which create Undead Minions
+partial	#% reduced Slowing Potency of Debuffs on You	Slowing Potency of Debuffs on You
+partial	#% reduced Slowing Potency of Debuffs on You # to # Physical Thorns damage	Slowing Potency of Debuffs on You # to # Physical
+partial	#% reduced Slowing Potency of Debuffs on You #% increased Critical Spell Damage Bonus	Slowing Potency of Debuffs on You #% increased
+partial	#% reduced Slowing Potency of Debuffs on You #% reduced Movement Speed Penalty from using Skills while moving	Slowing Potency of Debuffs on You #% reduced  Penalty from using Skills
+partial	#% reduced Slowing Potency of Debuffs on You Buffs on you expire #% slower	Slowing Potency of Debuffs on You Buffs on you expire #% slower
+partial	#% reduced Slowing Potency of Debuffs on You Debuffs on you expire #% faster	Slowing Potency of Debuffs on You Debuffs on you expire #% faster
+partial	#% reduced Volatility Explosion delay	Volatility Explosion delay
+partial	#% reduced effect of Archon Buffs on you	of Archon Buffs on you
+partial	#% reduced effect of Archon Buffs on you Archon Buffs have no recovery period after you lose one	of Archon Buffs on you Archon Buffs have no recovery period after you lose one
+partial	#% reduced maximum Divinity per Corrupted Item Equipped	maximum Divinity per Corrupted Item Equipped
+partial	#% reduced maximum Divinity per Corrupted Item Equipped Skills Cost Divinity instead of Mana or Life	maximum Divinity per Corrupted Item Equipped Skills Cost Divinity instead of  or Life
+partial	#% to Cold Resistance	% to
+partial	#% to Cold and Lightning Resistances per Equipped Item with a Fire Resistance Modifier	per Equipped Item with a Fire Resistance Modifier
+partial	#% to Cold and Lightning Resistances per Equipped Item with a Fire Resistance Modifier #% to Cold and Lightning Resistances per Equipped Item with a Fire Resistance Modifier	per Equipped Item with a Fire Resistance Modifier #% to Cold and Lightning Resistances per Equipped Item with a Fire Resistance Modifier
+partial	#% to Cold and Lightning Resistances per Equipped Item with a Fire Resistance Modifier #% to Fire and Cold Resistances per Equipped Item with a Lightning Resistance Modifier	per Equipped Item with a Fire Resistance Modifier #% to Fire and Cold Resistances per Equipped Item with a Lightning Resistance Modifier
+partial	#% to Cold and Lightning Resistances per Equipped Item with a Fire Resistance Modifier Fire Resistance is unaffected by Area Penalties	per Equipped Item with a Fire Resistance Modifier Fire Resistance is unaffected by  Penalties
+partial	#% to Fire Resistance	% to
+partial	#% to Fire and Cold Resistances per Equipped Item with a Lightning Resistance Modifier	per Equipped Item with a Lightning Resistance Modifier
+partial	#% to Fire and Cold Resistances per Equipped Item with a Lightning Resistance Modifier #% to Fire and Cold Resistances per Equipped Item with a Lightning Resistance Modifier	per Equipped Item with a Lightning Resistance Modifier #% to Fire and Cold Resistances per Equipped Item with a Lightning Resistance Modifier
+partial	#% to Fire and Cold Resistances per Equipped Item with a Lightning Resistance Modifier Cold Resistance is unaffected by Area Penalties	per Equipped Item with a Lightning Resistance Modifier Cold Resistance is unaffected by  Penalties
+partial	#% to Fire and Cold Resistances per Equipped Item with a Lightning Resistance Modifier You can only Socket # Ruby Jewel in this item	per Equipped Item with a Lightning Resistance Modifier You can only Socket # Ruby Jewel in this item
+partial	#% to Fire and Lightning Resistances per Equipped Item with a Cold Resistance Modifier	per Equipped Item with a Cold Resistance Modifier
+partial	#% to Fire and Lightning Resistances per Equipped Item with a Cold Resistance Modifier #% to Fire and Lightning Resistances per Equipped Item with a Cold Resistance Modifier	per Equipped Item with a Cold Resistance Modifier #% to Fire and Lightning Resistances per Equipped Item with a Cold Resistance Modifier
+partial	#% to Fire and Lightning Resistances per Equipped Item with a Cold Resistance Modifier Lightning Resistance is unaffected by Area Penalties	per Equipped Item with a Cold Resistance Modifier Lightning Resistance is unaffected by  Penalties
+partial	#% to Fire and Lightning Resistances per Equipped Item with a Cold Resistance Modifier You can only Socket # Emerald Jewel in this item	per Equipped Item with a Cold Resistance Modifier You can only Socket # Emerald Jewel in this item
+partial	#% to Lightning Resistance	% to
+partial	#% to Maximum Resistances of each Elemental Damage Type you have been Hit with Recently	Maximum Resistances of each  Type you have been Hit with Recently
+partial	#% to all Maximum Elemental Resistances if you have at	if you have at
+partial	(##)% chance to deal Double Damage	(##)% chance to deal
+partial	(##)% chance to deal Double Damage (##)% increased Physical Damage	(##)% chance to deal   (##)% increased Physical Damage
+partial	Adaptations have a duration of # seconds Double Adaptation Effect	Adaptations have a  of # seconds  Adaptation Effect
+partial	Allies in your Presence Regenerate # Rage per second if you have gained Rage Recently	if you have gained Rage Recently
+partial	Allies in your Presence Regenerate #% of their Maximum Life per second Allies in your Presence Gain #% of Damage as Extra Fire Damage	Allies in your Presence Gain #% of  as Extra Fire Damage
+partial	Allies in your Presence have #% increased Glory generation	Glory generation
+partial	Attacks have #% chance to Maim on Hit	to Maim
+partial	Banners also grant #% to all Elemental Resistances affected targets	affected targets
+partial	Body Armour grants #% increased Glory generation	Glory generation
+partial	Bolts fired by Crossbow Attacks have #% chance to not	to not
+partial	Cannot be Critically Hit while Parrying	Critically Hit while Parrying
+partial	Cannot be Light Stunned by Deflected Hits	Light Stunned by Deflected Hits
+partial	Cannot be Used manually	Used manually
+partial	Cannot be Used manually Used when you release a skill with Perfect Timing	Used manually Used when you release a skill with Perfect Timing
+partial	Chance is doubled against Undead and Demons	Chance  against Undead and Demons
+partial	Critical Hits cannot Extract Impale # to # Physical Thorns damage	Critical Hits cannot Extract Impale
+partial	Damage Penetrates #% Elemental Resistances for each time you've used a Skill that Requires Glory in the past # seconds	for each time you've used a Skill that Requires Glory in the past # seconds
+partial	Deal #% of Overkill damage to enemies within # metres of the enemy killed	Overkill  to enemies within # metres of the enemy killed
+partial	Deal your Thorns Damage to Enemies you Stun with Melee Attacks # to # Physical Thorns damage	your  to Enemies you Stun
+partial	Double Adaptation Effect	Adaptation
+partial	Double Stun Threshold while Shield is Raised	while Shield is Raised
+partial	Enemies in your Presence count as having double Power	count as having  Power
+partial	Enemies in your Presence gain # Gruelling Madness each second	Gruelling Madness each second
+partial	Energy Generation is doubled	Energy Generation
+partial	Gain # Dark Whisper every second there is a Cursed Enemy in your Presence	Dark Whisper every second there is a Cursed Enemy in your Presence
+partial	Gain # Dark Whisper every second there is a Cursed Enemy in your Presence #% increased Damage with Hits against targets in your Presence	Dark Whisper every second there is a Cursed Enemy in your Presence #% increased   against targets in your Presence
+partial	Gain # Dark Whisper every second there is a Cursed Enemy in your Presence Curses you inflict can affect Hexproof Enemies	Dark Whisper every second there is a Cursed Enemy in your Presence Curses you inflict can affect Hexproof Enemies
+partial	Gain # Druidic Prowess for every # total Rage spent	Druidic Prowess for every # total Rage spent
+partial	Gain # Endurance Charge every second if you've been Hit Recently	Endurance Charge every second
+partial	Gain # Explosive Rhythm every # times you use a Grenade Skill	Explosive Rhythm every # times you use aSkill
+partial	Gain # Explosive Rhythm every # times you use a Grenade Skill Remove all Explosive Rhythm on reaching # to gain Explosive Fervour for # Seconds	Explosive Rhythm every # times you use aSkill Remove all Explosive Rhythm on reaching # to gain Explosive Fervour
+partial	Gain # Fear Incarnate when you Cull a target	Fear Incarnate when you Cull a target
+partial	Gain # Fragile Regrowth each second	Fragile Regrowth each second
+partial	Gain # Guard for # seconds per Combo expended when using Skills	Guard for # seconds per Combo expended when using Skills
+partial	Gain # Life Flask Charge per #% Life spent	Flask Charge per #% Life spent
+partial	Gain # Life Flask Charge per #% Life spent On Hitting an Enemy while a Life Flask is at full Charges, #% of its Charges are consumed	Flask Charge per #% Life spent ting an Enemy while a Life Flask is at full Charges, #% of its Charges are consumed
+partial	Gain # Life Flask Charge per #% Life spent On Hitting an Enemy while a Life Flask is at full Charges, #% of its Charges are consumed Gain #% of damage as Physical damage for # seconds per Charge consumed this way	Flask Charge per #% Life spent ting an Enemy while a Life Flask is at full Charges, #% of its Charges are consumed Gain #% of damage   per Charge consumed this way
+partial	Gain # Rage when Critically Hit by an Enemy	Rage when Critically Hit by an Enemy
+partial	Gain # Rage when Hit by an Enemy during effect	Rage when Hit by an Enemy
+partial	Gain # Rage when Hit by an Enemy during effect No Inherent loss of Rage during effect	Rage when Hit by an Enemy  No Inherent loss of Rage
+partial	Gain # Rage when you use a Life Flask	Rage when you use a  Flask
+partial	Gain # Rage when your Hit Ignites a target	Rage when your Hit Ignites a target
+partial	Gain # Runefather's Boast per Power of targets affected by Runefather's Challenge you kill	Runefather's Boast per Power of targets affected by Runefather's Challenge you kill
+partial	Gain # Runic Binding on Hit with Spells, no more than once every # seconds	Runic Binding , no more than once every # seconds
+partial	Gain # Runic Binding on Hit with Spells, no more than once every # seconds Lose all Runic Bindings when you Shapeshift to gain that much Unbound Potential	Runic Binding , no more than once every # seconds Lose all Runic Bindings when you Shapeshift to gain that much Unbound Potential
+partial	Gain # Volatility on inflicting an Elemental Ailment	Volatility on inflicting an Elemental Ailment
+partial	Gain # Volatility on inflicting an Elemental Ailment Take no Damage from Volatility	Volatility on inflicting an Elemental Ailment Take no  from Volatility
+partial	Gain # Volatility when an Allied Persistent Reviving Minion is Killed	Volatility when an Allied Persistent Reviving  is Killed
+partial	Gain # fewer Lightning Surge from Triggering Elemental Surge	fewer Lightning Surge from Triggering
+partial	Gain #% of Damage as Chaos Damage per Undead Minion	per Undead
+partial	Gain #% of Damage as Chaos Damage per Undead Minion Gain #% of Damage as Chaos Damage per Undead Minion	per Undead  Gain #% of Damage as Chaos Damage per Undead Minion
+partial	Gain #% of Damage as Extra Fire Damage for	for
+partial	Gain #% of Damage as Extra Fire Damage per Endurance Charge consumed Recently	consumed Recently
+partial	Gain #% of damage as Physical damage for # seconds per Charge consumed this way	per Charge consumed this way
+partial	Gain Arcane Surge when a Minion Dies	when a  Dies
+partial	Gain Arcane Surge when a Minion Dies #% increased maximum Energy Shield	when a  Dies #% increased
+partial	Gain Arcane Surge when a Minion Dies Recover #% of your maximum Life when an Enemy dies in your Presence	when a  Dies Recover #% of your  when an Enemy dies in your Presence
+partial	Gain Arcane Surge when you Shapeshift to Human form after	when you Shapeshift to Human form after
+partial	Gain Arcane Surge when you Shapeshift to Human form after being Shapeshifted for at least # seconds	when you Shapeshift to Human form after being Shapeshifted for at least # seconds
+partial	Gain Onslaught for # seconds when a Minion Dies	when a  Dies
+partial	Gain Onslaught for # seconds when a Minion Dies # to Spirit while you have at least # Strength	when a  Dies # to
+partial	Gain Onslaught for # seconds when a Minion Dies #% increased Area of Effect for Attacks	when a  Dies #% increased  for Attacks
+partial	Gain Physical Thorns damage equal to #% - #% of maximum Life	equal to #% - #% of
+partial	Gain Tailwind on Critical Hit, no more than once per second	, no more than once per second
+partial	Gain Tailwind on Critical Hit, no more than once per second Lose all Tailwind when Hit	, no more than once per second Lose all  when Hit
+partial	Has # Augment Sockets	Augment Sockets
+partial	Hits with this Weapon have #% chance to Trigger Molten Shower per # Strength	to Trigger
+partial	Hits with this Weapon have #% chance to Trigger Molten Shower per # Strength #% increased Physical Damage	to Trigger #% increased
+partial	Immune to Bleeding while affected by an Archon Buff	Bleeding while affected by an Archon Buff
+partial	Immune to Freeze and Chill while affected by an Archon Buff	Freeze and Chill while affected by an Archon Buff
+partial	Immune to Shock while affected by an Archon Buff	Shock while affected by an Archon Buff
+partial	Inherent loss of Rage is #% slower per # Tribute	Inherent loss of Rage slower
+partial	Invocated Spells have #% chance to consume half as much Energy	to consume half as much Energy
+partial	Invocated skills have #% increased Maximum Energy	Maximum Energy
+partial	Life Recovery from Flasks is instant # to # Physical Thorns damage	is instant
+partial	Life Recovery other than Flasks cannot Recover Life to above Low Life Gain Physical Thorns damage equal to #% - #% of maximum Life	Recovery other than Flasks cannot Recover Life to above Low Life  equal to #% - #% of maximum Life
+partial	Lose # Life when you use a Skill	when you use a Skill
+partial	Lose # Life when you use a Skill # to # Physical Thorns damage	when you use a Skill # to # Physical Thorns damage
+partial	Lose #% Life per second while you have no Runic Ward during Effect	while you have no
+partial	Lose #% Life per second while you have no Runic Ward during Effect Mana Recovery from Flasks can Overflow maximum Mana during Effect	while you have no   Mana Recovery from Flasks can Overflow maximum Mana
+partial	Lose #% of maximum Life and Energy Shield when you use a Chaos Skill	and Energy Shield when you use a Chaos Skill
+partial	Maximum Volatility is #	Maximum Volatility
+partial	Minions have #% chance to inflict Gruelling Madness on Hit	to inflict Gruelling Madness
+partial	Minions have #% chance to inflict Gruelling Madness on Hit #% increased Spirit Reservation Efficiency	to inflict Gruelling Madness  #% increased
+partial	Minions lose #% Life per # Tribute you have when following Commands	%   you have when following Commands
+partial	No Inherent loss of Rage Regenerate #% of your maximum Rage per second Increases and Reductions to Mana Regeneration Rate also apply to Rage Regeneration Rate Skills have # to Rage cost # to Maximum Rage	No Inherent loss of  Regenerate #% of your  per second Increases and Reductions to Mana Regeneration Rate also apply to Rage Regeneration Rate Skills have # to Rage  to Maximum Rage
+partial	Projectiles deal #% increased Damage with Hits for each time they have Pierced	for each time they have Pierced
+partial	Projectiles deal #% increased Damage with Hits for each time they have Pierced Projectiles have #% increased Critical Hit chance for each time they have Pierced	for each time they have Pierced Projectiles have #% increased Critical Hit chance for each time they have Pierced
+partial	Projectiles have #% chance for an additional Projectile when Forking	for an additional  when Forking
+partial	Projectiles have #% chance for an additional Projectile when Forking #% increased Critical Damage Bonus	for an additional  when Forking #% increased Critical Damage Bonus
+partial	Projectiles have #% chance for an additional Projectile when Forking per # Tribute	for an additional  when Forking
+partial	Projectiles have #% chance to Fork if you've dealt a Melee Hit in the past eight seconds	to Fork
+partial	Projectiles have #% increased Critical Hit chance for each time they have Pierced	for each time they have Pierced
+partial	Regenerate # Rage per second per # Rage spent Recently	spent Recently
+partial	Regenerate # Rage per second per # Rage spent Recently No Rage effect	spent Recently No
+partial	Sacrifice # Life to not consume the last bolt when firing	to not consume the last bolt when firing
+partial	Sacrifice #% of Mana and they Leech that Mana	and they Leech that Mana
+partial	Sacrifice #% of maximum Energy Shield when you Cast a Spell	when you Cast a
+partial	Sacrifice #% of maximum Energy Shield when you Cast a Spell Spells for which this Sacrifice was fully made deal #% more Damage	when you Cast a  Spells for which this Sacrifice was fully made deal #% more Damage
+partial	Sacrifice #% of maximum Life to gain that much Energy Shield when you Cast a Spell	to gain that much Energy Shield when you Cast a
+partial	Skills gain # Glory every # seconds for each Rare or Unique monster in your Presence	Glory every # seconds for each Rare or Unique monster in your Presence
+partial	Skills have #% chance to not remove Charges but still count as consuming them	to not remove  but still count as consuming them
+partial	Skills have #% chance to not remove Elemental Infusions but still count as consuming them	to not remove Elemental Infusions but still count as consuming them
+partial	Skills have #% longer Perfect Timing window during effect	% longer Perfect Timing window
+partial	Skills have #% longer Perfect Timing window during effect #% increased Amount Recovered	% longer Perfect Timing window  #% increased
+partial	Skills have a #% chance to not consume Glory	to not consume Glory
+partial	Spells have a #% chance to inflict Withered for # seconds on Hit	to inflict Withered
+partial	Storm and Plant Spells: deal #% more damage cost #% less	Storm and Plant Spells: deal #% more damage % less
+partial	Strikes deal Splash Damage Adds # to # Fire Damage	Strikes deal Splash
+partial	Strikes deal Splash Damage Adds # to # Physical Damage	Strikes deal Splash
+partial	Take #% less Damage from Hits	from Hits
+partial	Take #% less Damage from Hits Take #% less Damage over time	from Hits Take #% less Damage over time
+partial	Take #% less Damage over Time if you've started taking Damage over Time in the past second	if you've started taking Damage over Time in the past second
+partial	Take #% less Damage over Time if you've started taking Damage over Time in the past second Take #% more Damage over Time if you haven't started taking Damage over Time in the past second	if you've started taking Damage over Time in the past second Take #% more Damage over Time if you haven't started taking Damage over Time in the past second
+partial	Take #% more Damage over Time if you haven't started taking Damage over Time in the past second	if you haven't started taking Damage over Time in the past second
+partial	Take #% of Mana Costs you pay for Skills as Physical Damage	s you pay for Skills
+partial	Your Critical Hit Chance cannot be Rerolled Your Critical Damage Bonus is #%	Your  cannot be Rerolled Your Critical Damage Bonus
+partial	Your Totem Limit is doubled	Your  Limit
+partial	Your Totem Limit is doubled No Charge requirement for placing Totems	Your  Limit  No Charge requirement for placing Totems
+partial	Your Totem Limit is doubled No Charge requirement for placing Totems Totems reserve # Spirit each	Your  Limit  No Charge requirement for placing Totems Totems reserve #  each
+partial	gain # Cold Surges or # Fire Surges	Cold Surges or # Fire Surges

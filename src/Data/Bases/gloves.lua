@@ -2047,4 +2047,3 @@ itemBases["Runeforged Fists of Stone"] = {
 	armour = { },
 	req = { },
 }
-

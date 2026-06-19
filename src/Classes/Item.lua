@@ -302,6 +302,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 	self.spiritValue = nil
 	self.runicItem = nil
 	self.quality = nil
+	self.wardFromPropertyLine = false
 	self.rawLines = { }
 	-- Find non-blank lines and trim whitespace
 	for line in raw:gmatch("%s*([^\n]*%S)") do
@@ -581,7 +582,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					end
 				elseif specName == "Talisman Tier" then
 					self.talismanTier = specToNumber(specVal)
-				elseif specName == "Armour" or specName == "Evasion Rating" or specName == "Evasion" or specName == "Energy Shield" or specName == "Ward" then
+				elseif specName == "Armour" or specName == "Evasion Rating" or specName == "Evasion" or specName == "Energy Shield" or specName == "Ward" or specName == "Runic Ward" then
 					if specName == "Evasion Rating" then
 						specName = "Evasion"
 						if self.baseName == "Two-Toned Boots (Armour/Energy Shield)" then
@@ -596,9 +597,14 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 							self.baseName = "Two-Toned Boots (Evasion/Energy Shield)"
 							self.base = data.itemBases[self.baseName]
 						end
+					elseif specName == "Runic Ward" then
+						specName = "Ward"
 					end
 					self.armourData = self.armourData or { }
 					self.armourData[specName] = specToNumber(specVal)
+					if specName == "Ward" then
+						self.wardFromPropertyLine = true
+					end
 				elseif specName == "Requires Level" then
 					self.requirements.level = specToNumber(specVal)
 					minimumReqLevel = minimumReqLevel or {}
@@ -796,7 +802,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 					self.name = self.name:gsub(" %(.+%)","")
 				end
 				if not baseName then
-					baseName = line:gsub("^Superior ", "")
+					baseName = line:gsub("^Superior ", ""):gsub("^Runeforged ", "")
 				end
 				if baseName == "Two-Toned Boots" then
 					baseName = "Two-Toned Boots (Armour/Energy Shield)"
@@ -1345,7 +1351,9 @@ function ItemClass:BuildRaw()
 	if self.armourData then
 		for _, type in ipairs({ "Armour", "Evasion", "EnergyShield", "Ward" }) do
 			if self.armourData[type] and self.armourData[type] > 0 then
-				t_insert(rawLines, type:gsub("EnergyShield", "Energy Shield") .. ": " .. self.armourData[type])
+				if type ~= "Ward" or self.wardFromPropertyLine then
+					t_insert(rawLines, type:gsub("EnergyShield", "Energy Shield") .. ": " .. self.armourData[type])
+				end
 			end
 		end
 	end
@@ -1874,14 +1882,31 @@ function ItemClass:BuildModListForSlotNum(baseList, slotNum)
 			weaponData.TotalDPS = weaponData.TotalDPS + (weaponData[dmgType.."DPS"] or 0)
 		end
 	elseif self.base.armour then
-		local armourData = self.armourData
+		local armourData = self.armourData  -- same object populated by ParseRaw/ImportItem; authoritative Ward read inside wardIsAuthoritative block below relies on this
 		local armourBase = calcLocal(modList, "Armour", "BASE", 0) + (self.base.armour.Armour or 0)
 		local armourEvasionBase = calcLocal(modList, "ArmourAndEvasion", "BASE", 0)
 		local evasionBase = calcLocal(modList, "Evasion", "BASE", 0) + (self.base.armour.Evasion or 0)
 		local evasionEnergyShieldBase = calcLocal(modList, "EvasionAndEnergyShield", "BASE", 0)
 		local energyShieldBase = calcLocal(modList, "EnergyShield", "BASE", 0) + (self.base.armour.EnergyShield or 0)
 		local armourEnergyShieldBase = calcLocal(modList, "ArmourAndEnergyShield", "BASE", 0)
-		local wardBase = calcLocal(modList, "Ward", "BASE", 0) + (self.base.armour.Ward or 0)
+		-- wardIsAuthoritative: true when armourData.Ward was set by a property line in the original
+		-- user-provided paste or API import (tracked by self.wardFromPropertyLine, which BuildRaw
+		-- preserves only for authoritative items, so the flag survives BuildAndParseRaw round-trips).
+		-- That value is the final game-computed ward (already includes flat rune mods, INC rune mods,
+		-- and quality). We must consume the local ward mods from modList to prevent double-application
+		-- in CalcDefence, but we must NOT re-scale the already-final value.
+		-- Exception: WardPerLevel is NOT baked into the property line, so the consumed wardInc
+		-- must still be applied to it (same as EvasionPerLevel/EnergyShieldPerLevel use their INC mods).
+		local wardIsAuthoritative = self.wardFromPropertyLine
+		local wardBase
+		local wardIncConsumed = 0  -- INC consumed in authoritative path; preserved for WardPerLevel
+		if wardIsAuthoritative then
+			calcLocal(modList, "Ward", "BASE", 0)  -- consume flat rune ward mods (discard result)
+			wardIncConsumed = calcLocal(modList, "Ward", "INC", 0)  -- consume INC rune ward mods; save for WardPerLevel
+			wardBase = armourData.Ward  -- property line is the final game value; base Ward is already baked in
+		else
+			wardBase = calcLocal(modList, "Ward", "BASE", 0) + (self.base.armour.Ward or 0)
+		end
 		local evasionPerLevel = calcLocal(modList, "EvasionPerLevel", "BASE", 0)
 		local energyShieldPerLevel = calcLocal(modList, "EnergyShieldPerLevel", "BASE", 0)
 		local wardPerLevel = calcLocal(modList, "WardPerLevel", "BASE", 0)
@@ -1890,7 +1915,8 @@ function ItemClass:BuildModListForSlotNum(baseList, slotNum)
 		local evasionInc = calcLocal(modList, "Evasion", "INC", 0)
 		local evasionEnergyShieldInc = calcLocal(modList, "EvasionAndEnergyShield", "INC", 0)
 		local energyShieldInc = calcLocal(modList, "EnergyShield", "INC", 0)
-		local wardInc = calcLocal(modList, "Ward", "INC", 0)
+		local wardInc = wardIsAuthoritative and 0 or calcLocal(modList, "Ward", "INC", 0)
+		local wardIncForPerLevel = wardIsAuthoritative and wardIncConsumed or wardInc
 		local armourEnergyShieldInc = calcLocal(modList, "ArmourAndEnergyShield", "INC", 0)
 		local defencesInc = calcLocal(modList, "Defences", "INC", 0)
 		local qualityScalar = self.quality
@@ -1901,10 +1927,12 @@ function ItemClass:BuildModListForSlotNum(baseList, slotNum)
 		armourData.Armour = round((armourBase + armourEvasionBase + armourEnergyShieldBase) * (1 + (armourInc + armourEvasionInc + armourEnergyShieldInc + defencesInc) / 100) * (1 + (qualityScalar / 100)))
 		armourData.Evasion = round((evasionBase + armourEvasionBase + evasionEnergyShieldBase) * (1 + (evasionInc + armourEvasionInc + evasionEnergyShieldInc + defencesInc) / 100) * (1 + (qualityScalar / 100)))
 		armourData.EnergyShield = round((energyShieldBase + evasionEnergyShieldBase + armourEnergyShieldBase) * (1 + (energyShieldInc + armourEnergyShieldInc + evasionEnergyShieldInc + defencesInc) / 100) * (1 + (qualityScalar / 100)))
-		armourData.Ward = round((wardBase) * (1 + (wardInc + defencesInc) / 100) * (1 + (qualityScalar / 100)))
+		armourData.Ward = wardIsAuthoritative
+			and round(wardBase)  -- property line is final (game already applied quality+INC); do not re-scale
+			or round((wardBase) * (1 + (wardInc + defencesInc) / 100) * (1 + (qualityScalar / 100)))
 		armourData.EvasionPerLevel = evasionPerLevel * (1 + (evasionInc + armourEvasionInc + evasionEnergyShieldInc + defencesInc) / 100) * (1 + (qualityScalar / 100))
 		armourData.EnergyShieldPerLevel = energyShieldPerLevel * (1 + (energyShieldInc + armourEnergyShieldInc + evasionEnergyShieldInc + defencesInc) / 100) * (1 + (qualityScalar / 100))
-		armourData.WardPerLevel = wardPerLevel * (1 + (wardInc + defencesInc) / 100) * (1 + (qualityScalar / 100))
+		armourData.WardPerLevel = wardPerLevel * (1 + (wardIncForPerLevel + defencesInc) / 100) * (1 + (qualityScalar / 100))
 
 		if self.base.armour.BlockChance then
 			armourData.BlockChance = m_floor((self.base.armour.BlockChance * (1 + calcLocal(modList, "BlockChance", "INC", 0) / 100) + calcLocal(modList, "BlockChance", "BASE", 0)))

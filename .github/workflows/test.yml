@@ -37,18 +37,70 @@ jobs:
           done
           [ "$found" -eq 1 ]
   check_modcache:
+    name: check ModCache is up-to-date
     runs-on: ubuntu-latest
-    container: ghcr.io/pathofbuildingcommunity/pathofbuilding-tests:latest
+    permissions:
+      contents: write
     steps:
-      - name: Install git dependency
-        run: apk add git
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Check out the PR head branch so we can push back to it.
+          # On push events github.head_ref is empty; fall back to the pushed ref.
+          ref: ${{ github.head_ref || github.ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Cache test image
+        id: image-cache
+        uses: actions/cache@v4
+        with:
+          path: /tmp/pob-test-image.tar
+          key: pob-test-image-${{ hashFiles('docker-compose.yml') }}
+          restore-keys: pob-test-image-
+
+      - name: Pull or restore image
+        run: |
+          if [[ "${{ steps.image-cache.outputs.cache-hit }}" == "true" ]]; then
+            echo "Restoring image from cache"
+            docker load < /tmp/pob-test-image.tar
+          else
+            echo "Cache miss — pulling from GHCR"
+            docker pull ghcr.io/pathofbuildingcommunity/pathofbuilding-tests:latest
+            docker save ghcr.io/pathofbuildingcommunity/pathofbuilding-tests:latest \
+              -o /tmp/pob-test-image.tar
+          fi
+
       - name: Regenerate ModCache
-        env:
-          LUA_PATH: ../runtime/lua/?.lua;../runtime/lua/?/init.lua
-          REGENERATE_MOD_CACHE: 1
-        run: cd src; luajit HeadlessWrapper.lua
-      - run: git config --global --add safe.directory $(pwd)
-      - name: Check if the generated ModCache is different
-        run: git diff --exit-code src/Data/ModCache.lua
+        # Run on the host (not via container:) so git credentials are available
+        # for the auto-commit step. Mount the workspace read-write so the
+        # regenerated ModCache.lua lands in the workspace.
+        run: |
+          docker run --rm \
+            -e HOME=/tmp \
+            -e "LUA_PATH=../runtime/lua/?.lua;../runtime/lua/?/init.lua" \
+            -e REGENERATE_MOD_CACHE=1 \
+            -v "${{ github.workspace }}:/workdir" \
+            -w /workdir/src \
+            ghcr.io/pathofbuildingcommunity/pathofbuilding-tests:latest \
+            luajit HeadlessWrapper.lua
+
+      - name: Auto-commit ModCache if stale
+        run: |
+          if git diff --quiet src/Data/ModCache.lua; then
+            echo "ModCache.lua is up to date ✓"
+            exit 0
+          fi
+
+          echo "ModCache.lua was out of date — committing regenerated version"
+          git diff --stat src/Data/ModCache.lua
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/Data/ModCache.lua
+          git commit -m "chore: auto-regenerate ModCache.lua"
+
+          # Push back to the PR branch (head_ref) or the pushed branch (ref_name).
+          TARGET="${{ github.head_ref || github.ref_name }}"
+          git push origin "HEAD:${TARGET}"
+
+          echo "::notice::ModCache.lua was regenerated and committed automatically."
