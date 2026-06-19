@@ -7,6 +7,7 @@
 #          - fix mode    → opencode/deepseek-v4-flash-free (free tier)
 #                       → opencode-go/qwen3.6-plus (Go subscription fallback)
 #                       → opencode-go/deepseek-v4-flash (last resort)
+# Tier 3: Claude Code via PAYG (EMERGENCY_ANTHROPIC_API_KEY) — last resort
 #
 # Verified model slugs as of opencode v1.15.7 (2026-05-25):
 #   opencode-go/glm-5.1
@@ -16,7 +17,7 @@
 #
 # Usage: ./ai-agent.sh "<task>" [--mode review|fix] [--max-turns N]
 #
-# Required env: CLAUDE_CODE_OAUTH_TOKEN, OPENCODE_API_KEY
+# Required env: CLAUDE_CODE_OAUTH_TOKEN or OPENCODE_API_KEY or EMERGENCY_ANTHROPIC_API_KEY
 # MUST NOT BE SET: ANTHROPIC_API_KEY (would override Pro OAuth token and incur PAYG charges)
 
 set -euo pipefail
@@ -136,6 +137,44 @@ try_opencode_model() {
   return 0
 }
 
+try_emergency_anthropic() {
+  if ! command -v claude >/dev/null 2>&1; then
+    log "claude CLI not found, skipping emergency tier"
+    return 2
+  fi
+  if [[ -z "${EMERGENCY_ANTHROPIC_API_KEY:-}" ]]; then
+    log "EMERGENCY_ANTHROPIC_API_KEY not set, skipping emergency tier"
+    return 2
+  fi
+  log "tier 3: Claude Code via EMERGENCY_ANTHROPIC_API_KEY (PAYG last resort)"
+  local out exit_code
+  set +e
+  out=$(timeout 900 \
+        env ANTHROPIC_API_KEY="$EMERGENCY_ANTHROPIC_API_KEY" \
+        claude --print "$TASK" \
+          --allowedTools "$ALLOWED_TOOLS" \
+          --max-turns "$MAX_TURNS" \
+          --output-format text \
+          --dangerously-skip-permissions 2>&1)
+  exit_code=$?
+  set -e
+  if [[ $exit_code -eq 124 ]]; then
+    log "emergency claude: timed out after 15 min"
+    return 1
+  fi
+  if is_quota_or_overload_error "$out"; then
+    log "emergency claude: hit quota/overload"
+    return 1
+  fi
+  if [[ $exit_code -ne 0 ]]; then
+    log "emergency claude exited $exit_code"
+    log "stderr tail: $(echo "$out" | tail -5)"
+    return 1
+  fi
+  echo "$out"
+  return 0
+}
+
 # Tier 1: Claude Code via Pro subscription
 if try_claude_code; then exit 0; fi
 
@@ -147,6 +186,9 @@ fi
 if [[ -n "$OPENCODE_MODEL_TERTIARY" ]]; then
   if try_opencode_model "$OPENCODE_MODEL_TERTIARY"; then exit 0; fi
 fi
+
+# Tier 3: Emergency Anthropic PAYG fallback
+if try_emergency_anthropic; then exit 0; fi
 
 log "all tiers exhausted — manual intervention needed"
 exit 1

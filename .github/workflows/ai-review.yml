@@ -154,6 +154,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          source scripts/agent-lib.sh
           retry_op 3 10 gh pr comment ${{ github.event.pull_request.number }} \
             --body "⚠️ **AI Review Failed**
 
