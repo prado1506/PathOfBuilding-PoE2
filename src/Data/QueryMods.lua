@@ -12565,6 +12565,14 @@ return {
 			},
 		},
 		["1484026495"] = {
+			["2HWeapon"] = {
+				["max"] = 4,
+				["min"] = 3,
+			},
+			["Staff"] = {
+				["max"] = 4,
+				["min"] = 3,
+			},
 			["specialCaseData"] = {
 			},
 			["tradeMod"] = {
@@ -13420,12 +13428,12 @@ return {
 		},
 		["1702195217"] = {
 			["2HWeapon"] = {
-				["max"] = 16,
-				["min"] = 12,
+				["max"] = 25,
+				["min"] = 20,
 			},
 			["Staff"] = {
-				["max"] = 16,
-				["min"] = 12,
+				["max"] = 25,
+				["min"] = 20,
 			},
 			["specialCaseData"] = {
 			},
@@ -20137,6 +20145,14 @@ return {
 			},
 		},
 		["3398787959"] = {
+			["2HWeapon"] = {
+				["max"] = 50,
+				["min"] = 40,
+			},
+			["Staff"] = {
+				["max"] = 50,
+				["min"] = 40,
+			},
 			["specialCaseData"] = {
 			},
 			["tradeMod"] = {
