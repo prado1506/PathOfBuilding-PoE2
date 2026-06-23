@@ -311,9 +311,10 @@ on trade site to work on other leagues and realms)]]
 	self.controls.tradeTypeSelection:SetSel(self.tradeTypeIndex or 1)
 
 	-- Fetches Box
-	self.maxFetchPerSearchDefault = 2
+	self.maxFetchPagesMax = 50
+	self.maxFetchPerSearchDefault = self.maxFetchPagesMax
 	self.controls.fetchCountEdit = new("EditControl", {"TOPRIGHT", nil, "TOPRIGHT"}, {-12, 19, 150, row_height}, "", "Fetch Pages", "%D", 3, function(buf)
-		self.maxFetchPages = m_min(m_max(tonumber(buf) or self.maxFetchPerSearchDefault, 1), 10)
+		self.maxFetchPages = m_min(m_max(tonumber(buf) or self.maxFetchPerSearchDefault, 1), self.maxFetchPagesMax)
 		self.tradeQueryRequests.maxFetchPerSearch = 10 * self.maxFetchPages
 		self.controls.fetchCountEdit.focusValue = self.maxFetchPages
 	end)
@@ -327,7 +328,7 @@ on trade site to work on other leagues and realms)]]
 		tooltip:Clear()
 		tooltip:AddLine(16, "Specify maximum number of item pages to retrieve per search from PoE Trade.")
 		tooltip:AddLine(16, "Each page fetches up to 10 items.")
-		tooltip:AddLine(16, "Acceptable Range is: 1 to 10")
+		tooltip:AddLine(16, "Acceptable Range is: 1 to " .. self.maxFetchPagesMax)
 	end
 
 	-- Stat sort popup button
