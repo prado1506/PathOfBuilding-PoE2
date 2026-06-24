@@ -5719,8 +5719,8 @@ c["Grants Skill: Hollow Form"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",t
 c["Grants Skill: Hollow Resonance"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="HollowResonancePlayer"}}},nil}
 c["Grants Skill: Inevitable Agony"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="InevitableAgonyPlayer"}}},nil}
 c["Grants Skill: Into the Breach"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="IntoTheBreachPlayer"}}},nil}
-c["Grants Skill: Kelari's Deception"]={nil,nil}
-c["Grants Skill: Kelari's Judgment"]={nil,nil}
+c["Grants Skill: Kelari's Deception"]={{},"Grants Skill: Kelari's Deception"}
+c["Grants Skill: Kelari's Judgment"]={{},"Grants Skill: Kelari's Judgment"}
 c["Grants Skill: Kelari's Malediction"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="CorpseBeetlesPlayer"}}},nil}
 c["Grants Skill: Kelari, the Tainted Sands"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="SummonSandDjinnPlayer"}}},nil}
 c["Grants Skill: Level 11 Azmerian Swarms"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=11,skillId="AzmerianSwarmPlayer"}}},nil}
@@ -5814,11 +5814,11 @@ c["Grants Skill: Level 20 Herald of Ash"]={{[1]={flags=0,keywordFlags=0,name="Ex
 c["Grants Skill: Level 20 Herald of Ice"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="HeraldOfIcePlayer"}}},nil}
 c["Grants Skill: Level 20 Herald of Thunder"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="HeraldOfThunderPlayer"}}},nil}
 c["Grants Skill: Level 20 Herald of the Royal Queen"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="UniqueAtziriHeraldPlayer"}}},nil}
-c["Grants Skill: Level 20 His Dark Horizon"]={nil,nil}
-c["Grants Skill: Level 20 His Dark Horizon Grants Skill: Level 20 His Foul Emergence"]={nil,nil}
+c["Grants Skill: Level 20 His Dark Horizon"]={{},"Grants Skill: Level 20 His Dark Horizon"}
+c["Grants Skill: Level 20 His Dark Horizon Grants Skill: Level 20 His Foul Emergence"]={{},"Grants Skill: Level 20 His Dark Horizon Grants Skill: Level 20 His Foul Emergence"}
 c["Grants Skill: Level 20 His Foul Emergence"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="HisFoulEmergencePlayer"}}},nil}
-c["Grants Skill: Level 20 His Grave Command"]={nil,nil}
-c["Grants Skill: Level 20 His Grave Command Grants Skill: Level 20 His Scattering Calamity"]={nil,nil}
+c["Grants Skill: Level 20 His Grave Command"]={{},"Grants Skill: Level 20 His Grave Command"}
+c["Grants Skill: Level 20 His Grave Command Grants Skill: Level 20 His Scattering Calamity"]={{},"Grants Skill: Level 20 His Grave Command Grants Skill: Level 20 His Scattering Calamity"}
 c["Grants Skill: Level 20 His Scattering Calamity"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="ScatteringCalamityPlayer"}}},nil}
 c["Grants Skill: Level 20 His Vile Intrusion"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="VileDisruptionPlayer"}}},nil}
 c["Grants Skill: Level 20 His Winnowing Flame"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=20,skillId="HisWinnowingFlamePlayer"}}},nil}
@@ -5864,17 +5864,17 @@ c["Grants Skill: Manifest Weapon"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkil
 c["Grants Skill: Meditate"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="MeditatePlayer"}}},nil}
 c["Grants Skill: Mirage Deadeye"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="MetaMirageDeadeyePlayer"}}},nil}
 c["Grants Skill: Moment of Vulnerability"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="MomentOfVulnerabilityPlayer"}}},nil}
-c["Grants Skill: Navira's Fracturing"]={nil,nil}
-c["Grants Skill: Navira's Oasis"]={nil,nil}
-c["Grants Skill: Navira's Well"]={nil,nil}
+c["Grants Skill: Navira's Fracturing"]={{},"Grants Skill: Navira's Fracturing"}
+c["Grants Skill: Navira's Oasis"]={{},"Grants Skill: Navira's Oasis"}
+c["Grants Skill: Navira's Well"]={{},"Grants Skill: Navira's Well"}
 c["Grants Skill: Navira, the Last Mirage"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="SummonWaterDjinnPlayer"}}},nil}
 c["Grants Skill: Parry"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="ParryPlayer"}}},nil}
 c["Grants Skill: Primal Bounty"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="PrimalBountyPlayer"}}},nil}
 c["Grants Skill: Raise Shield"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="ShieldBlockPlayer"}}},nil}
 c["Grants Skill: Ritual Sacrifice"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="RitualSacrificePlayer"}}},nil}
-c["Grants Skill: Ruzhan's Fury"]={nil,nil}
-c["Grants Skill: Ruzhan's Reckoning"]={nil,nil}
-c["Grants Skill: Ruzhan's Trap"]={nil,nil}
+c["Grants Skill: Ruzhan's Fury"]={{},"Grants Skill: Ruzhan's Fury"}
+c["Grants Skill: Ruzhan's Reckoning"]={{},"Grants Skill: Ruzhan's Reckoning"}
+c["Grants Skill: Ruzhan's Trap"]={{},"Grants Skill: Ruzhan's Trap"}
 c["Grants Skill: Ruzhan, the Blazing Sword"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="SummonFireDjinnPlayer"}}},nil}
 c["Grants Skill: Shattering Concoction"]={{[1]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="ShatteringConcoctionPlayer"}}},nil}
 c["Grants Skill: Sorcery Ward"]={{[1]={flags=0,keywordFlags=0,name="Condition:SorceryWard",type="FLAG",value=true},[2]={flags=0,keywordFlags=0,name="ExtraSkill",type="LIST",value={level=1,skillId="SorceryWardPlayer"}}},nil}
