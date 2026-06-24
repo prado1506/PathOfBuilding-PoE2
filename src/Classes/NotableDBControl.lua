@@ -12,7 +12,7 @@ local m_floor = math.floor
 local m_huge = math.huge
 local s_format = string.format
 
-local emotionList = {"Ire", "Guilt", "Greed", "Paranoia", "Envy", "Disgust", "Despair", "Fear", "Suffering", "Isolation", "Contempt", "Ferocity",  "Melancholy"}
+local emotionList = {"Ire", "Guilt", "Greed", "Paranoia", "Envy", "Disgust", "Despair", "Fear", "Suffering", "Isolation", "Melancholy", "Ferocity", "Contempt" }
 
 ---@param node table
 ---@return boolean
@@ -67,9 +67,9 @@ local NotableDBClass = newClass("NotableDBControl", "ListControl", function(self
 			self.listBuildFlag = true
 		end
 	end
-	local function emoCheck(name, relTo)
-		local anchor = {"LEFT", relTo, "RIGHT"}
-		local rect = {2, 0, 26, 26}
+	local function emoCheck(name, relTo, newRow)
+		local anchor = newRow and {"TOPLEFT", relTo, "BOTTOMLEFT"} or {"LEFT", relTo, "RIGHT"}
+		local rect = newRow and {0, 2, 26, 26} or {2, 0, 26, 26}
 		local ctl = new("CheckBoxControl", anchor, rect, "", emoCheckOnChange(name), "Distilled "..name, true)
 		if self.emotionImages then ctl:SetCheckImage(self.emotionImages[name]) end
 		return ctl
@@ -77,14 +77,9 @@ local NotableDBClass = newClass("NotableDBControl", "ListControl", function(self
 
 	local emotionCheckBoxes = {}
 	for i,emo in ipairs(emotionList) do
-		local emoCtl
-		if i == 11 then
-			local ctl = new("CheckBoxControl", {"TOPLEFT", emotionCheckBoxes[1], "BOTTOMLEFT"}, {0, 2, 26, 26}, "", emoCheckOnChange(emo), "Distilled "..emo, true)
-			if self.emotionImages then ctl:SetCheckImage(self.emotionImages[emo]) end
-			emoCtl = ctl
-		else
-			emoCtl = emoCheck(emo, emotionCheckBoxes[i-1] or self.controls.emotionLabel)
-		end
+		local newRow = i == 8
+		local relTo = newRow and emotionCheckBoxes[1] or emotionCheckBoxes[i-1] or self.controls.emotionLabel
+		local emoCtl = emoCheck(emo, relTo, newRow)
 		emotionCheckBoxes[i] = emoCtl
 		self.controls["emotionCheckbox"..emo] = emoCtl
 	end
@@ -301,7 +296,8 @@ function NotableDBClass:AddValueTooltip(tooltip, index, node)
 		if node.sd[1] then
 			tooltip:AddLine(16, "")
 			for i, line in ipairs(node.sd) do
-				if line ~= " " and (node.mods[i].extra or not node.mods[i].list) then
+				local mod = node.mods and node.mods[i]
+				if line ~= " " and (not mod or mod.extra or not mod.list) then
 					local line = colorCodes.UNSUPPORTED..line
 					line = main.notSupportedModTooltips and (line .. main.notSupportedTooltipText) or line
 					tooltip:AddLine(16, line)
