@@ -449,10 +449,10 @@ function GemSelectClass:Draw(viewPort, noTooltip)
 			DrawString(0, y, "LEFT", height - 4, "VAR", gemText)
 			if gemData then
 				if gemData.grantedEffect.support and self.sortCache.canSupport[gemId] then
-					SetDrawColor(self.sortCache.dpsColor[gemId])
+					SetDrawColor(self.sortCache.dpsColor[gemId] or "^xFFFFFF")
 					main:DrawCheckMark(width - 4 - height / 2 - (scrollBar.enabled and 18 or 0), y + (height - 4) / 2, (height - 4) * 0.8)
 				elseif gemData.grantedEffect.hasGlobalEffect then
-					SetDrawColor(self.sortCache.dpsColor[gemId])
+					SetDrawColor(self.sortCache.dpsColor[gemId] or "^xFFFFFF")
 					DrawString(width - 4 - height / 2 - (scrollBar.enabled and 18 or 0), y - 2, "CENTER_X", height, "VAR", "+")
 				end
 			end

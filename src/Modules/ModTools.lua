@@ -112,6 +112,9 @@ function modLib.compareModParams(modA, modB)
 end
 
 function modLib.formatFlags(flags, src)
+	if not flags then
+		return "-"
+	end
 	local flagNames = { }
 	for name, val in pairs(src) do
 		if band(flags, val) == val then
