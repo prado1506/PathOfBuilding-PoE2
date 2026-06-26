@@ -137,6 +137,9 @@ data.gameConstants = {
 	["SupportGemGoldPrice"] = 228,
 	["LineageSupportGemGoldPrice "] = 9091,
 	["DivinityInherentRegenPercentPerMinute"] = 1500,
+	["OpenWeaknessHealthPercentage"] = 45,
+	["ExpeditionMonsterModRuneOpulentMoreIIROfRuneMods"] = 400,
+	["ExpeditionMonsterModRuneOpulentPowerMoreIIROfRuneMods"] = 400,
 }
 -- From Metadata/Characters/Character.ot
 data.characterConstants = {

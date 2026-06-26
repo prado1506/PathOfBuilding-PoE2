@@ -12,7 +12,7 @@ local m_floor = math.floor
 local m_huge = math.huge
 local s_format = string.format
 
-local emotionList = {"Ire", "Guilt", "Greed", "Paranoia", "Envy", "Disgust", "Despair", "Fear", "Suffering", "Isolation", "Melancholy", "Ferocity", "Contempt" }
+local emotionList = {"Ire", "Guilt", "Greed", "Paranoia", "Envy", "Disgust", "Despair", "Fear", "Suffering", "Isolation", "Contempt", "Ferocity",  "Melancholy"}
 
 ---@param node table
 ---@return boolean
@@ -77,9 +77,14 @@ local NotableDBClass = newClass("NotableDBControl", "ListControl", function(self
 
 	local emotionCheckBoxes = {}
 	for i,emo in ipairs(emotionList) do
-		local newRow = i == 8
-		local relTo = newRow and emotionCheckBoxes[1] or emotionCheckBoxes[i-1] or self.controls.emotionLabel
-		local emoCtl = emoCheck(emo, relTo, newRow)
+		local emoCtl
+		if i == 11 then
+			local ctl = new("CheckBoxControl", {"TOPLEFT", emotionCheckBoxes[1], "BOTTOMLEFT"}, {0, 2, 26, 26}, "", emoCheckOnChange(emo), "Distilled "..emo, true)
+			if self.emotionImages then ctl:SetCheckImage(self.emotionImages[emo]) end
+			emoCtl = ctl
+		else
+			emoCtl = emoCheck(emo, emotionCheckBoxes[i-1] or self.controls.emotionLabel)
+		end
 		emotionCheckBoxes[i] = emoCtl
 		self.controls["emotionCheckbox"..emo] = emoCtl
 	end

@@ -100,7 +100,7 @@ local legacies = {
 	},
 	LegacyOfGold = {
 		effects = {
-			{ stat = "ItemRarity", type = "INC", value = 45 },
+			{ stat = "LootRarity", type = "INC", value = 45 },
 		}
 	},
 	LegacyOfGranite = {
@@ -1429,7 +1429,7 @@ function calcs.perform(env, skipEHP)
 
 	for slot, item in pairs(env.player.itemList) do
 		local slotEffectMod = modDB:Sum("INC", nil, "EffectOfBonusesFrom" .. slot) / 100
-		if slotEffectMod > 0 then
+		if slotEffectMod > 0 and slot ~= "Amulet" then
 			if item.name:match("Kalandra's Touch") then
 				if slot == "Ring 2" then
 					item = env.player.itemList["Ring 1"]
