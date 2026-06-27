@@ -167,7 +167,7 @@ local function buildURL(item, slotName, controls, modEntries, defenceEntries, is
 				-- 1 id entries are added to the stat filters section
 				t_insert(queryTable.query.stats[1].filters, getFilter(entry.tradeIds[1]))
 			elseif #entry.tradeIds > 1 then
-				-- ambiguous entries are added as a sparate count filter
+				-- ambiguous entries are added as a separate count filter
 				local countFilter = { type = "count", value = { min = 1 }, filters = {} }
 				for _, tradeId in ipairs(entry.tradeIds) do
 					t_insert(countFilter.filters, getFilter(tradeId))

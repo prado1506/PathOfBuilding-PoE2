@@ -17,7 +17,7 @@ for _, statDescEntry in ipairs(statDescData) do
 			-- and minus signs
 			:gsub("%-{", "%%%-{")
 			-- make plus signs optional and escape them. resistances for example have + in pob but
-			-- dont in the stat descriptors
+			-- don't in the stat descriptors
 			:gsub("%+{", "%%%+%?{")
 			-- match # to # as one block since the trade site uses the midpoint
 			:gsub("{%d?:?%+?%-?d?} to {%d?:?%+?%-?d?}", string.format("(%s to %s)", numberPattern, numberPattern))
@@ -180,8 +180,8 @@ function M.findTradeHash(modLine)
 		end
 	end
 	for _, statDescEntry in ipairs(statDescData) do
-		local statdescs = statDescEntry[1]
-		if not statdescs then
+		local statDescriptions = statDescEntry[1]
+		if not statDescriptions then
 			goto continue
 		end
 		-- by default, the trade site uses the first form listed in the stat descriptions, but there
@@ -191,7 +191,7 @@ function M.findTradeHash(modLine)
 		-- flag can define it to be another one
 		local canonical_stat = 1
 		local canonical_negated = false
-		for statDescIdx, statdesc in ipairs(statdescs) do
+		for statDescIdx, statdesc in ipairs(statDescriptions) do
 			local negate = false
 			for desc_idx, flag in ipairs(statdesc) do
 				if (k == "negate" or k == "negate_and_double") and v == 1 then
@@ -206,7 +206,7 @@ function M.findTradeHash(modLine)
 				end
 			end
 		end
-		for _, statdesc in ipairs(statdescs) do
+		for _, statdesc in ipairs(statDescriptions) do
 			local negate = false
 			for desc_idx, flag in ipairs(statdesc) do
 				if (k == "negate" or k == "negate_and_double") and v == 1 then
