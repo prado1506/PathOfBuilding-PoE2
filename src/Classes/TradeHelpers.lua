@@ -135,25 +135,6 @@ function M.swapInverse(modLine)
 	return modLine, inverseKey
 end
 
--- used for calculating the hash field of a stat
-local GGG_STAT_HASH32_SEED = 0xC58F1A7B
--- used for calculating the trade hash from stat hash fields
-local GGG_TRADE_SEED = 0x02312233
----@param stats string[]
----@param extraStat string extra stat for time-lost jewels
----@return integer
-local function hashStats(stats, extraStat)
-	if extraStat then
-		stats = copyTable(stats)
-		table.insert(stats, extraStat)
-	end
-	local statHashes = ""
-	for _, statName in ipairs(stats) do
-		local newHash = intToBytes(murmurHash2(statName, GGG_STAT_HASH32_SEED))
-		statHashes = statHashes .. newHash
-	end
-	return murmurHash2(statHashes, GGG_TRADE_SEED)
-end
 
 ---@return string? tradeId
 ---@return number? value Only returned when applicable (primarily timeless jewels)
@@ -234,7 +215,7 @@ function M.findTradeHash(modLine)
 			end
 			-- stat has no variables
 			if modLine == statdesc.text then
-				local tradeHash = hashStats(statDescEntry.stats, extraStat)
+				local tradeHash = HashStats(statDescEntry.stats, extraStat)
 				table.insert(resultIds, tradeHash)
 				shouldNegate = false
 				-- it's hard to know the correct value, but many stats have a form with no variables when the chance to do something is 100%. this should assign a value for those
@@ -251,7 +232,7 @@ function M.findTradeHash(modLine)
 					local number = tonumber(match) or M.modLineValue(match)
 					if number and idx == canonical_stat then
 						shouldNegate = negate ~= canonical_negated
-						local tradeHash = hashStats(statDescEntry.stats, extraStat)
+						local tradeHash = HashStats(statDescEntry.stats, extraStat)
 						table.insert(resultIds, tradeHash)
 						value = number
 					end
