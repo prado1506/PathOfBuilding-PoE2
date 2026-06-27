@@ -5,6 +5,30 @@
 --
 local m_floor = math.floor
 local dkjson = require "dkjson"
+local statDescData = require("Data.StatDescriptions.stat_descriptions")
+
+-- precalculate patterns used for matching stat lines
+local numberPattern = "%%d%+%%.%?%%d*"
+for _, statDescEntry in ipairs(statDescData) do
+	for _, desc in ipairs(statDescEntry[1] or {}) do
+		desc.pat = desc.text
+			-- escape percentages
+			:gsub("%%", "%%%%")
+			-- and minus signs
+			:gsub("%-{", "%%%-{")
+			-- make plus signs optional and escape them. resistances for example have + in pob but
+			-- dont in the stat descriptors
+			:gsub("%+{", "%%%+%?{")
+			-- match # to # as one block since the trade site uses the midpoint
+			:gsub("{%d?:?%+?%-?d?} to {%d?:?%+?%-?d?}", string.format("(%s to %s)", numberPattern, numberPattern))
+
+			-- match negative number variables
+			:gsub("{%d?:%-d}", "%-(" .. numberPattern .. ")")
+			:gsub("{%d?:?%+?d?}", "%%%+%?(" .. numberPattern .. ")")
+			-- match basic number variables like {}, {0} or {:d}
+			:gsub("{%d?:?d?}", "(" .. numberPattern .. ")")
+	end
+end
 
 local M = {}
 
@@ -29,10 +53,13 @@ end
 -- Helper: extract the first number from a mod line for value comparison, or in the case of # to #
 -- mods, the midpoint of that range
 --- @param line string
-function M.modLineValue(line)
+--- @param onlyFromTo boolean whether we should only check for # to # matches
+function M.modLineValue(line, onlyFromTo)
 	local low, high = line:match("(%-?%d+%.?%d*) to (%-?%d+%.?%d*)")
 	if low and high then
 		return (tonumber(low) + tonumber(high)) / 2
+	elseif onlyFromTo then
+		return nil
 	end
 	return tonumber(line:match("%-?[%d]+%.?[%d]*"))
 end
@@ -63,7 +90,7 @@ local function getOptionTradeStatMap(tradeStats)
 					if entry.text:match("#") then
 						-- work around issue where pob splits timeless jewel
 						-- mods into separate mod lines
-						newEntry.pattern = entry.text:gsub("\n.*", ""):gsub("(%+)", "%%+"):gsub("#", "(%%d%+)")
+						newEntry.pattern = entry.text:gsub("\n.*", ""):gsub("(%+)", "%%+"):gsub("#", "(%%d%+)"):lower()
 					end
 					table.insert(optionTradeStatMap[cat.id], newEntry)
 				end
@@ -108,161 +135,133 @@ function M.swapInverse(modLine)
 	return modLine, inverseKey
 end
 
--- checks if the mod should be inverted before query
---- @param tradeId string
---- @param modLine string
---- @param modType string
-function M.shouldBeInverted(tradeId, modLine, modType)
-	local formattedLine = M.formatDatabaseText(M.formatDatabaseText(modLine))
-	local invertedLine, inverseKey = M.swapInverse(formattedLine)
-	invertedLine = invertedLine:gsub("^%-", "")
-	if not inverseKey then
-		return false
+-- used for calculating the hash field of a stat
+local GGG_STAT_HASH32_SEED = 0xC58F1A7B
+-- used for calculating the trade hash from stat hash fields
+local GGG_TRADE_SEED = 0x02312233
+---@param stats string[]
+---@param extraStat string extra stat for time-lost jewels
+---@return integer
+local function hashStats(stats, extraStat)
+	if extraStat then
+		stats = copyTable(stats)
+		table.insert(stats, extraStat)
 	end
-	for _, category in ipairs(M.getTradeStats() or {}) do
-		if category.id == modType then
-			for _, stat in ipairs(category.entries) do
-				if tradeId == stat.id then
-					-- remove radius jewel extra text
-					local formattedTradeSiteText = M.formatDatabaseText(stat.text)
-					-- there are multiple stat variants on the trade site which are marked with e.g. (Local). None of these seem to be inverted, so we can check for those and return early
-					if formattedTradeSiteText:match(" %(%w+%)$") then
-						return false
-					end
-
-					-- test for inverted mod
-					if inverseKey
-						and ((invertedLine == formattedTradeSiteText)
-							or (invertedLine:gsub("^%+", "") == formattedTradeSiteText)) then
-						return true
-					end
-
-					-- otherwise it's probably not inverted
-					return false
-				end
-			end
-		end
+	local statHashes = ""
+	for _, statName in ipairs(stats) do
+		local newHash = intToBytes(murmurHash2(statName, GGG_STAT_HASH32_SEED))
+		statHashes = statHashes .. newHash
 	end
-	return false
+	return murmurHash2(statHashes, GGG_TRADE_SEED)
 end
 
--- Helper: normalise data texts to # format
---- @param text string
-function M.formatDatabaseText(text)
-	-- decimal -> integer
-	text = text:gsub("%d+%.%d+", "1")
-	-- (123-124) -> #
-	text = text:gsub("%(%d+%-%d+%)", "#")
-	text = text:gsub("%d+", "#")
-	return text
-end
-
-
--- Helper: find the trade stat ID for a mod line
----@param item         table
----@param modLine      string
----@param modType      string
----@param isDesecrated boolean
----@return number? hash          returned for most mods
----@return string? optionTradeId returned if the mod is an option. e.g. Allocates X
----@return number? value         returned if the mod is an option and uses values. e.g. timeless jewel
-function M.findTradeHash(item, modLine, modType, isDesecrated)
-	local formattedLine = M.formatDatabaseText(modLine)
-	-- hack for belt implicits not matching. TODO: use stat_descriptions instead, which define what
-	-- description is the canonical form that is used on the trade site, either by assuming it's the
-	-- first one, or one with a marker called "canonical_line"
-	formattedLine = formattedLine:gsub("Has # Charm Slots", "Has # Charm Slot")
-	-- the data export splits some mods into different parts, even though they
-	-- are technically just one stat. we handle that here
-	local isUnique = item.rarity == "UNIQUE" or item.rarity == "RELIC"
-	local function findStat(dbMod, ignoreWeights)
-		local excludeTags = (not isUnique) and { default = true } or nil
-		if not ignoreWeights and #(dbMod.weightKey or {}) > 0
-			and not (item:GetModSpawnWeight(dbMod, nil, excludeTags) > 0) then
-			return nil
-		end
-		for tradeHash, description in pairs(dbMod.tradeHashes) do
-			local tradeLine = table.concat(description, "\n")
-			if formattedLine == M.formatDatabaseText(tradeLine) then
-				return tradeHash
-			end
-
-			-- the mod line splitting between the stat export and item parsing
-			-- can be different. hence we test both a combined line and separate
-			-- lines
-			for _, descLine in ipairs(description) do
-				if formattedLine == M.formatDatabaseText(descLine) then
-					return tradeHash
-				end
-			end
-		end
-	end
-
+---@return string? tradeId
+---@return number? value Only returned when applicable (primarily timeless jewels)
+function M.findTradeIdOption(modLine, modType)
+	-- match stringify() behaviour
+	modLine = modLine:gsub("\n", " ")
 	local tradeStats = M.getTradeStats()
 	local optionTradeStatMap = getOptionTradeStatMap(tradeStats)
 	if not tradeStats or not optionTradeStatMap then return end
 
 	for _, v in ipairs(optionTradeStatMap[modType] or {}) do
 		if v.pattern then
-			local match = modLine:match(v.pattern)
+			local match = modLine:lower():match(v.pattern)
 			if match then
-				return nil, v.tradeId, tonumber(match)
+				return v.tradeId, tonumber(match)
 			end
-		elseif v.text == modLine then
-			return nil, v.tradeId
+		elseif v.text:lower() == modLine:lower() then
+			return v.tradeId
 		end
 	end
+end
 
-	-- desecrate-only mods
-	if isDesecrated then
-		for _, dbMod in pairs(data.itemMods.Desecrated) do
-			local tradeHashMaybe = findStat(dbMod, isUnique)
-			if tradeHashMaybe then
-				return tradeHashMaybe
+-- Helper: find the trade stat ID for a mod line
+---@param modLine  string
+---@return table[] results Can include more than one result if the results are ambiguous
+---@return number? value Might be nil if the line has no sensible number value
+---@return boolean shouldNegate whether the mod needs to be negated when given to the trade site
+function M.findTradeHash(modLine)
+	local resultIds = {}
+	local value
+	local shouldNegate
+	local extraStat
+	-- time-lost jewels don't have proper stat descriptors and need to be handled separately
+	local timeLostJewelLines = {
+		["^Notable Passive Skills in Radius also grant "] = "local_jewel_mod_stats_added_to_notable_passives",
+		["^Small Passive Skills in Radius also grant "] = "local_jewel_mod_stats_added_to_small_passives",
+	}
+	for pat, stat in pairs(timeLostJewelLines) do
+		if modLine:match(pat) then
+			modLine = modLine:gsub(pat, "")
+			extraStat = stat
+			break
+		end
+	end
+	for _, statDescEntry in ipairs(statDescData) do
+		local statdescs = statDescEntry[1]
+		if not statdescs then
+			goto continue
+		end
+		-- by default, the trade site uses the first form listed in the stat descriptions, but there
+		-- can be a flag that says otherwise
+		-- local canonical_line = 1
+		-- the stat descriptions default to using the first stat for the trade site, but this
+		-- flag can define it to be another one
+		local canonical_stat = 1
+		local canonical_negated = false
+		for statDescIdx, statdesc in ipairs(statdescs) do
+			local negate = false
+			for desc_idx, flag in ipairs(statdesc) do
+				if (k == "negate" or k == "negate_and_double") and v == 1 then
+					negate = true
+				end
+				if k == "canonical_stat" then
+					canonical_stat = v
+				end
+				if desc_idx == 1 or k == "canonical_line" then
+					-- canonical_line = desc_idx
+					canonical_negated = negate
+				end
 			end
 		end
-	end
-	-- corruptions
-	if modType == "enchant" then
-		for _, dbMod in pairs(data.itemMods.Corruption) do
-			local tradeHashMaybe = findStat(dbMod)
-			if tradeHashMaybe then
-				return tradeHashMaybe
+		for _, statdesc in ipairs(statdescs) do
+			local negate = false
+			for desc_idx, flag in ipairs(statdesc) do
+				if (k == "negate" or k == "negate_and_double") and v == 1 then
+					negate = true
+				end
+			end
+			-- stat has no variables
+			if modLine == statdesc.text then
+				local tradeHash = hashStats(statDescEntry.stats, extraStat)
+				table.insert(resultIds, tradeHash)
+				shouldNegate = false
+				-- it's hard to know the correct value, but many stats have a form with no variables when the chance to do something is 100%. this should assign a value for those
+				value = tonumber(statdesc.limit[statDescIdx] and statdesc.limit[statDescIdx][1])
+				goto continue
+			end
+			-- ensure no false positives by requiring a full line match. this is not possible in gmatch as it doesn't support ^
+			if modLine:match("^" .. statdesc.pat .. "$") then
+				local idx = 1
+				for match in modLine:gmatch(statdesc.pat) do
+					-- note that if the desired value isn't the first match and this is a # to #,
+					-- this will break as it contains two values. however, there is only a single
+					-- example where # to # are not the first two values currently
+					local number = tonumber(match) or M.modLineValue(match)
+					if number and idx == canonical_stat then
+						shouldNegate = negate ~= canonical_negated
+						local tradeHash = hashStats(statDescEntry.stats, extraStat)
+						table.insert(resultIds, tradeHash)
+						value = number
+					end
+					idx = idx + 1
+				end
 			end
 		end
-		-- most implicit and explicit applicable to the type
-	elseif modType == "implicit" or modType == "explicit" then
-		for _, dbMod in pairs(item.affixes) do
-			local tradeHashMaybe = findStat(dbMod)
-			if tradeHashMaybe then
-				return tradeHashMaybe
-			end
-		end
+		::continue::
 	end
-	-- special mods with weird weights
-	for _, dbMod in pairs(data.itemMods.Exclusive) do
-		local tradeHashMaybe = findStat(dbMod, true)
-		if tradeHashMaybe then
-			return tradeHashMaybe
-		end
-	end
-	-- charm mods
-	if item.base and item.base.type == "Charm" then
-		for _, dbMod in pairs(data.itemMods.Charm) do
-			-- charms don't seem to have any spawn weights, so allow the default tag here
-			local tradeHashMaybe = findStat(dbMod, true)
-			if tradeHashMaybe then
-				return tradeHashMaybe
-			end
-		end
-	end
-	-- essence and emotion mods don't seem to have spawn weights and are tested last
-	for _, dbMod in pairs(item.affixes) do
-		local tradeHashMaybe = findStat(dbMod, true)
-		if tradeHashMaybe then
-			return tradeHashMaybe
-		end
-	end
+	return resultIds, value, shouldNegate
 end
 
 -- Map slot name + item type to (trade API category string, itemCategoryTags key).
