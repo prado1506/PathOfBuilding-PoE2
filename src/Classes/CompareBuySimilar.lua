@@ -209,7 +209,7 @@ function M.openPopup(item, slotName, primaryBuild)
 	local leftMargin = 20
 	local minFieldX = popupWidth - 130
 	local maxFieldX = popupWidth - 50
-	local fieldW = 60
+	local fieldW = 74
 	local fieldH = 20
 	local checkboxSize = 20
 
@@ -226,8 +226,6 @@ function M.openPopup(item, slotName, primaryBuild)
 			-- check if all result trade ids are equal
 			local sameHashes = #entry.tradeIds > 0 and tableDeepEquals(entry.tradeIds, existingFilter.tradeIds)
 			if sameHashes and existingFilter.type == entry.type then
-				-- count of combined lines
-				existingFilter.count = existingFilter.count + 1
 				if entry.value then
 					local value = (entry.invert ~= existingFilter.invert) and -entry.value or entry.value or 0
 					existingFilter.value = (existingFilter.value or 0) + value
@@ -260,13 +258,12 @@ function M.openPopup(item, slotName, primaryBuild)
 							-- aggregated together it will contain the original mod lines for each
 							formattedLines = { formatted },
 							type = source.type,
-							isOption = true,
+							isOption = not not tradeId,
 							invert = false,
 							count = 1,
 							tradeIds = { tradeId },
 							value = value,
 						}
-
 						if not tradeId then
 							local resultHashes, value, invert = tradeHelpers.findTradeHash(resolvedLine)
 							-- convert hashes to string ids
@@ -279,7 +276,7 @@ function M.openPopup(item, slotName, primaryBuild)
 									end
 								end
 							end
-							entry.tradeIds = resultHashes
+							entry.tradeIds = resultIds
 							entry.value = value
 							entry.invert = invert
 						end
