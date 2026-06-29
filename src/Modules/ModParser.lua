@@ -1043,6 +1043,10 @@ local modFlagList = {
 	["with ranged weapons"] = { flags = bor(ModFlag.WeaponRanged, ModFlag.Hit) },
 	-- Skill types
 	["spell"] = { flags = ModFlag.Spell },
+	["fire spell"] = { flags = ModFlag.Spell, keywordFlags = KeywordFlag.Fire },
+	["cold spell"] = { flags = ModFlag.Spell, keywordFlags = KeywordFlag.Cold },
+	["lightning spell"] = { flags = ModFlag.Spell, keywordFlags = KeywordFlag.Lightning },
+	["chaos spell"] = { flags = ModFlag.Spell, keywordFlags = KeywordFlag.Chaos },
 	["for spells"] = { flags = ModFlag.Spell },
 	["for spell skills"] = { flags = ModFlag.Spell },
 	["for spell damage"] = { flags = ModFlag.Spell },
@@ -5885,6 +5889,7 @@ local specialModList = {
 		mod("CritChanceCap", "OVERRIDE", num),
 	} end,
 	["allocates (.+) if you have the matching modifiers? on forbidden (.+)"] = function(_, ascendancy, side) return { mod("GrantedAscendancyNode", "LIST", { side = side, name = ascendancy }) } end,
+	["allocates (%d+) sinister jewel sockets?"] = function(num) return { mod("GrantedPassive", "LIST", { type = "SinisterJewelSockets", count = num }) } end,
 	["allocates (.+)"] = function(_, passive) return { mod("GrantedPassive", "LIST", passive) } end,
 	["battlemage"] = { flag("Battlemage"), mod("MainHandWeaponDamageAppliesToSpells", "MAX", 100) },
 	["transfiguration of body"] = { flag("TransfigurationOfBody") },

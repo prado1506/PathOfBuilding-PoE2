@@ -1329,7 +1329,7 @@ function SkillsTabClass:AddSocketGroupTooltip(tooltip, socketGroup)
 				gemShown[skillEffect.srcInstance] = true
 			end
 		end
-		if activeSkill.minion then
+		if activeSkill.minion and activeSkill.minion.mainSkill then
 			tooltip:AddSeparator(10)
 			tooltip:AddLine(16, "^7Active Skill #" .. index .. "'s Main Minion Skill:")
 			local activeEffect = activeSkill.minion.mainSkill.effectList[1]
@@ -1572,4 +1572,3 @@ function SkillsTabClass:UpdateGlobalGemCountAssignments()
 	end
 	GlobalGemAssignments["GemGroupCount"] = SkillsTabClass.CountGemGroups(self)
 end
-
