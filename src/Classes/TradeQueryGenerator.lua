@@ -95,7 +95,7 @@ local function getStatEntries(modType)
 		["HeartOfTheWell"] = "explicit",
 		["AgainstTheDarkness"] = "explicit",
 	}
-	if tradeStatCategoryIndices[modType] then
+	if tradeStatCategoryIndices[modType] or tradeStats[modType] then
 		for i, cat in ipairs(tradeStats) do
 			if cat.id == tradeStatCategoryIndices[modType] then
 				return cat.entries
