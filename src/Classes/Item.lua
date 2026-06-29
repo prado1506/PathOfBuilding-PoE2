@@ -11,8 +11,8 @@ local m_max = math.max
 local m_floor = math.floor
 
 local dmgTypeList = {"Physical", "Lightning", "Cold", "Fire", "Chaos"}
-local catalystList = {"Flesh", "Neural", "Carapace", "Uul-Netol's", "Xoph's", "Tul's", "Esh's", "Chayula's", "Reaver", "Sibilant", "Skittering", "Adaptive"}
-local catalystDescriptorList = {"Life", "Mana", "Defence", "Physical", "Fire", "Cold", "Lightning", "Chaos", "Attack", "Caster", "Speed", "Attribute"}
+local catalystList = {"Flesh", "Neural", "Carapace", "Uul-Netol's", "Xoph's", "Tul's", "Esh's", "Chayula's", "Reaver", "Sibilant", "Skittering", "Adaptive", "Necrotic"}
+local catalystDescriptorList = {"Life", "Mana", "Defence", "Physical", "Fire", "Cold", "Lightning", "Chaos", "Attack", "Caster", "Speed", "Attribute", "Minion"}
 local catalystTags = {
 	{ "life" },
 	{ "mana" },
@@ -26,6 +26,7 @@ local catalystTags = {
 	{ "caster" },
 	{ "speed" },
 	{ "attribute" },
+	{ "minion" },
 }
 
 local minimumReqLevel = { }
@@ -443,6 +444,10 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 				self.pendingAffixList = { }
 				local backupAffixList = { }
 				for modId, modData in pairs(self.affixes) do
+					-- these can produce false positives, and only ever exist on the monk glove base
+					if modId:match("^HandWraps") and not self.name:match("Fists of Stone") then
+						goto modContinue
+					end
 					if modData.affix == modName then
 						if self:GetModSpawnWeight(modData) > 0 then
 							if modData.type == "Prefix" then
@@ -459,6 +464,7 @@ function ItemClass:ParseRaw(raw, rarity, highQuality)
 							end
 						end
 					end
+					::modContinue::
 				end
 				if #self.pendingAffixList == 0 and #backupAffixList > 0 then
 					self.pendingAffixList = backupAffixList
@@ -1574,7 +1580,7 @@ function ItemClass:UpdateRunes()
 			local itemType = self.base.type:lower()
 			local baseType = self.base.weapon and "weapon" or self.base.armour and "armour" or (self.base.tags.wand or self.base.tags.staff or self.base.tags.sceptre) and "caster"
 			local specificType =
-				(subType == "warstaff" and "warstaff") or
+				(subType == "warstaff" and "quarterstaff") or
 				(itemType == "shield" and subType == "evasion" and "buckler") or
 				itemType
 			local gatheredMods = getModRunesForTypes(name, baseType, specificType)

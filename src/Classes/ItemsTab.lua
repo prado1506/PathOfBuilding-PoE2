@@ -16,6 +16,7 @@ local m_floor = math.floor
 local m_modf = math.modf
 local buySimilar = LoadModule("Classes/CompareBuySimilar")
 
+local gemTooltip = LoadModule("Classes/GemTooltip")
 local rarityDropList = {
 	{ label = colorCodes.NORMAL.."Normal", rarity = "NORMAL" },
 	{ label = colorCodes.MAGIC.."Magic", rarity = "MAGIC" },
@@ -43,6 +44,7 @@ local catalystQualityFormat = {
 	"^x7F7F7FQuality (Caster Modifiers): "..colorCodes.MAGIC.."+%d%% (augmented)",
 	"^x7F7F7FQuality (Speed Modifiers): "..colorCodes.MAGIC.."+%d%% (augmented)",
 	"^x7F7F7FQuality (Attribute Modifiers): "..colorCodes.MAGIC.."+%d%% (augmented)",
+	"^x7F7F7FQuality (Minion Modifiers): "..colorCodes.MAGIC.."+%d%% (augmented)",
 }
 
 local flavourLookup = {}
@@ -602,6 +604,7 @@ holding Shift will put it in the second.]])
 		"Sibilant (Caster)",
 		"Skittering (Speed)",
 		"Adaptive (Attribute)",
+		"Necrotic (Minion)",
 		},
 		function(index, value)
 			self.displayItem.catalyst = index - 1
@@ -3066,32 +3069,31 @@ function ItemsTabClass:AddCustomModifierToDisplayItem()
 					break
 				end
 			end
-			if not baseColour then
-				error("Base is a gem but has no colour. Base name: " .. tostring(self.displayItem.baseName))
-			end
-			for _, emotion in pairs(data.emotions) do
-				if emotion.radiusJewel == radiusJewel then
-					for modType, modId in pairs(emotion.mods[baseColour] or {}) do
-						local mod = data.itemMods.Jewel[modId]
-						if mod then
-							t_insert(modList, {
-								label = string.format("%s ^8[%s] (%s)", emotion.name, table.concat(mod, "/"),
-									mod.type or ""),
-								mod = mod,
-								type = "custom",
-								emotion = emotion,
-							})
+			if baseColour then
+				for _, emotion in pairs(data.emotions) do
+					if emotion.radiusJewel == radiusJewel then
+						for modType, modId in pairs(emotion.mods[baseColour] or {}) do
+							local mod = data.itemMods.Jewel[modId]
+							if mod then
+								t_insert(modList, {
+									label = string.format("%s ^8[%s] (%s)", emotion.name, table.concat(mod, "/"),
+										mod.type or ""),
+									mod = mod,
+									type = "custom",
+									emotion = emotion,
+								})
+							end
 						end
 					end
 				end
+				table.sort(modList, function(a, b)
+					if a.emotion.tierLevel ~= b.emotion.tierLevel then
+						return a.emotion.tierLevel > b.emotion.tierLevel
+					else
+						return a.emotion.name > b.emotion.name
+					end
+				end)
 			end
-			table.sort(modList, function(a, b)
-				if a.emotion.tierLevel ~= b.emotion.tierLevel then
-					return a.emotion.tierLevel > b.emotion.tierLevel
-				else
-					return a.emotion.name > b.emotion.name
-				end
-			end)
 		elseif sourceId == "DESECRATED" then
 			local function isDesecratedMod(mod)
 				for _, tag in ipairs(mod.modTags or { }) do
@@ -3713,6 +3715,46 @@ function ItemsTabClass:AddItemTooltip(tooltip, item, slot, dbMode, maxWidth)
 		tooltip:AddSeparator(14)
 	end
 
+	-- Skill tooltip. We add child tooltips, which will be rendered to the right of the main
+	-- tooltip, growing downwards
+	if not tooltip.childTooltips then
+		tooltip.childTooltips = {}
+	end
+	local gemMaxWidth = 450
+	for _, tt in ipairs(tooltip.childTooltips) do
+		tt:Clear()
+		tt.maxWidth = gemMaxWidth
+	end
+	if item.grantedSkills and #item.grantedSkills > 0 then
+		tooltip:AddSeparator(14)
+		tooltip:AddLine(14,
+			colorCodes.TIP ..
+			"Tip: Hold Shift to display a tooltip for the granted skill" ..
+			(#item.grantedSkills > 1 and "s" or "") .. ".")
+		for i, itemSkill in ipairs(item.grantedSkills) do
+			if not tooltip.childTooltips[i] then
+				tooltip.childTooltips[i] = new("Tooltip")
+				tooltip.childTooltips[i].maxWidth = gemMaxWidth
+			end
+			-- find gem since the item data only contains the skill id
+			local skill = data.skills[itemSkill.skillId]
+			if skill and skill.id and IsKeyDown("SHIFT") then
+				local gemId = data.gemForSkill[skill] or ""
+				local gem = data.gems[gemId]
+				if gem then
+					local gemInst = {
+						gemData = gem,
+						level = itemSkill.level or 1,
+						quality = 0,
+						grantedEffect = skill
+					}
+					gemTooltip.AddGemTooltip(tooltip.childTooltips[i], self.build, gemInst, {
+						includeQualityRange = true,
+					})
+				end
+			end
+		end
+	end
 	-- Stat differences
 	if not self.showStatDifferences then
 		tooltip:AddSeparator(14)

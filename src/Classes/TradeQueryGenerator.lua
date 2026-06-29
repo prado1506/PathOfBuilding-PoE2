@@ -1396,7 +1396,7 @@ Remove: anoints are completely ignored, and removed from items.]]
 			if mod then
 				selector:SelByValue(mod.label, "label")
 				selector.width = totalWidth - auxControlWidth
-				minimumBox.buf = mod.value or ""
+				minimumBox.buf = mod.value and tostring(mod.value) or ""
 			else
 				selector.selIndex = 1
 				selector.width = totalWidth
