@@ -1,4 +1,4 @@
-# total=7041 supported=5584 partial=496 unsupported=961
+# total=7069 supported=5598 partial=519 unsupported=952
 unsupported	#% Chance to gain a Charge when you kill an enemy
 unsupported	#% Chance to gain a Charge when you kill an enemy Creates Ignited Ground for # seconds when used, Igniting enemies as though dealing Fire damage equal to #% of your maximum Life
 unsupported	#% Chance to gain a Charge when you kill an enemy Energy Shield Recharge starts on use
@@ -67,13 +67,19 @@ unsupported	+(##)% to Fire Resistance
 unsupported	+(##)% to Lightning Resistance
 unsupported	+(##)% to all Elemental Resistances
 unsupported	Abyssal Wasting also applies % to Cold Resistance
-unsupported	Abyssal Wasting also applies % to Cold Resistance #% increased Magnitude of Chill you inflict
+unsupported	Abyssal Wasting also applies % to Cold Resistance #% chance to revive one of your Persistent Minions when you kill an
 unsupported	Abyssal Wasting also applies % to Fire Resistance
 unsupported	Abyssal Wasting also applies % to Fire Resistance #% of Armour also applies to Elemental Damage
 unsupported	Abyssal Wasting also applies % to Lightning Resistance
 unsupported	Abyssal Wasting also applies % to Lightning Resistance Projectiles have #% chance for an additional Projectile when Forking
+unsupported	Abyssal Wasting you inflict also gives targets #% chance to explode on death, dealing a tenth of their life as Physical Damage
+unsupported	Abyssal Wasting you inflict also gives targets #% chance to explode on death, dealing a tenth of their life as Physical Damage Abyssal Wasting you inflict also prevents targets from inflicting Elemental Ailments
+unsupported	Abyssal Wasting you inflict also prevents targets from dealing Critical Hits
+unsupported	Abyssal Wasting you inflict also prevents targets from dealing Critical Hits Gain # Rage when you kill an enemy affected by Abyssal Wasting
+unsupported	Abyssal Wasting you inflict also prevents targets from inflicting Elemental Ailments
+unsupported	Abyssal Wasting you inflict also prevents targets from inflicting Elemental Ailments Abyssal Wasting also applies % to Cold Resistance
 unsupported	Abyssal Wasting you inflict has Infinite Duration
-unsupported	Abyssal Wasting you inflict has Infinite Duration Abyssal Wasting also applies % to Fire Resistance
+unsupported	Abyssal Wasting you inflict has Infinite Duration #% chance to gain Onslaught for # seconds when you kill an
 unsupported	Adapt to the highest Elemental Damage Type of each Hit you take
 unsupported	Adapt to the highest Elemental Damage Type of each Hit you take #% less Damage taken of each Elemental Damage Type per matching Adaptation
 unsupported	Adaptations have a duration of # seconds
@@ -245,6 +251,7 @@ unsupported	Debuffs you inflict have #% increased Slow Magnitude #% increased Ph
 unsupported	Debuffs you inflict have #% increased Slow Magnitude #% increased Spirit
 unsupported	Debuffs you inflict have #% increased Slow Magnitude Cannot Immobilise enemies
 unsupported	Debuffs you inflict have #% increased Slow Magnitude Debuffs on you expire #% faster
+unsupported	Debuffs you inflict have #% increased Slow Magnitude Gain #% of Damage as Extra Fire Damage
 unsupported	Decimating Strike
 unsupported	Defend with #% of Armour against Critical Hits
 unsupported	Defend with #% of Armour against Critical Hits # to Strength
@@ -307,6 +314,8 @@ unsupported	Enemies you Fully Armour Break cannot Regenerate Life
 unsupported	Enemies you Fully Armour Break cannot Regenerate Life Enemies you Fully Armour Break are Maimed
 unsupported	Enemies you Heavy Stun while Shapeshifted are Intimidated for # seconds
 unsupported	Enemies you inflict Bleeding on cannot Regenerate Life
+unsupported	Enemies you kill while they are affected by Abyssal Wasting
+unsupported	Enemies you kill while they are affected by Abyssal Wasting #% increased Immobilisation buildup against targets affected by Abyssal Wasting
 unsupported	Enemies' Damage with Critical Hits against you is Lucky
 unsupported	Energy Shield Recharge is not interrupted by Damage if Recharge began Recently
 unsupported	Energy Shield Recharge starts on use
@@ -402,18 +411,6 @@ unsupported	Gloves you equip have their Base Type transformed to Fists of Stone 
 unsupported	Grant Elemental Archon to your Minions for # seconds when they Revive
 unsupported	Grants Onslaught during effect
 unsupported	Grants Sands of Time
-unsupported	Grants Skill: Kelari's Deception
-unsupported	Grants Skill: Kelari's Judgment
-unsupported	Grants Skill: Level # His Dark Horizon
-unsupported	Grants Skill: Level # His Dark Horizon Grants Skill: Level # His Foul Emergence
-unsupported	Grants Skill: Level # His Grave Command
-unsupported	Grants Skill: Level # His Grave Command Grants Skill: Level # His Scattering Calamity
-unsupported	Grants Skill: Navira's Fracturing
-unsupported	Grants Skill: Navira's Oasis
-unsupported	Grants Skill: Navira's Well
-unsupported	Grants Skill: Ruzhan's Fury
-unsupported	Grants Skill: Ruzhan's Reckoning
-unsupported	Grants Skill: Ruzhan's Trap
 unsupported	Grants Thaumaturgical Dynamism
 unsupported	Grants a Frenzy Charge on use
 unsupported	Grants a Power Charge on use
@@ -442,7 +439,6 @@ unsupported	Increases and Reductions to Mana Regeneration Rate also
 unsupported	Infinite Parry Range
 unsupported	Infinite Parry Range #% increased Parried Debuff Duration
 unsupported	Inflict Abyssal Wasting on Hit
-unsupported	Inflict Abyssal Wasting on Hit #% increased Magnitude of Abyssal Wasting you inflict
 unsupported	Inflict Abyssal Wasting on Hit Projectiles have #% chance to Chain an additional time from terrain
 unsupported	Inflict Cold Exposure on Igniting an Enemy
 unsupported	Inflict Cold Exposure on Igniting an Enemy Inflict Fire Exposure on Shocking an Enemy
@@ -570,8 +566,6 @@ unsupported	Parrying applies # Stacks of Critical Weakness
 unsupported	Parrying applies # Stacks of Critical Weakness #% increased Parry Damage
 unsupported	Physical Damage of Enemies Hitting you is Unlucky
 unsupported	Physical Damage of Enemies Hitting you is Unlucky Convert All Armour to Evasion Rating
-unsupported	Physical damage from Hits Contributes to Chill Magnitude and Freeze Buildup
-unsupported	Physical damage from Hits Contributes to Chill Magnitude and Freeze Buildup Enemies in your Presence are Blinded
 unsupported	Pin Enemies which are Primed for Pinning
 unsupported	Pin Enemies which are Primed for Pinning Require # fewer enemies to be Surrounded
 unsupported	Pinned enemies cannot perform actions
@@ -683,7 +677,6 @@ unsupported	Skills can build and retain Combo regardless of Weapon Set
 unsupported	Skills can build and retain Combo regardless of Weapon Set Gain Combo from all Attack Hits
 unsupported	Skills from Corrupted Gems have #% increased Cost Efficiency during any Flask Effect
 unsupported	Skills from Corrupted Gems have #% increased Cost Efficiency during any Flask Effect Corrupted Blood cannot be inflicted on you
-unsupported	Skills from Corrupted Gems have #% of Mana Costs Converted to Life Costs
 unsupported	Skills lose Combo #% slower
 unsupported	Skills which Empower an Attack have #% chance to not count that Attack
 unsupported	Skills which Empower an Attack have #% chance to not count that Attack # to # added Physical Thorns damage per Runic Plate
@@ -714,6 +707,12 @@ unsupported	Tame Beast can capture Unique Beasts
 unsupported	Tame Beast can capture Unique Beasts Can have up to one Unique Tamed Beast summoned
 unsupported	Tame Beast can capture Unique Beasts Can have up to one Unique Tamed Beast summoned Unique Tamed Beasts have #% increased movement speed
 unsupported	Tame Beast can capture Unique Beasts Can have up to one Unique Tamed Beast summoned Unique Tamed Beasts have #% increased movement speed Unique Tamed Beasts are Possessed by random Azmeri Spirits, changing every # seconds
+unsupported	Targets affected by Abyssal Wasting you inflict are Blinded
+unsupported	Targets affected by Abyssal Wasting you inflict are Blinded Enemies you kill while they are affected by Abyssal Wasting
+unsupported	Targets affected by Abyssal Wasting you inflict are Debilitated
+unsupported	Targets affected by Abyssal Wasting you inflict are Debilitated #% of Mana Leeched from targets affected by Abyssal Wasting is Instant
+unsupported	Targets affected by Abyssal Wasting you inflict are Hindered
+unsupported	Targets affected by Abyssal Wasting you inflict are Hindered #% increased Magnitude of Abyssal Wasting you inflict
 unsupported	The Bodach haunts your Presence
 unsupported	The next Attack you use within # seconds after Heavy Stunning a Rare or Unique Enemy is Ancestrally Boosted
 unsupported	The next Attack you use within # seconds after Heavy Stunning a Rare or Unique Enemy is Ancestrally Boosted Ancestrally Boosted Attacks deal #% increased Damage
@@ -731,14 +730,6 @@ unsupported	This item gains bonuses from Socketed Items as though it was a Body 
 unsupported	This item gains bonuses from Socketed Items as though it was a Helmet
 unsupported	This item gains bonuses from Socketed Items as though it was a Helmet This item gains bonuses from Socketed Items as though it was a Shield
 unsupported	This item gains bonuses from Socketed Items as though it was a Shield
-unsupported	This item gains bonuses from Socketed Soul Cores as though it was also Boots
-unsupported	This item gains bonuses from Socketed Soul Cores as though it was also Boots This item gains bonuses from Socketed Soul Cores as though it was also Gloves
-unsupported	This item gains bonuses from Socketed Soul Cores as though it was also Gloves
-unsupported	This item gains bonuses from Socketed Soul Cores as though it was also Gloves This item gains bonuses from Socketed Soul Cores as though it was also a Helmet
-unsupported	This item gains bonuses from Socketed Soul Cores as though it was also a Helmet
-unsupported	This item gains bonuses from Socketed Soul Cores as though it was also a Helmet This item gains bonuses from Socketed Soul Cores as though it was also a Shield
-unsupported	This item gains bonuses from Socketed Soul Cores as though it was also a Shield
-unsupported	This item gains bonuses from Socketed Soul Cores as though it was also a Shield Has no Attribute Requirements
 unsupported	Thorns can Retaliate against all Hits
 unsupported	Totems Regenerate #% of maximum Life per second
 unsupported	Totems die # seconds after their Life is reduced to #
@@ -984,10 +975,16 @@ partial	#% chance to create an additional Remnant Remnants can be collected from
 partial	#% chance to deal your Thorns Damage to Enemies you Hit with Melee Attacks	to deal your  to Enemies you Hit
 partial	#% chance to deal your Thorns Damage to Enemies you Hit with Melee Attacks #% chance for Spell Damage with Critical Hits to be Lucky	to deal your  to Enemies you Hit  #% chance for Spell Damage  to be Lucky
 partial	#% chance to deal your Thorns Damage to Enemies you Hit with Melee Attacks #% chance to deal your Thorns Damage to Enemies you Hit with Melee Attacks	to deal your  to Enemies you Hit  #% chance to deal your Thorns Damage to Enemies you Hit with Melee Attacks
+partial	#% chance to gain Onslaught for # seconds when you kill an	when you kill an
+partial	#% chance to gain Onslaught for # seconds when you kill an Abyssal Wasting you inflict also prevents targets from dealing Critical Hits	when you kill an Abyssal Wasting you inflict also prevents targets from dealing Critical Hits
 partial	#% chance to gain Onslaught on Killing Blow with Axes	ing Blow
+partial	#% chance to inflict Withered with Hits against targets affected by Abyssal Wasting	to inflict Withered  against targets affected by Abyssal Wasting
+partial	#% chance to inflict Withered with Hits against targets affected by Abyssal Wasting #% increased Magnitude of Chill you inflict	to inflict Withered  against targets affected by Abyssal Wasting #% increased
 partial	#% chance to load a bolt into all Crossbow skills on Kill	to load a bolt into all  skills
 partial	#% chance to load a bolt into all Crossbow skills on Kill Sacrifice # Life to not consume the last bolt when firing	to load a bolt into all  skills #  to not consume the last bolt when firing
 partial	#% chance to not destroy Corpses when Consuming Corpses	to not destroy Corpses when Consuming Corpses
+partial	#% chance to revive one of your Persistent Minions when you kill an	to revive one of your Persistent s when you kill an
+partial	#% chance to revive one of your Persistent Minions when you kill an Gain # Volatility when you kill an enemy affected by Abyssal Wasting	to revive one of your Persistent s when you kill an Gain # Volatility  affected by Abyssal Wasting
 partial	#% chance when a Charm is used to use another Charm without consuming Charges	when a Charm is used to use another Charm without consuming
 partial	#% chance when a Charm is used to use another Charm without consuming Charges Charms applied to you have #% increased Effect	when a Charm is used to use another Charm without consuming  Charms applied to you have #% increased Effect
 partial	#% chance when collecting an Elemental Infusion to gain an	when collecting an Elemental Infusion to gain an
@@ -1004,7 +1001,7 @@ partial	#% faster Dodge Roll Gain Guard equal to #% of missing Energy Shield for
 partial	#% faster start of Energy Shield Recharge while affected by an Archon Buff	while affected by an Archon Buff
 partial	#% faster start of inherent Rage loss	start of inherent Rage loss
 partial	#% increased Accuracy Rating against Enemies affected by Abyssal Wasting	against Enemies affected by Abyssal Wasting
-partial	#% increased Accuracy Rating against Enemies affected by Abyssal Wasting #% of Mana Leeched from targets affected by Abyssal Wasting is Instant	against Enemies affected by Abyssal Wasting #% of Mana Leeched from targets affected by Abyssal Wasting is Instant
+partial	#% increased Accuracy Rating against Enemies affected by Abyssal Wasting Targets affected by Abyssal Wasting you inflict are Debilitated	against Enemies affected by Abyssal Wasting Targets affected by Abyssal Wasting you inflict are Debilitated
 partial	#% increased Archon Buff duration	Archon Buff
 partial	#% increased Archon Buff duration #% faster start of Energy Shield Recharge while affected by an Archon Buff	Archon Buff  #% faster start of Energy Shield Recharge while affected by an Archon Buff
 partial	#% increased Archon Buff duration #% increased effect of Archon Buffs on you	Archon Buff  #% increased effect of Archon Buffs on you
@@ -1023,8 +1020,6 @@ partial	#% increased Chance to Block if you've Blocked with a raised Shield Rece
 partial	#% increased Chance to be afflicted by Ailments when Hit	Chance to be afflicted by Ailments when Hit
 partial	#% increased Chance to be afflicted by Ailments when Hit #% increased Movement Speed while affected by an Ailment	Chance to be afflicted by Ailments when Hit #% increased
 partial	#% increased Chaos Damage over Time per Volatility	per Volatility
-partial	#% increased Cooldown Recovery Rate for Grenade Skills	forSkills
-partial	#% increased Cooldown Recovery Rate for Grenade Skills #% reduced Grenade Damage	forSkills #% reduced  Damage
 partial	#% increased Corrupted Charms effect duration	Corrupted Charms  duration
 partial	#% increased Corrupted Charms effect duration #% of Charges consumed by used Charms are granted to your Life Flasks	Corrupted Charms  duration #% of Charges consumed by used Charms are granted to your Life Flasks
 partial	#% increased Critical Hit Chance against Enemies that are affected	against Enemies that are affected
@@ -1059,6 +1054,8 @@ partial	#% increased Glory generation	Glory generation
 partial	#% increased Glory generation for Banner Skills	Glory generation for Banner Skills
 partial	#% increased Hinder Duration	Hinder
 partial	#% increased Immobilisation buildup against Constructs	against Constructs
+partial	#% increased Immobilisation buildup against targets affected by Abyssal Wasting	against targets affected by Abyssal Wasting
+partial	#% increased Immobilisation buildup against targets affected by Abyssal Wasting #% of Life Leeched from targets affected by Abyssal Wasting is Instant	against targets affected by Abyssal Wasting #% of Life Leeched from targets affected by Abyssal Wasting is Instant
 partial	#% increased Jagged Ground Duration	Jagged Ground
 partial	#% increased Life Recovery rate per #% missing Unreserved Life	per #% missing Unreserved Life
 partial	#% increased Magnitude of Abyssal Wasting you inflict	Magnitude of Abyssal Wasting you inflict
@@ -1088,11 +1085,9 @@ partial	#% increased Stun Threshold while Parrying	while Parrying
 partial	#% increased Totem Placement range	Placement range
 partial	#% increased Volatility Explosion delay	Volatility Explosion delay
 partial	#% increased chance to inflict Ailments against Enemies affected by Abyssal Wasting	against Enemies affected by Abyssal Wasting
-partial	#% increased chance to inflict Ailments against Enemies affected by Abyssal Wasting #% of Life Leeched from targets affected by Abyssal Wasting is Instant	against Enemies affected by Abyssal Wasting #% of Life Leeched from targets affected by Abyssal Wasting is Instant
+partial	#% increased chance to inflict Ailments against Enemies affected by Abyssal Wasting Targets affected by Abyssal Wasting you inflict are Blinded	against Enemies affected by Abyssal Wasting Targets affected by Abyssal Wasting you inflict are Blinded
 partial	#% increased damage against Undead Enemies	against Undead Enemies
 partial	#% increased effect of Archon Buffs on you	of Archon Buffs on you
-partial	#% increased effect of Socketed Augment Items	of Socketed Augment Items
-partial	#% increased effect of Socketed Augment Items This item gains bonuses from Socketed Items as though it was a Body Armour	of Socketed Augment Items This item gains bonuses from Socketed Items as though it was a Body Armour
 partial	#% increased maximum Divinity	maximum Divinity
 partial	#% increased maximum Divinity #% reduced maximum Divinity per Corrupted Item Equipped	maximum Divinity #% reduced maximum Divinity per Corrupted Item Equipped
 partial	#% increased speed of Recoup Effects	speed of Recoup s
@@ -1122,7 +1117,7 @@ partial	#% of Infernal Flame lost per second if none was gained in the past # se
 partial	#% of Life Leeched from targets affected by Abyssal Wasting is Instant	Leeched from targets affected by Abyssal Wasting is Instant
 partial	#% of Life Leeched from targets affected by Abyssal Wasting is Instant Abyssal Wasting also applies % to Lightning Resistance	Leeched from targets affected by Abyssal Wasting is Instant Abyssal Wasting also applies % to Lightning Resistance
 partial	#% of Mana Leeched from targets affected by Abyssal Wasting is Instant	Leeched from targets affected by Abyssal Wasting is Instant
-partial	#% of Mana Leeched from targets affected by Abyssal Wasting is Instant Abyssal Wasting also applies % to Cold Resistance	Leeched from targets affected by Abyssal Wasting is Instant Abyssal Wasting also applies % to Cold Resistance
+partial	#% of Mana Leeched from targets affected by Abyssal Wasting is Instant Abyssal Wasting you inflict also gives targets #% chance to explode on death, dealing a tenth of their life as Physical Damage	Leeched from targets affected by Abyssal Wasting is Instant Abyssal Wasting you inflict also gives targets #% chance to explode on death, dealing a tenth of their life
 partial	#% of Maximum Mana is Converted to twice that much Armour	is Converted to twice that much Armour
 partial	#% of Melee Physical Damage taken reflected to Attacker	taken reflected to Attacker
 partial	#% of Melee Physical Damage taken reflected to Attacker Regenerate #% of maximum Life per second while Surrounded	taken reflected to Attacker Regenerate #% of maximum Life per second
@@ -1151,7 +1146,6 @@ partial	#% reduced Duration of Curses on you Curses you inflict spread to enemie
 partial	#% reduced Effect of Non-Damaging Ailments on you	on you
 partial	#% reduced Movement Speed Penalty from using Cold Skills while moving	Penalty from using Cold Skills
 partial	#% reduced Movement Speed Penalty from using Fire Skills while moving	Penalty from using Fire Skills
-partial	#% reduced Movement Speed Penalty while Actively Blocking	Penalty ly Blocking
 partial	#% reduced Projectile Range	Range
 partial	#% reduced Projectile Range Adds # to # Fire Damage	Range Adds # to # Fire Damage
 partial	#% reduced Quantity of Gold Dropped by Slain Enemies	Quantity of Gold Dropped by Slain Enemies
@@ -1215,8 +1209,8 @@ partial	Gain # Dark Whisper every second there is a Cursed Enemy in your Presenc
 partial	Gain # Dark Whisper every second there is a Cursed Enemy in your Presence Curses you inflict can affect Hexproof Enemies	Dark Whisper every second there is a Cursed Enemy in your Presence Curses you inflict can affect Hexproof Enemies
 partial	Gain # Druidic Prowess for every # total Rage spent	Druidic Prowess for every # total Rage spent
 partial	Gain # Endurance Charge every second if you've been Hit Recently	Endurance Charge every second
-partial	Gain # Explosive Rhythm every # times you use a Grenade Skill	Explosive Rhythm every # times you use aSkill
-partial	Gain # Explosive Rhythm every # times you use a Grenade Skill Remove all Explosive Rhythm on reaching # to gain Explosive Fervour for # Seconds	Explosive Rhythm every # times you use aSkill Remove all Explosive Rhythm on reaching # to gain Explosive Fervour
+partial	Gain # Explosive Rhythm every # times you use a Grenade Skill	Explosive Rhythm every # times you use a  Skill
+partial	Gain # Explosive Rhythm every # times you use a Grenade Skill Remove all Explosive Rhythm on reaching # to gain Explosive Fervour for # Seconds	Explosive Rhythm every # times you use a  Skill Remove all Explosive Rhythm on reaching # to gain Explosive Fervour
 partial	Gain # Fear Incarnate when you Cull a target	Fear Incarnate when you Cull a target
 partial	Gain # Fragile Regrowth each second	Fragile Regrowth each second
 partial	Gain # Guard for # seconds per Combo expended when using Skills	Guard for # seconds per Combo expended when using Skills
@@ -1226,6 +1220,8 @@ partial	Gain # Life Flask Charge per #% Life spent On Hitting an Enemy while a L
 partial	Gain # Rage when Critically Hit by an Enemy	Rage when Critically Hit by an Enemy
 partial	Gain # Rage when Hit by an Enemy during effect	Rage when Hit by an Enemy
 partial	Gain # Rage when Hit by an Enemy during effect No Inherent loss of Rage during effect	Rage when Hit by an Enemy  No Inherent loss of Rage
+partial	Gain # Rage when you kill an enemy affected by Abyssal Wasting	Rage  affected by Abyssal Wasting
+partial	Gain # Rage when you kill an enemy affected by Abyssal Wasting Abyssal Wasting also applies % to Fire Resistance	Rage  affected by Abyssal Wasting Abyssal Wasting also applies % to
 partial	Gain # Rage when you use a Life Flask	Rage when you use a  Flask
 partial	Gain # Rage when your Hit Ignites a target	Rage when your Hit Ignites a target
 partial	Gain # Runefather's Boast per Power of targets affected by Runefather's Challenge you kill	Runefather's Boast per Power of targets affected by Runefather's Challenge you kill
@@ -1234,6 +1230,8 @@ partial	Gain # Runic Binding on Hit with Spells, no more than once every # secon
 partial	Gain # Volatility on inflicting an Elemental Ailment	Volatility on inflicting an Elemental Ailment
 partial	Gain # Volatility on inflicting an Elemental Ailment Take no Damage from Volatility	Volatility on inflicting an Elemental Ailment Take no  from Volatility
 partial	Gain # Volatility when an Allied Persistent Reviving Minion is Killed	Volatility when an Allied Persistent Reviving  is Killed
+partial	Gain # Volatility when you kill an enemy affected by Abyssal Wasting	Volatility  affected by Abyssal Wasting
+partial	Gain # Volatility when you kill an enemy affected by Abyssal Wasting #% chance to inflict Withered with Hits against targets affected by Abyssal Wasting	Volatility  affected by Abyssal Wasting #% chance to inflict Withered  against targets affected by Abyssal Wasting
 partial	Gain # fewer Lightning Surge from Triggering Elemental Surge	fewer Lightning Surge from Triggering
 partial	Gain #% of Damage as Chaos Damage per Undead Minion	per Undead
 partial	Gain #% of Damage as Chaos Damage per Undead Minion Gain #% of Damage as Chaos Damage per Undead Minion	per Undead  Gain #% of Damage as Chaos Damage per Undead Minion
@@ -1242,21 +1240,36 @@ partial	Gain #% of Damage as Extra Fire Damage per Endurance Charge consumed Rec
 partial	Gain #% of damage as Physical damage for # seconds per Charge consumed this way	per Charge consumed this way
 partial	Gain Arcane Surge when a Minion Dies	when a  Dies
 partial	Gain Arcane Surge when a Minion Dies #% increased maximum Energy Shield	when a  Dies #% increased
+partial	Gain Arcane Surge when a Minion Dies Gain Arcane Surge when a Minion Dies	when a  Dies Gain  when a Minion Dies
 partial	Gain Arcane Surge when a Minion Dies Recover #% of your maximum Life when an Enemy dies in your Presence	when a  Dies Recover #% of your  when an Enemy dies in your Presence
 partial	Gain Arcane Surge when you Shapeshift to Human form after	when you Shapeshift to Human form after
 partial	Gain Arcane Surge when you Shapeshift to Human form after being Shapeshifted for at least # seconds	when you Shapeshift to Human form after being Shapeshifted for at least # seconds
 partial	Gain Onslaught for # seconds when a Minion Dies	when a  Dies
 partial	Gain Onslaught for # seconds when a Minion Dies # to Spirit while you have at least # Strength	when a  Dies # to
-partial	Gain Onslaught for # seconds when a Minion Dies #% increased Area of Effect for Attacks	when a  Dies #% increased  for Attacks
+partial	Gain Onslaught for # seconds when a Minion Dies Gain Onslaught for # seconds when a Minion Dies	when a  Dies Gain   when a Minion Dies
+partial	Gain Onslaught for # seconds when a Minion Dies Projectiles have #% chance for an additional Projectile when Forking	when a  Dies  have #% chance for an additional Projectile when Forking
 partial	Gain Physical Thorns damage equal to #% - #% of maximum Life	equal to #% - #% of
 partial	Gain Tailwind on Critical Hit, no more than once per second	, no more than once per second
 partial	Gain Tailwind on Critical Hit, no more than once per second Lose all Tailwind when Hit	, no more than once per second Lose all  when Hit
+partial	Grants Skill: Kelari's Deception	Grants Skill: Kelari's Deception
+partial	Grants Skill: Kelari's Judgment	Grants Skill: Kelari's Judgment
+partial	Grants Skill: Level # His Dark Horizon	Grants Skill: Level # His Dark Horizon
+partial	Grants Skill: Level # His Dark Horizon Grants Skill: Level # His Foul Emergence	Grants Skill: Level # His Dark Horizon Grants Skill: Level # His Foul Emergence
+partial	Grants Skill: Level # His Grave Command	Grants Skill: Level # His Grave Command
+partial	Grants Skill: Level # His Grave Command Grants Skill: Level # His Scattering Calamity	Grants Skill: Level # His Grave Command Grants Skill: Level # His Scattering Calamity
+partial	Grants Skill: Navira's Fracturing	Grants Skill: Navira's Fracturing
+partial	Grants Skill: Navira's Oasis	Grants Skill: Navira's Oasis
+partial	Grants Skill: Navira's Well	Grants Skill: Navira's Well
+partial	Grants Skill: Ruzhan's Fury	Grants Skill: Ruzhan's Fury
+partial	Grants Skill: Ruzhan's Reckoning	Grants Skill: Ruzhan's Reckoning
+partial	Grants Skill: Ruzhan's Trap	Grants Skill: Ruzhan's Trap
 partial	Has # Augment Sockets	Augment Sockets
-partial	Hits with this Weapon have #% chance to Trigger Molten Shower per # Strength	to Trigger
-partial	Hits with this Weapon have #% chance to Trigger Molten Shower per # Strength #% increased Physical Damage	to Trigger #% increased
+partial	Hits with this Weapon have #% chance to Trigger Molten Shower per # Strength	to Trigger Molten Shower
+partial	Hits with this Weapon have #% chance to Trigger Molten Shower per # Strength #% increased Physical Damage	to Trigger Molten Shower  #% increased
 partial	Immune to Bleeding while affected by an Archon Buff	Bleeding while affected by an Archon Buff
 partial	Immune to Freeze and Chill while affected by an Archon Buff	Freeze and Chill while affected by an Archon Buff
 partial	Immune to Shock while affected by an Archon Buff	Shock while affected by an Archon Buff
+partial	Inflict Abyssal Wasting on Hit Targets affected by Abyssal Wasting in your Presence have double Power	Inflict Abyssal Wasting  Targets affected by Abyssal Wasting in your Presence have  Power
 partial	Inherent loss of Rage is #% slower per # Tribute	Inherent loss of Rage slower
 partial	Invocated Spells have #% chance to consume half as much Energy	to consume half as much Energy
 partial	Invocated skills have #% increased Maximum Energy	Maximum Energy
@@ -1276,6 +1289,7 @@ partial	Projectiles deal #% increased Damage with Hits for each time they have P
 partial	Projectiles deal #% increased Damage with Hits for each time they have Pierced Projectiles have #% increased Critical Hit chance for each time they have Pierced	for each time they have Pierced Projectiles have #% increased Critical Hit chance for each time they have Pierced
 partial	Projectiles have #% chance for an additional Projectile when Forking	for an additional  when Forking
 partial	Projectiles have #% chance for an additional Projectile when Forking #% increased Critical Damage Bonus	for an additional  when Forking #% increased Critical Damage Bonus
+partial	Projectiles have #% chance for an additional Projectile when Forking Gain #% of Damage as Extra Lightning Damage	for an additional  when Forking Gain #% of Damage as Extra Lightning Damage
 partial	Projectiles have #% chance for an additional Projectile when Forking per # Tribute	for an additional  when Forking
 partial	Projectiles have #% chance to Fork if you've dealt a Melee Hit in the past eight seconds	to Fork
 partial	Projectiles have #% increased Critical Hit chance for each time they have Pierced	for each time they have Pierced
@@ -1302,6 +1316,8 @@ partial	Take #% less Damage over Time if you've started taking Damage over Time 
 partial	Take #% less Damage over Time if you've started taking Damage over Time in the past second Take #% more Damage over Time if you haven't started taking Damage over Time in the past second	if you've started taking Damage over Time in the past second Take #% more Damage over Time if you haven't started taking Damage over Time in the past second
 partial	Take #% more Damage over Time if you haven't started taking Damage over Time in the past second	if you haven't started taking Damage over Time in the past second
 partial	Take #% of Mana Costs you pay for Skills as Physical Damage	s you pay for Skills
+partial	Targets affected by Abyssal Wasting in your Presence have double Power	Targets affected by Abyssal Wasting in your Presence have  Power
+partial	Targets affected by Abyssal Wasting in your Presence have double Power Targets affected by Abyssal Wasting you inflict are Hindered	Targets affected by Abyssal Wasting in your Presence have  Power Targets affected by Abyssal Wasting you inflict are Hindered
 partial	Your Critical Hit Chance cannot be Rerolled Your Critical Damage Bonus is #%	Your  cannot be Rerolled Your Critical Damage Bonus
 partial	Your Totem Limit is doubled	Your  Limit
 partial	Your Totem Limit is doubled No Charge requirement for placing Totems	Your  Limit  No Charge requirement for placing Totems
