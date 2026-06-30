@@ -4,7 +4,6 @@
 -- Stateless trade mod lookup/matching and item display helper functions
 --
 local m_floor = math.floor
-local dkjson = require "dkjson"
 local statDescData = require("Data.StatDescriptions.stat_descriptions")
 
 -- precalculate patterns used for matching stat lines
@@ -12,21 +11,24 @@ local numberPattern = "%%d%+%%.%?%%d*"
 for _, statDescEntry in ipairs(statDescData) do
 	for _, desc in ipairs(statDescEntry[1] or {}) do
 		desc.pat = desc.text
-			-- escape percentages
-			:gsub("%%", "%%%%")
-			-- and minus signs
-			:gsub("%-{", "%%%-{")
-			-- make plus signs optional and escape them. resistances for example have + in pob but
-			-- don't in the stat descriptors
-			:gsub("%+{", "%%%+%?{")
-			-- match # to # as one block since the trade site uses the midpoint
-			:gsub("{%d?:?%+?%-?d?} to {%d?:?%+?%-?d?}", string.format("(%s to %s)", numberPattern, numberPattern))
+			-- ignore uppercase letters to help custom items match
+			:lower()
+			-- remove minus and plus signs
+			:gsub("%-{", "{")
+			:gsub("%+{", "{")
+			-- escape existing characters
+			:gsub("([%(%)%.%%%+%-%*%?%[%]%^%$])", "%%%1")
+			-- match # to # as one block since the trade site uses the midpoint. these don't seem to
+			-- ever have plus or minus signs, and can't be negative as even flat damage turns into
+			-- flat damage against you instead of being negative
+			:gsub("{.-} to {.-}", string.format("(%s to %s)", numberPattern, numberPattern))
 
-			-- match negative number variables
-			:gsub("{%d?:%-d}", "%-(" .. numberPattern .. ")")
-			:gsub("{%d?:?%+?d?}", "%%%+%?(" .. numberPattern .. ")")
-			-- match basic number variables like {}, {0} or {:d}
-			:gsub("{%d?:?d?}", "(" .. numberPattern .. ")")
+			-- match number variables like {}, {0}, {0:-d}, {0:+d}, or {:d}
+			:gsub("{.-}",
+				-- and add optional plus and number signs. this is not necessarily correct as some
+				-- stats do require the plus sign to parse, but this simplifies handling reflected
+				-- mods
+				"%%%+%?(%%%-%?" .. numberPattern .. ")")
 	end
 end
 
@@ -53,7 +55,7 @@ end
 -- Helper: extract the first number from a mod line for value comparison, or in the case of # to #
 -- mods, the midpoint of that range
 --- @param line string
---- @param onlyFromTo boolean whether we should only check for # to # matches
+--- @param onlyFromTo? boolean whether we should only check for # to # matches
 function M.modLineValue(line, onlyFromTo)
 	local low, high = line:match("(%-?%d+%.?%d*) to (%-?%d+%.?%d*)")
 	if low and high then
@@ -163,18 +165,19 @@ end
 ---@return number? value Might be nil if the line has no sensible number value
 ---@return boolean shouldNegate whether the mod needs to be negated when given to the trade site
 function M.findTradeHash(modLine)
+	modLine = modLine:lower()
 	local resultIds = {}
 	local value
 	local shouldNegate
 	local extraStat
 	-- time-lost jewels don't have proper stat descriptors and need to be handled separately
 	local timeLostJewelLines = {
-		["^Notable Passive Skills in Radius also grant "] = "local_jewel_mod_stats_added_to_notable_passives",
-		["^Small Passive Skills in Radius also grant "] = "local_jewel_mod_stats_added_to_small_passives",
+		["^notable passive skills in radius also grant "] = "local_jewel_mod_stats_added_to_notable_passives",
+		["^small passive skills in radius also grant "] = "local_jewel_mod_stats_added_to_small_passives",
 	}
 	for pat, stat in pairs(timeLostJewelLines) do
 		if modLine:match(pat) then
-			modLine = modLine:gsub(pat, "")
+			modLine = modLine:lower():gsub(pat, "")
 			extraStat = stat
 			break
 		end
@@ -191,41 +194,41 @@ function M.findTradeHash(modLine)
 		-- flag can define it to be another one
 		local canonical_stat = 1
 		local canonical_negated = false
-		for statDescIdx, statdesc in ipairs(statDescriptions) do
+		for statFormIdx, statForm in ipairs(statDescriptions) do
 			local negate = false
-			for desc_idx, flag in ipairs(statdesc) do
-				if (k == "negate" or k == "negate_and_double") and v == 1 then
+			for _, flag in ipairs(statForm) do
+				if (flag.k == "negate" or flag.k == "negate_and_double") and flag.v == 1 then
 					negate = true
 				end
-				if k == "canonical_stat" then
-					canonical_stat = v
+				if flag.k == "canonical_stat" then
+					canonical_stat = flag.v
 				end
-				if desc_idx == 1 or k == "canonical_line" then
+				if statFormIdx == 1 or (flag.k == "canonical_line" and flag.v) then
 					-- canonical_line = desc_idx
 					canonical_negated = negate
 				end
 			end
 		end
-		for _, statdesc in ipairs(statDescriptions) do
+		for statFormIdx, statForm in ipairs(statDescriptions) do
 			local negate = false
-			for desc_idx, flag in ipairs(statdesc) do
-				if (k == "negate" or k == "negate_and_double") and v == 1 then
+			for _, flag in ipairs(statForm) do
+				if (flag.k == "negate" or flag.k == "negate_and_double") and flag.v == 1 then
 					negate = true
 				end
 			end
 			-- stat has no variables
-			if modLine == statdesc.text then
+			if modLine == statForm.text:lower() then
 				local tradeHash = HashStats(statDescEntry.stats, extraStat)
 				table.insert(resultIds, tradeHash)
 				shouldNegate = false
 				-- it's hard to know the correct value, but many stats have a form with no variables when the chance to do something is 100%. this should assign a value for those
-				value = tonumber(statdesc.limit[statDescIdx] and statdesc.limit[statDescIdx][1])
+				value = tonumber(statForm.limit[statFormIdx] and statForm.limit[statFormIdx][1])
 				goto continue
 			end
 			-- ensure no false positives by requiring a full line match. this is not possible in gmatch as it doesn't support ^
-			if modLine:match("^" .. statdesc.pat .. "$") then
+			if modLine:match("^" .. statForm.pat .. "$") then
 				local idx = 1
-				for match in modLine:gmatch(statdesc.pat) do
+				for match in modLine:gmatch(statForm.pat) do
 					-- note that if the desired value isn't the first match and this is a # to #,
 					-- this will break as it contains two values. however, there is only a single
 					-- example where # to # are not the first two values currently

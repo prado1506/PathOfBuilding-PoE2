@@ -197,30 +197,15 @@ local function buildURL(item, slotName, controls, modEntries, defenceEntries, is
 	return url
 end
 
--- Open the Buy Similar popup for a compared item
-function M.openPopup(item, slotName, primaryBuild)
-	if not item then return end
-
-	local isUnique = item.rarity == "UNIQUE" or item.rarity == "RELIC"
-	local controls = {}
-	local uri = ""
-	local rowHeight = 24
-	local popupWidth = 700
-	local leftMargin = 20
-	local minFieldX = popupWidth - 130
-	local maxFieldX = popupWidth - 50
-	local fieldW = 74
-	local fieldH = 20
-	local checkboxSize = 20
-
-	-- Collect mod entries with trade IDs
+---@param item any
+---@param modTypeSources ModTypeSources
+---@return table[] entries mod entries used in buy similar popup
+function M.addModEntries(item, modTypeSources)
 	local modEntries = {}
-	local modTypeSources = {
-		{ list = item.enchantModLines,  type = "enchant" },
-		{ list = item.implicitModLines, type = "implicit" },
-		{ list = item.explicitModLines, type = "explicit" },
-	}
-	-- this adds a single aggregated entry for matching stats (e.g. transformed flat dmg mods) which avoids issues with confusing results. different types are not summed as e.g. implicit and explicit mods are separate in the search. options are also avoided as they don't represent values that can be added combined
+	-- this adds a single aggregated entry for matching stats (e.g. transformed flat dmg mods) which
+	-- avoids issues with confusing results. mods with different types are not summed as e.g.
+	-- implicit and explicit mods are separate in the search. options are also avoided as they don't
+	-- represent values that can be added combined
 	local function insertOrAddToExisting(entry)
 		for _, existingFilter in ipairs(modEntries) do
 			-- check if all result trade ids are equal
@@ -260,7 +245,6 @@ function M.openPopup(item, slotName, primaryBuild)
 							type = source.type,
 							isOption = not not tradeId,
 							invert = false,
-							count = 1,
 							tradeIds = { tradeId },
 							value = value,
 						}
@@ -272,7 +256,7 @@ function M.openPopup(item, slotName, primaryBuild)
 								for idx = 1, #resultHashes do
 									local id = string.format("%s.stat_%s", source.type, resultHashes[idx])
 									if existingStats[id] then
-										resultIds[idx] = id
+										t_insert(resultIds, id)
 									end
 								end
 							end
@@ -286,6 +270,35 @@ function M.openPopup(item, slotName, primaryBuild)
 			end
 		end
 	end
+	return modEntries
+end
+
+-- Open the Buy Similar popup for a compared item
+function M.openPopup(item, slotName, primaryBuild)
+	if not item then return end
+
+	local isUnique = item.rarity == "UNIQUE" or item.rarity == "RELIC"
+	local controls = {}
+	local uri = ""
+	local rowHeight = 24
+	local popupWidth = 700
+	local leftMargin = 20
+	local minFieldX = popupWidth - 130
+	local maxFieldX = popupWidth - 50
+	local fieldW = 74
+	local fieldH = 20
+	local checkboxSize = 20
+
+
+	---@class ModTypeSources
+	local modTypeSources = {
+		{ list = item.enchantModLines,  type = "enchant" },
+		{ list = item.implicitModLines, type = "implicit" },
+		{ list = item.explicitModLines, type = "explicit" },
+	}
+
+	-- Collect mod entries with trade IDs
+	local modEntries = M.addModEntries(item, modTypeSources)
 
 	-- Collect defence stats for non-unique gear items
 	local defenceEntries = {}
@@ -446,6 +459,8 @@ function M.openPopup(item, slotName, primaryBuild)
 		--- @type string[]
 		local displayTexts = entry.formattedLines
 		for index, displayText in ipairs(displayTexts) do
+			-- shorten time-lost jewel affix labels to fit better
+			displayText = displayText:gsub(" Passive Skills in Radius also grant", ":")
 			local colorCodeLength = displayText:match("(%^x%x%x%x%x%x%x)") or displayText:gsub("(%^%x)", "") or ""
 
 			if not canSearch then
