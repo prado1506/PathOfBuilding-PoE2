@@ -3585,6 +3585,8 @@ function calcs.perform(env, skipEHP)
 				end
 			end
 		end
+	end
+
 	local function calcMinionLifePool(env, buffs, includeSkill)
 		local totalLife = 0
 		local lifeList = { }
