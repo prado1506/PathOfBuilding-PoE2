@@ -1,4 +1,4 @@
-# total=7069 supported=5598 partial=519 unsupported=952
+# total=7056 supported=5609 partial=513 unsupported=934
 unsupported	#% Chance to gain a Charge when you kill an enemy
 unsupported	#% Chance to gain a Charge when you kill an enemy Creates Ignited Ground for # seconds when used, Igniting enemies as though dealing Fire damage equal to #% of your maximum Life
 unsupported	#% Chance to gain a Charge when you kill an enemy Energy Shield Recharge starts on use
@@ -360,7 +360,6 @@ unsupported	Fork an additional time Chain an additional time Chain from Terrain 
 unsupported	Fork an additional time Chain an additional time Chain from Terrain an additional time Cannot collide with targets
 unsupported	Frenzy or Power Charge
 unsupported	Fully Armour Broken enemies you kill with Hits Shatter
-unsupported	Fully Broken Armour you inflict also increases Cold and Lightning Damage Taken from Hits
 unsupported	Gain Combo from all Attack Hits
 unsupported	Gain Deflection Rating equal to #% of Evasion Rating per # Tribute
 unsupported	Gain Deflection Rating equal to #% of Evasion Rating per # Tribute #% increased Evasion Rating per # Tribute
@@ -404,7 +403,6 @@ unsupported	Gain an Endurance Charge when you Heavy Stun a Rare or Unique Enemy
 unsupported	Gain an additional Charge when you gain a Charge
 unsupported	Gain no inherent bonus from Dexterity
 unsupported	Gain no inherent bonus from Dexterity #% increased Armour per # Dexterity
-unsupported	Gem Quality grants Socketed Skills an additional effect
 unsupported	Gloves you equip have their Base Type transformed to Fists of Stone while equipped, and
 unsupported	Gloves you equip have their Base Type transformed to Fists of Stone while equipped, and their Explicit Modifiers are transformed into more powerful related Modifiers
 unsupported	Gloves you equip have their Base Type transformed to Fists of Stone while equipped, and their Explicit Modifiers are transformed into more powerful related Modifiers Ignore Attribute Requirements to equip Gloves
@@ -419,7 +417,6 @@ unsupported	Grants effect of Guided Freezing Shrine
 unsupported	Grants effect of Guided Meteoric Shrine
 unsupported	Grants effect of Guided Tempest Shrine
 unsupported	Grants up to your maximum Rage on use
-unsupported	Green: #% less Movement Speed Penalty from using Skills while Moving
 unsupported	Hit damage is taken from Mana before Life if your current Mana is higher than your current Life
 unsupported	Hit damage is taken from Mana before Life if your current Mana is higher than your current Life #% less maximum Life
 unsupported	Hit damage is taken from Mana before Life if your current Mana is higher than your current Life #% less maximum Life #% less maximum Mana
@@ -536,10 +533,6 @@ unsupported	Nearby Allies and Enemies Share Charges with you Enemies Hitting you
 unsupported	Nearby Allies and Enemies Share Charges with you Enemies Hitting you have #% chance to gain an Endurance,  Frenzy or Power Charge
 unsupported	No Charge requirement for placing Totems
 unsupported	No Charge requirement for placing Totems Totems reserve # Spirit each
-unsupported	No Inherent loss of Rage
-unsupported	No Inherent loss of Rage Regenerate #% of your maximum Rage per second
-unsupported	No Inherent loss of Rage Regenerate #% of your maximum Rage per second Increases and Reductions to Mana Regeneration Rate also apply to Rage Regeneration Rate
-unsupported	No Inherent loss of Rage Regenerate #% of your maximum Rage per second Increases and Reductions to Mana Regeneration Rate also apply to Rage Regeneration Rate Skills have # to Rage cost
 unsupported	No Inherent loss of Rage during effect
 unsupported	No Inherent loss of Rage during effect #% increased Duration
 unsupported	Non-Unique Life Flasks apply their Effects constantly
@@ -720,16 +713,6 @@ unsupported	The next Fire Spell you cast yourself after using a Warcry is Ancest
 unsupported	There is no Limit on the number of Banners you can place
 unsupported	This Flask cannot be Used but applies its Effect constantly
 unsupported	This Flask cannot be Used but applies its Effect constantly #% reduced Amount Recovered
-unsupported	This item gains bonuses from Socketed Items as though it was Boots
-unsupported	This item gains bonuses from Socketed Items as though it was Boots This item gains bonuses from Socketed Items as though it was Gloves
-unsupported	This item gains bonuses from Socketed Items as though it was Gloves
-unsupported	This item gains bonuses from Socketed Items as though it was Gloves This item gains bonuses from Socketed Items as though it was a Helmet
-unsupported	This item gains bonuses from Socketed Items as though it was a Body Armour
-unsupported	This item gains bonuses from Socketed Items as though it was a Body Armour Has # Augment Sockets
-unsupported	This item gains bonuses from Socketed Items as though it was a Body Armour This item gains bonuses from Socketed Items as though it was Boots
-unsupported	This item gains bonuses from Socketed Items as though it was a Helmet
-unsupported	This item gains bonuses from Socketed Items as though it was a Helmet This item gains bonuses from Socketed Items as though it was a Shield
-unsupported	This item gains bonuses from Socketed Items as though it was a Shield
 unsupported	Thorns can Retaliate against all Hits
 unsupported	Totems Regenerate #% of maximum Life per second
 unsupported	Totems die # seconds after their Life is reduced to #
@@ -828,7 +811,6 @@ unsupported	You can only Socket # Sapphire Jewel in this item
 unsupported	You can only Socket # Sapphire Jewel in this item Projectiles from Spells Fork
 unsupported	You cannot Recover Energy Shield from Regeneration
 unsupported	You cannot Recover Energy Shield from Regeneration You cannot Recover Energy Shield to above Armour
-unsupported	You cannot Recover Energy Shield to above Armour
 unsupported	You cannot be Chilled for # seconds after being Chilled
 unsupported	You cannot be Chilled for # seconds after being Chilled You cannot be Frozen for # seconds after being Frozen
 unsupported	You cannot be Electrocuted
@@ -1012,8 +994,6 @@ partial	#% increased Attack Damage for each different Non-Instant Spell you've u
 partial	#% increased Blind duration	Blind
 partial	#% increased Blind duration #% increased Damage with Hits against Blinded Enemies	Blind  #% increased Damage
 partial	#% increased Cast Speed for each different Spell you've Cast in the last eight seconds	for each different  you've Cast in the last eight seconds
-partial	#% increased Cast Speed if you've used a Mana Flask Recently	if you've used a Mana Flask Recently
-partial	#% increased Cast Speed if you've used a Mana Flask Recently Mana Flasks gain # charges per Second	if you've used a Mana Flask Recently Mana Flasks gain # charges per Second
 partial	#% increased Cast Speed per Spell Echoed Recently, up to #%	per  Echoed Recently, up to #%
 partial	#% increased Chance to Block if you've Blocked with a raised Shield Recently	if you've Blocked with a raised Shield Recently
 partial	#% increased Chance to Block if you've Blocked with a raised Shield Recently #% increased Armour, Evasion and Energy Shield from Equipped Shield	if you've Blocked with a raised Shield Recently #% increased Armour, Evasion and Energy Shield
@@ -1104,9 +1084,6 @@ partial	#% of Charges consumed by used Charms are granted to your Life Flasks	co
 partial	#% of Charges consumed by used Charms are granted to your Life Flasks #% of Charges consumed by used Life Flasks are granted to your Charms	consumed by used Charms are granted to your Life Flasks #% of Charges consumed by used Life Flasks are granted to your Charms
 partial	#% of Charges consumed by used Life Flasks are granted to your Charms	consumed by used Life Flasks are granted to your Charms
 partial	#% of Charges consumed by used Life Flasks are granted to your Charms # Charm Slot	consumed by used Life Flasks are granted to your Charms # Charm Slot
-partial	#% of Damage from Deflected Hits is taken from Damageable Companion's Life before you	from Deflected Hits is taken from Damageable Companion's Life before you
-partial	#% of Damage from Hits is taken from your Damageable Companion's Life before you	from Hits is taken from your Damageable Companion's Life before you
-partial	#% of Damage from Hits is taken from your Damageable Companion's Life before you #% increased Armour, Evasion and Energy Shield while your Companion is in your Presence	from Hits is taken from your Damageable Companion's Life before you #% increased Armour, Evasion and Energy Shield
 partial	#% of Damage taken during effect Recouped as Life	Recouped as Life
 partial	#% of Damage taken during effect Recouped as Life Gain # Rage when Hit by an Enemy during effect	Recouped as Life Gain # Rage when Hit by an Enemy
 partial	#% of Damage taken from Deflected Hits Recouped as Life	from Deflected Hits Recouped as Life
@@ -1284,7 +1261,6 @@ partial	Maximum Volatility is #	Maximum Volatility
 partial	Minions have #% chance to inflict Gruelling Madness on Hit	to inflict Gruelling Madness
 partial	Minions have #% chance to inflict Gruelling Madness on Hit #% increased Spirit Reservation Efficiency	to inflict Gruelling Madness  #% increased
 partial	Minions lose #% Life per # Tribute you have when following Commands	%   you have when following Commands
-partial	No Inherent loss of Rage Regenerate #% of your maximum Rage per second Increases and Reductions to Mana Regeneration Rate also apply to Rage Regeneration Rate Skills have # to Rage cost # to Maximum Rage	No Inherent loss of  Regenerate #% of your  per second Increases and Reductions to Mana Regeneration Rate also apply to Rage Regeneration Rate Skills have # to Rage  to Maximum Rage
 partial	Projectiles deal #% increased Damage with Hits for each time they have Pierced	for each time they have Pierced
 partial	Projectiles deal #% increased Damage with Hits for each time they have Pierced Projectiles have #% increased Critical Hit chance for each time they have Pierced	for each time they have Pierced Projectiles have #% increased Critical Hit chance for each time they have Pierced
 partial	Projectiles have #% chance for an additional Projectile when Forking	for an additional  when Forking
