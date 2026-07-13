@@ -837,6 +837,8 @@ describe("TestSkills", function()
 
 		local skillsTab = {
 			socketGroupList = {
+				{ enabled = false, gemList = { fakeGem("Disabled Skill") } },
+				{ enabled = true, gemList = { fakeGem("Disabled Gem", nil, { enabled = false }) } },
 				{ enabled = true, gemList = { fakeGem("Item Skill", { fromItem = true }) } },
 				{ enabled = true, gemList = { fakeGem("Tree Skill", { fromTree = true }) } },
 				{ enabled = true, gemList = { fakeGem("Stored Item Skill", nil, { fromItem = true }) } },
@@ -890,6 +892,19 @@ describe("TestSkills", function()
 
 		assert.True(avgDPS > coldSelectedDPS)
 		assert.True(avgDPS < lightningDPS)
+	end)
+
+	it("scales spell bleed magnitude from maximum Life", function()
+		build.configTab.input.customMods = [[
+			+5000 to maximum Life
+			100% chance to inflict Bleeding on Hit
+			Non-Channelling Spells have 3% increased Magnitude of Ailments per 100 maximum Life
+		]]
+		build.configTab:BuildModList()
+		build.skillsTab:PasteSocketGroup("Unearth 20/0  1")
+		runCallback("OnFrame")
+
+		assert.are.equals(1 + math.floor(build.calcsTab.mainOutput.Life / 100) * 0.03, build.calcsTab.mainOutput.BleedMagnitudeEffect)
 	end)
 
 	it("Test flicker strike scales with power charges", function()

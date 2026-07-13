@@ -375,13 +375,108 @@ describe("TestItemParse", function()
 		assert.are.equals("~price 1 chaos", item.note)
 	end)
 
-	it("Attribute Requirements", function()
-		local item = new("Item", raw("Dex: 100"))
-		assert.are.equals(100, item.requirements.dex)
-		item = new("Item", raw("Int: 101"))
-		assert.are.equals(101, item.requirements.int)
-		item = new("Item", raw("Str: 102"))
-		assert.are.equals(102, item.requirements.str)
+	it("Rune level requirements", function()
+		local item = new("Item", [[
+			Test Wand
+			Runic Fork
+			Sockets: S
+			Rune: Perfect Storm Rune
+			LevelReq: 1
+			Implicits: 1
+			{enchant}{rune}Gain 12% of Damage as Extra Lightning Damage
+		]])
+		assert.are.equals(50, item.requirements.level)
+	end)
+
+	it("Unique mod level requirements", function()
+		local foundAnvil
+		for _, rawUnique in ipairs(data.uniques.amulet) do
+			if rawUnique:match("The Anvil") then
+				local item = new("Item", rawUnique)
+				assert.are.equals(18, item.requirements.level)
+				assert.is_nil(rawUnique:match("Requires Level 18"))
+				foundAnvil = true
+				break
+			end
+		end
+		assert(foundAnvil, "The Anvil not found")
+
+		local foundChoirOfTheStorm
+		for _, rawUnique in ipairs(data.uniques.amulet) do
+			if rawUnique:match("Choir of the Storm") then
+				assert(rawUnique:find("Grants Skill: Level (1-20) Lightning Bolt", 1, true))
+				assert(rawUnique:find("Trigger Lightning Bolt Skill on Critical Hit", 1, true))
+				foundChoirOfTheStorm = true
+				break
+			end
+		end
+		assert(foundChoirOfTheStorm, "Choir of the Storm not found")
+
+		local foundSylvansEffigy
+		for _, rawUnique in ipairs(data.uniques.sceptre) do
+			if rawUnique:match("Sylvan's Effigy") then
+				local item = new("Item", rawUnique)
+				assert.are.equals(62, item.requirements.level)
+				foundSylvansEffigy = true
+				break
+			end
+		end
+		assert(foundSylvansEffigy, "Sylvan's Effigy not found")
+
+		for _, rawUnique in ipairs(data.uniques.amulet) do
+			if rawUnique:match("Hinekora's Sight") then
+				local item = new("Item", rawUnique)
+				assert.are.equals(44, item.requirements.level)
+				assert(rawUnique:find("Grants Skill: Level (1-20) Future-Past", 1, true))
+				return
+			end
+		end
+		assert(false, "Hinekora's Sight not found")
+	end)
+
+	it("keeps legacy base implicit variants as implicits", function()
+		for _, rawUnique in ipairs(data.uniques.belt) do
+			if rawUnique:match("Goregirdle") then
+				assert(rawUnique:find("Implicits: 3\n{variant:2}+(140-180) to Armour\n{variant:1}+(100-140) to Armour\nHas (1-3) Charm Slot", 1, true))
+				return
+			end
+		end
+		assert(false, "Goregirdle not found")
+	end)
+
+	it("uses upgraded base requirements for uniques", function()
+		local item = new("Item", [[
+			Item Class: Spears
+			Rarity: Unique
+			Tyranny's Grip
+			Runemastered Ironhead Spear
+			Requires: Level 55, 31 Str, 76 Dex
+			Item Level: 30
+		]])
+		assert.are.equals(55, item.requirements.level)
+
+		item.itemSocketCount = 1
+		item.runes = { "Legacy of Tyranny's Grip" }
+		item:UpdateRunes()
+		item:BuildAndParseRaw()
+		assert.are.equals(65, item.requirements.level)
+
+		item.runes[1] = "None"
+		item:UpdateRunes()
+		item:BuildAndParseRaw()
+		assert.are.equals(55, item.requirements.level)
+	end)
+
+	it("inherits implicits from variant base types", function()
+		for _, rawUnique in ipairs(data.uniques.shield) do
+			if rawUnique:match("The Surrender") then
+				assert(rawUnique:find("Implicits: 1\nGrants Skill: Raise Shield", 1, true))
+				local item = new("Item", rawUnique)
+				assert.are.equals(75, item.requirements.level)
+				return
+			end
+		end
+		assert(false, "The Surrender not found")
 	end)
 
 	it("Requires Class", function()
@@ -711,6 +806,7 @@ describe("TestItemParse", function()
 			--------
 			Corrupted
 		]])
+		assert.are.equals(90, item.requirements.level)
 
 		local damageGainAsLightning = 0
 		for _, mod in ipairs(item.slotModList[1]) do
@@ -721,6 +817,7 @@ describe("TestItemParse", function()
 		assert.are.equals(120, damageGainAsLightning)
 
 		item:BuildAndParseRaw()
+		assert.are.equals(90, item.requirements.level)
 
 		assert.are.equals(5, item.itemSocketCount)
 		assert.are.equals(5, #item.runes)
@@ -739,6 +836,13 @@ describe("TestItemParse", function()
 		assert.is_not_nil(rawItem:match("{enchant}{rune}Gain 120%% of Damage as Extra Lightning Damage"))
 		assert.is_not_nil(rawItem:match("{enchant}{rune}Remnants you create have 75%% reduced effect"))
 		assert.is_not_nil(rawItem:match("{enchant}{rune}Remnants can be collected from 150%% further away"))
+
+		for i = 1, item.itemSocketCount do
+			item.runes[i] = "None"
+		end
+		item:UpdateRunes()
+		item:BuildAndParseRaw()
+		assert.are.equals(65, item.requirements.level)
 	end)
 
 	it("multi-line rune mod", function()
@@ -759,6 +863,197 @@ describe("TestItemParse", function()
 		assert.are.equals(2, #item.sockets)
 		assert.are.equals(2, #item.runeModLines)
 		
+	end)
+
+	it("loads Darkness Enthroned with two augment sockets", function()
+		local item = new("Item", data.uniques.belt[6])
+
+		assert.are.equals("Darkness Enthroned, Fine Belt", item.name)
+		assert.are.equals(2, item.itemSocketCount)
+		assert.are.equals(2, #item.sockets)
+
+		item.variant = 1 -- Helmet
+		item:BuildModList()
+		local baseType, specificType = item:GetSocketedAugmentTypes()
+		assert.are.equals("armour", baseType)
+		assert.are.equals("helmet", specificType)
+	end)
+
+	it("infers helmet augments from an advanced copy of Darkness Enthroned", function()
+		local item = new("Item", [[
+			Item Class: Belts
+			Rarity: Unique
+			Darkness Enthroned
+			Fine Belt
+			--------
+			Requires: Level 62
+			--------
+			Sockets: S S
+			--------
+			Item Level: 83
+			--------
+			28% increased Armour, Evasion and Energy Shield (rune)
+			12% increased Skill Effect Duration (rune)
+			12% increased Cooldown Recovery Rate (rune)
+			--------
+			{ Implicit Modifier }
+			Flasks gain 0.17 charges per Second
+			{ Implicit Modifier — Charm }
+			Has 1(1-3) Charm Slot
+			--------
+			{ Unique Modifier }
+			This item gains bonuses from Socketed Items as though it was a Helmet — Unscalable Value
+			{ Unique Modifier }
+			61(50-100)% increased effect of Socketed Augment Items — Unscalable Value
+			--------
+			Kulemak sat triumphant, raising the crown.
+			Darkness coiled the world in eternal night.
+			Victory, a mere moment, came crashing down.
+			No conqueror, no conquered, only searing Light.
+			--------
+			Corrupted
+			--------
+			Note: ~b/o 40 exalted
+		]])
+
+		assert.are.same({ "Greater Iron Rune", "Quipolatl's Soul Core of Flow" }, item.runes)
+		local rawItem = item:BuildRaw()
+		assert.is_not_nil(rawItem:match("28%% increased Armour, Evasion and Energy Shield"))
+		assert.is_not_nil(rawItem:match("12%% increased Skill Effect Duration"))
+		assert.is_not_nil(rawItem:match("12%% increased Cooldown Recovery Rate"))
+
+		item:BuildAndParseRaw()
+		assert.are.same({ "Greater Iron Rune", "Quipolatl's Soul Core of Flow" }, item.runes)
+		rawItem = item:BuildRaw()
+		assert.is_not_nil(rawItem:match("28%% increased Armour, Evasion and Energy Shield"))
+		assert.is_not_nil(rawItem:match("12%% increased Skill Effect Duration"))
+		assert.is_not_nil(rawItem:match("12%% increased Cooldown Recovery Rate"))
+	end)
+
+	it("infers body armour augments from an advanced copy of Darkness Enthroned", function()
+		local item = new("Item", [[
+			Item Class: Belts
+			Rarity: Unique
+			Darkness Enthroned
+			Fine Belt
+			--------
+			Requires: Level 62
+			--------
+			Sockets: S S
+			--------
+			Item Level: 86
+			--------
+			+83 to Spirit (rune)
+			Idols socketed in this item gain the benefits of their Bonded modifiers (rune)
+			-1 to Spirit per 2 Levels (rune)
+			Bonded: +8% to Quality of all Skills (rune)
+			--------
+			{ Implicit Modifier }
+			Flasks gain 0.17 charges per Second
+			{ Implicit Modifier — Charm }
+			Has 1(1-3) Charm Slot
+			--------
+			{ Unique Modifier }
+			This item gains bonuses from Socketed Items as though it was a Body Armour — Unscalable Value
+			{ Unique Modifier }
+			66(50-100)% increased effect of Socketed Augment Items — Unscalable Value
+			--------
+			Kulemak sat triumphant, raising the crown.
+			Darkness coiled the world in eternal night.
+			Victory, a mere moment, came crashing down.
+			No conqueror, no conquered, only searing Light.
+			--------
+			Corrupted
+			--------
+			Note: ~b/o 1 divine
+		]])
+
+		assert.are.same({ "Rune of the Blossom", "Fox Idol" }, item.runes)
+		local rawItem = item:BuildRaw()
+		assert.is_not_nil(rawItem:match("%+83 to Spirit"))
+		assert.is_not_nil(rawItem:match("%-1 to Spirit per 2 Levels"))
+		assert.is_not_nil(rawItem:match("Bonded: %+8%% to Quality of all Skills"))
+
+		item:BuildAndParseRaw()
+		assert.are.same({ "Rune of the Blossom", "Fox Idol" }, item.runes)
+		rawItem = item:BuildRaw()
+		assert.is_not_nil(rawItem:match("%+83 to Spirit"))
+		assert.is_not_nil(rawItem:match("%-1 to Spirit per 2 Levels"))
+		assert.is_not_nil(rawItem:match("Bonded: %+8%% to Quality of all Skills"))
+	end)
+
+	it("parses Atziri's Splendour soul core socket types", function()
+		local item = new("Item", data.uniques.body[1])
+		item.variant = 1 -- Helmet
+		item:BuildModList()
+
+		assert.is_true(item.socketedSoulCoreTypes["helmet"])
+		assert.is_nil(item.socketedSoulCoreTypes["gloves"])
+	end)
+
+	it("infers Soul Cores using Atziri's Splendour's variant type", function()
+		local item = new("Item", [[
+			Item Class: Body Armours
+			Rarity: Unique
+			Atziri's Splendour
+			Sacrificial Regalia
+			--------
+			Sockets: S S S S S S
+			--------
+			Item Level: 86
+			--------
+			8% increased Skill Effect Duration (rune)
+			8% increased Cooldown Recovery Rate (rune)
+			--------
+			Only Soul Cores can be Socketed in this item
+			This item gains bonuses from Socketed Soul Cores as though it was also a Helmet
+		]])
+
+		assert.are.same({ "Quipolatl's Soul Core of Flow" }, item.runes)
+		item:BuildAndParseRaw()
+		assert.are.same({ "Quipolatl's Soul Core of Flow", "None", "None", "None", "None", "None" }, item.runes)
+		assert.are.equals(2, #item.runeModLines)
+
+		item = new("Item", [[
+			Item Class: Body Armours
+			Rarity: Unique
+			Atziri's Splendour
+			Sacrificial Regalia
+			--------
+			Sockets: S S S S S S
+			--------
+			Item Level: 86
+			--------
+			Hits against you have 40% reduced Critical Damage Bonus (rune)
+			--------
+			Only Soul Cores can be Socketed in this item
+			This item gains bonuses from Socketed Soul Cores as though it was also a Shield
+		]])
+
+		assert.are.same({ "Soul Core of Ticaba" }, item.runes)
+		item:BuildAndParseRaw()
+		assert.are.same({ "Soul Core of Ticaba", "None", "None", "None", "None", "None" }, item.runes)
+		assert.are.equals("Hits against you have 40% reduced Critical Damage Bonus", item.runeModLines[1].line)
+	end)
+
+	it("infers pasted Soul Core lines with socketed Soul Core effect", function()
+		local item = new("Item", [[
+			Item Class: Shields
+			Rarity: Unique
+			Mahuxotl's Machination
+			Omen Crest Shield
+			--------
+			Sockets: S
+			--------
+			Hits against you have 40% reduced Critical Damage Bonus (rune)
+			--------
+			100% increased effect of Socketed Soul Cores
+		]])
+
+		assert.are.same({ "Soul Core of Ticaba" }, item.runes)
+		item:BuildAndParseRaw()
+		assert.are.same({ "Soul Core of Ticaba" }, item.runes)
+		assert.is_not_nil(item:BuildRaw():match("Hits against you have 40%% reduced Critical Damage Bonus"))
 	end)
 
 	it("jewel sockets", function()
